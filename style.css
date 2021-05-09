@@ -12,3 +12,8 @@
     margin: 20px auto;
     padding: 20px 0;
 }
+a:-webkit-any-link {
+    
+    cursor: pointer;
+    text-decoration: none;
+}
