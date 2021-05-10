@@ -1,3 +1,4 @@
+
 .post-cover {
     border: 20px solid #23b0ff;
     border: 1px dashed var(--accent);
@@ -13,7 +14,7 @@
     padding: 20px 0;
 }
 a:-webkit-any-link {
-    
+
     cursor: pointer;
     text-decoration: none;
 }
