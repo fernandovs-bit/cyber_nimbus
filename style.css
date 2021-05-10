@@ -1,18 +1,18 @@
 
 .post-cover {
-    border: 20px solid #23b0ff;
+    /*border: 20px solid #23b0ff;
     border: 1px dashed var(--accent);
     background: transparent;
     margin: 0px 0;
-    padding: 0px;
+    padding: 0px;*/
     object-fit: cover;
-    opacity: 0.4;
+    opacity: 0.8;
 }
-.post {
+/*.post {
     text-align: justify;
     margin: 20px auto;
     padding: 20px 0;
-}
+}*/
 a:-webkit-any-link {
 
     cursor: pointer;
