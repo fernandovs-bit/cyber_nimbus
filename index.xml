@@ -7,7 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>TCN © 2021 :: Licensed under &lt;a href=http://creativecommons.org/licenses/by-sa/4.0/&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sun, 09 May 2021 23:00:30 -0300</lastBuildDate><atom:link href="https://cybernimbus.com.br/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Jul 2021 02:25:55 -0300</lastBuildDate><atom:link href="https://cybernimbus.com.br/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cyber Nimbus</title>
+      <link>https://cybernimbus.com.br/posts/cyber-nimbus/</link>
+      <pubDate>Mon, 26 Jul 2021 02:25:55 -0300</pubDate>
+      
+      <guid>https://cybernimbus.com.br/posts/cyber-nimbus/</guid>
+      <description>Lorem ipsum dui sem congue ultrices ad eu hac, consequat augue mi nunc primis dapibus venenatis congue dui, egestas rhoncus habitant nulla eros massa ullamcorper. ultrices cubilia iaculis turpis lorem cursus pretium per habitasse, cubilia suscipit suspendisse pulvinar quis class curabitur, himenaeos suscipit enim imperdiet at feugiat consequat. imperdiet fames ante vel morbi ac dapibus elementum leo, aptent habitant porta habitant laoreet eu morbi neque commodo, sapien consectetur ad dapibus potenti egestas curae.</description>
+      <content>&lt;p&gt;Lorem ipsum dui sem congue ultrices ad eu hac, consequat augue mi nunc primis dapibus venenatis congue dui, egestas rhoncus habitant nulla eros massa ullamcorper. ultrices cubilia iaculis turpis lorem cursus pretium per habitasse, cubilia suscipit suspendisse pulvinar quis class curabitur, himenaeos suscipit enim imperdiet at feugiat consequat. imperdiet fames ante vel morbi ac dapibus elementum leo, aptent habitant porta habitant laoreet eu morbi neque commodo, sapien consectetur ad dapibus potenti egestas curae.
+Lorem ipsum dui sem congue ultrices ad eu hac, consequat augue mi nunc primis dapibus venenatis congue dui, egestas rhoncus habitant nulla eros massa ullamcorper. ultrices cubilia iaculis turpis lorem cursus pretium per habitasse, cubilia suscipit suspendisse pulvinar quis class curabitur, himenaeos suscipit enim imperdiet at feugiat consequat. imperdiet fames ante vel morbi ac dapibus elementum leo, aptent habitant porta habitant laoreet eu morbi neque commodo, sapien consectetur ad dapibus potenti egestas curae.&lt;/p&gt;
+
+  &lt;figure class=&#34;center&#34; &gt;
+    &lt;img src=&#34;https://cybernimbus.com.br/cn.webp&#34;  alt=&#34;cyber-nimbus&#34;   style=&#34;border-radius: 8px;&#34;  /&gt;
+    
+      &lt;figcaption class=&#34;center&#34;  style=&#34;color: white;&#34; &gt;caption test&lt;/figcaption&gt;
+    
+  &lt;/figure&gt;
+
+
+&lt;p&gt;Lorem ipsum dui sem congue ultrices ad eu hac, consequat augue mi nunc primis dapibus venenatis congue dui, egestas rhoncus habitant nulla eros massa ullamcorper. ultrices cubilia iaculis turpis lorem cursus pretium per habitasse, cubilia suscipit suspendisse pulvinar quis class curabitur, himenaeos suscipit enim imperdiet at feugiat consequat. imperdiet fames ante vel morbi ac dapibus elementum leo, aptent habitant porta habitant laoreet eu morbi neque commodo, sapien consectetur ad dapibus potenti egestas curae.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Lorem ipsum dui sem congue ultrices ad eu hac, consequat augue mi nunc primis dapibus venenatis congue dui, egestas rhoncus habitant nulla eros massa ullamcorper. ultrices cubilia iaculis turpis lorem cursus pretium per habitasse, cubilia suscipit suspendisse pulvinar quis class curabitur, himenaeos suscipit enim imperdiet at feugiat consequat. imperdiet fames ante vel morbi ac dapibus elementum leo, aptent habitant porta habitant laoreet eu morbi neque commodo, sapien consectetur ad dapibus potenti egestas curae.&lt;/p&gt;
+&lt;hr&gt;
+</content>
+    </item>
+    
     <item>
       <title>Img_test2</title>
       <link>https://cybernimbus.com.br/posts/img_test2/</link>
@@ -133,7 +158,7 @@ Enfim, vamos tentar. Sou bacharel em Direito há alguns poucos anos e Nerd a vid
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;header-3&#34;&gt;Header 3&lt;/h3&gt;
 &lt;p&gt;Nulla libero turpis, lacinia vitae cursus ut, auctor dictum nisl. Fusce varius felis nec sem ullamcorper, at convallis nisi vestibulum. Duis risus odio, porta sit amet placerat mollis, tincidunt non mauris. Suspendisse fringilla, &lt;code&gt;odio a dignissim pharetra&lt;/code&gt;, est urna sollicitudin urna, eu scelerisque magna ex vitae tellus.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;/* PostCSS code */&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-css&#34; data-lang=&#34;css&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;/* PostCSS code */&lt;/span&gt;
 
 &lt;span style=&#34;color:#f92672&#34;&gt;pre&lt;/span&gt; {
   &lt;span style=&#34;color:#66d9ef&#34;&gt;background&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;#1a1a1d&lt;/span&gt;;
@@ -143,7 +168,7 @@ Enfim, vamos tentar. Sou bacharel em Direito há alguns poucos anos e Nerd a vid
   &lt;span style=&#34;color:#66d9ef&#34;&gt;overflow&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;auto&lt;/span&gt;;
 
   &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;@media&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;(--phone)&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;white-space&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;pre&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;wrap&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;white-space&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;pre-wrap&lt;/span&gt;;
     &lt;span style=&#34;color:#66d9ef&#34;&gt;word-wrap&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;break-word&lt;/span&gt;;
   }
 
@@ -154,7 +179,7 @@ Enfim, vamos tentar. Sou bacharel em Direito há alguns poucos anos e Nerd a vid
     &lt;span style=&#34;color:#66d9ef&#34;&gt;font-size&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;inherit&lt;/span&gt;;
   }
 &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// JS code
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// JS code
 &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
 &lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;menuTrigger&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; document.&lt;span style=&#34;color:#a6e22e&#34;&gt;querySelector&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;.menu-trigger&amp;#39;&lt;/span&gt;)
 &lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;menu&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; document.&lt;span style=&#34;color:#a6e22e&#34;&gt;querySelector&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;.menu&amp;#39;&lt;/span&gt;)
@@ -170,7 +195,7 @@ Enfim, vamos tentar. Sou bacharel em Direito há alguns poucos anos e Nerd a vid
 &lt;span style=&#34;color:#a6e22e&#34;&gt;menuTrigger&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;addEventListener&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;click&amp;#39;&lt;/span&gt;, () =&amp;gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;menu&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;classList&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;toggle&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;hidden&amp;#39;&lt;/span&gt;))
 
 window.&lt;span style=&#34;color:#a6e22e&#34;&gt;addEventListener&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;resize&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;isMobileMenu&lt;/span&gt;)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- HTML code --&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- HTML code --&amp;gt;&lt;/span&gt;
 
 &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;section&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;main&amp;#34;&lt;/span&gt;&amp;gt;
   &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
