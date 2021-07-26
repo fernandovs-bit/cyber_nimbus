@@ -19,11 +19,11 @@
 }
 .post {
     text-align: justify;
-    word-break: break-all;
+
     word-spacing:-2px;
     text-justify: inter-word;
     /*margin: 20px auto;
-    
+    word-break: break-all;
     padding: 20px 0;*/
 }
 a:-webkit-any-link {
