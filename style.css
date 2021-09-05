@@ -1,3 +1,6 @@
+body {
+	color:#fbfbfb;
+}
 :root {
     --accent: #ffa86a;
     --phoneWidth: (max-width:684px);
@@ -19,13 +22,13 @@
 }
 .post {
     text-align: justify;
-
     word-spacing:-2px;
     text-justify: inter-word;
     /*margin: 20px auto;
     word-break: break-all;
     padding: 20px 0;*/
 }
+
 a:-webkit-any-link {
 
     cursor: pointer;
@@ -39,6 +42,21 @@ a:-webkit-any-link {
     color: rgba(35, 176, 255, 0.7);
     color: rgb(255 255 255 / 70%);
     content-visibility: hidden;
+}
+.post-tags {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    opacity: .5;
+    margin-top: 25px;
+}
+.post-meta {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: rgba(35, 176, 255, 0.7);
+    color: rgb(255 255 255 / 70%);
+    content-visibility: hidden;
+    display:none;
 }
 
 .logo {
