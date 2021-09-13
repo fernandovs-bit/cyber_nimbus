@@ -7,7 +7,158 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <copyright>TCN © 2021 :: Licensed under &lt;a href=http://creativecommons.org/licenses/by-sa/4.0/&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 26 Jul 2021 02:25:55 -0300</lastBuildDate><atom:link href="https://cybernimbus.com.br/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Sep 2021 00:34:56 -0300</lastBuildDate><atom:link href="https://cybernimbus.com.br/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello Markdown</title>
+      <link>https://cybernimbus.com.br/posts/hello-markdown/</link>
+      <pubDate>Mon, 13 Sep 2021 00:34:56 -0300</pubDate>
+      
+      <guid>https://cybernimbus.com.br/posts/hello-markdown/</guid>
+      <description>Blockquotes  Blockquotes are very handy in email to emulate reply text. This line is part of the same quote.
+ Quote break.
+ This is a very long line that will still be quoted properly when it wraps. Oh boy let&amp;rsquo;s keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can put Markdown into a blockquote.
+ Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
+      <content>&lt;h1 id=&#34;blockquotes&#34;&gt;Blockquotes&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Blockquotes are very handy in email to emulate reply text.
+This line is part of the same quote.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Quote break.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is a very long line that will still be quoted properly when it wraps. Oh boy let&amp;rsquo;s keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can &lt;em&gt;put&lt;/em&gt; &lt;strong&gt;Markdown&lt;/strong&gt; into a blockquote.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;emphasis&#34;&gt;Emphasis&lt;/h1&gt;
+&lt;p&gt;Emphasis, aka italics, with &lt;em&gt;asterisks&lt;/em&gt; or &lt;em&gt;underscores&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Strong emphasis, aka bold, with &lt;strong&gt;asterisks&lt;/strong&gt; or &lt;strong&gt;underscores&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Combined emphasis with &lt;strong&gt;asterisks and &lt;em&gt;underscores&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Strikethrough uses two tildes. &lt;del&gt;Scratch this.&lt;/del&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;lists&#34;&gt;Lists&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;First ordered list item&lt;/li&gt;
+&lt;li&gt;Another item
+⋅⋅* Unordered sub-list.&lt;/li&gt;
+&lt;li&gt;Actual numbers don&amp;rsquo;t matter, just that it&amp;rsquo;s a number
+⋅⋅1. Ordered sub-list&lt;/li&gt;
+&lt;li&gt;And another item.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we&amp;rsquo;ll use three here to also align the raw Markdown).&lt;/p&gt;
+&lt;p&gt;⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
+⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
+⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Unordered list can use asterisks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Or minuses&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Or pluses&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;links&#34;&gt;Links&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.google.com&#34;&gt;I&amp;rsquo;m an inline-style link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.google.com&#34; title=&#34;Google&#39;s Homepage&#34;&gt;I&amp;rsquo;m an inline-style link with title&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.mozilla.org&#34;&gt;I&amp;rsquo;m a reference-style link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;../blob/master/LICENSE&#34;&gt;I&amp;rsquo;m a relative reference to a repository file&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://slashdot.org&#34;&gt;You can use numbers for reference-style link definitions&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Or leave it empty and use the &lt;a href=&#34;http://www.reddit.com&#34;&gt;link text itself&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;URLs and URLs in angle brackets will automatically get turned into links.
+&lt;a href=&#34;http://www.example.com&#34;&gt;http://www.example.com&lt;/a&gt; or &lt;a href=&#34;http://www.example.com&#34;&gt;http://www.example.com&lt;/a&gt; and sometimes
+example.com (but not on Github, for example).&lt;/p&gt;
+&lt;p&gt;Some text to show that the reference links can follow later.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;tables&#34;&gt;Tables&lt;/h1&gt;
+&lt;p&gt;Colons can be used to align columns.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Tables&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Are&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Cool&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;col 3 is&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;right-aligned&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;$1600&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;col 2 is&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;centered&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;$12&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;zebra stripes&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;are neat&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;$1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;There must be at least 3 dashes separating each header cell.
+The outer pipes (|) are optional, and you don&amp;rsquo;t need to make the
+raw Markdown line up prettily. You can also use inline Markdown.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Markdown&lt;/th&gt;
+&lt;th&gt;Less&lt;/th&gt;
+&lt;th&gt;Pretty&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;em&gt;Still&lt;/em&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;renders&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;nicely&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;horizontal-rule&#34;&gt;Horizontal Rule&lt;/h1&gt;
+&lt;p&gt;Three or more&amp;hellip;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hyphens, asterisks or underscores&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;credits&#34;&gt;Credits&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://unsplash.com/photos/JNz9bQD3Oio?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditShareLink&#34;&gt;&lt;em&gt;Photo by Florian Olivo on Unsplash&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/rayjolt/hugo-multilingual-example/blob/master/content/post/markdown-cheatsheet.en.md&#34;&gt;rayjolt/hugo-multilingual-example&lt;/a&gt;&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Hello Video</title>
+      <link>https://cybernimbus.com.br/posts/hello-video/</link>
+      <pubDate>Sun, 12 Sep 2021 22:59:27 -0300</pubDate>
+      
+      <guid>https://cybernimbus.com.br/posts/hello-video/</guid>
+      <description>Mussum Ipsum, cacilds vidis litro abertis. Leite de capivaris, leite de mula manquis sem cabeça. Casamentiss faiz malandris se pirulitá. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!
+    Mussum Ipsum, cacilds vidis litro abertis. Leite de capivaris, leite de mula manquis sem cabeça. Casamentiss faiz malandris se pirulitá.</description>
+      <content>&lt;p&gt;Mussum Ipsum, cacilds vidis litro abertis. Leite de capivaris, leite de mula manquis sem cabeça. Casamentiss faiz malandris se pirulitá. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/QOjmvL3e7Lc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;Tokyo Live - Can1 - Shiodome&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;p&gt;Mussum Ipsum, cacilds vidis litro abertis. Leite de capivaris, leite de mula manquis sem cabeça. Casamentiss faiz malandris se pirulitá. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;credits&#34;&gt;Credits&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/channel/UCbTLJi8lXWIt_d1AtRv4Nmw&#34;&gt;&lt;em&gt;Live feed by Tokyo Live Cam&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://unsplash.com/photos/DYLsNF8hNho?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditShareLink&#34;&gt;&lt;em&gt;Photo by Joe Gadd on Unsplash&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
     <item>
       <title>Cyber Nimbus</title>
       <link>https://cybernimbus.com.br/posts/cyber-nimbus/</link>
