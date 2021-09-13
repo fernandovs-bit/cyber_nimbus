@@ -191,7 +191,7 @@
     <label for="1">
       <span class="collapsable-code__language">html</span>
       <span class="collapsable-code__title">Quote blocks with markdown</span>
-      <span class="collapsable-code__toggle" data-label-expand="&#43;" data-label-collapse="-"></span>
+      <span class="collapsable-code__toggle" data-label-expand="▽" data-label-collapse="△"></span>
     </label>
     <pre class="language-html" ><code>
 &gt; Blockquotes are very handy in email to emulate reply text.
@@ -225,7 +225,7 @@ This line is part of the same quote.</p>
     <label for="2">
       <span class="collapsable-code__language">html</span>
       <span class="collapsable-code__title">Emphasis with markdown</span>
-      <span class="collapsable-code__toggle" data-label-expand="&#43;" data-label-collapse="-"></span>
+      <span class="collapsable-code__toggle" data-label-expand="▽" data-label-collapse="△"></span>
     </label>
     <pre class="language-html" ><code>
 Emphasis, aka italics, with *asterisks* or _underscores_.
@@ -256,50 +256,75 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     <label for="3">
       <span class="collapsable-code__language">html</span>
       <span class="collapsable-code__title">Lists with markdown</span>
-      <span class="collapsable-code__toggle" data-label-expand="&#43;" data-label-collapse="-"></span>
+      <span class="collapsable-code__toggle" data-label-expand="▽" data-label-collapse="△"></span>
     </label>
     <pre class="language-html" ><code>
-1. First ordered list item
-2. Another item
-⋅⋅* Unordered sub-list.
-1. Actual numbers don&#39;t matter, just that it&#39;s a number
-⋅⋅1. Ordered sub-list
-4. And another item.
+#### Unordered list
 
-⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we&#39;ll use three here to also align the raw Markdown).
+* Item 1
+* Item 2
+* Item 3
+    * Item 3a
+    * Item 3b
+    * Item 3c
 
-⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
-⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
-⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+#### Ordered list
 
-* Unordered list can use asterisks
-- Or minuses
-&#43; Or pluses
+1. Step 1
+2. Step 2
+3. Step 3
+    1. Step 3.1
+    2. Step 3.2
+    3. Step 3.3
+
+#### List in list
+
+1. Step 1
+2. Step 2
+3. Step 3
+    * Item 3a
+    * Item 3b
+    * Item 3c
 </code></pre>
   </div>
 
 
+<h4 id="unordered-list">Unordered list<a href="#unordered-list" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<ul>
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3
+<ul>
+<li>Item 3a</li>
+<li>Item 3b</li>
+<li>Item 3c</li>
+</ul>
+</li>
+</ul>
+<h4 id="ordered-list">Ordered list<a href="#ordered-list" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
 <ol>
-<li>First ordered list item</li>
-<li>Another item
-⋅⋅* Unordered sub-list.</li>
-<li>Actual numbers don&rsquo;t matter, just that it&rsquo;s a number
-⋅⋅1. Ordered sub-list</li>
-<li>And another item.</li>
+<li>Step 1</li>
+<li>Step 2</li>
+<li>Step 3
+<ol>
+<li>Step 3.1</li>
+<li>Step 3.2</li>
+<li>Step 3.3</li>
 </ol>
-<p>⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we&rsquo;ll use three here to also align the raw Markdown).</p>
-<p>⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
-⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
-⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)</p>
+</li>
+</ol>
+<h4 id="list-in-list">List in list<a href="#list-in-list" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h4>
+<ol>
+<li>Step 1</li>
+<li>Step 2</li>
+<li>Step 3
 <ul>
-<li>Unordered list can use asterisks</li>
+<li>Item 3a</li>
+<li>Item 3b</li>
+<li>Item 3c</li>
 </ul>
-<ul>
-<li>Or minuses</li>
-</ul>
-<ul>
-<li>Or pluses</li>
-</ul>
+</li>
+</ol>
 <ul>
 <li><a href="#postindex">post.INDEX</a></li>
 </ul>
@@ -313,7 +338,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     <label for="4">
       <span class="collapsable-code__language">html</span>
       <span class="collapsable-code__title">Links with markdown</span>
-      <span class="collapsable-code__toggle" data-label-expand="&#43;" data-label-collapse="-"></span>
+      <span class="collapsable-code__toggle" data-label-expand="▽" data-label-collapse="△"></span>
     </label>
     <pre class="language-html" ><code>
 [I&#39;m an inline-style link](https://www.google.com)
@@ -364,7 +389,7 @@ example.com (but not on Github, for example).</p>
     <label for="5">
       <span class="collapsable-code__language">html</span>
       <span class="collapsable-code__title">Tables with markdown</span>
-      <span class="collapsable-code__toggle" data-label-expand="&#43;" data-label-collapse="-"></span>
+      <span class="collapsable-code__toggle" data-label-expand="▽" data-label-collapse="△"></span>
     </label>
     <pre class="language-html" ><code>
 Colons can be used to align columns.
@@ -451,7 +476,7 @@ raw Markdown line up prettily. You can also use inline Markdown.</p>
     <label for="6">
       <span class="collapsable-code__language">html</span>
       <span class="collapsable-code__title">Horizontal Rules</span>
-      <span class="collapsable-code__toggle" data-label-expand="&#43;" data-label-collapse="-"></span>
+      <span class="collapsable-code__toggle" data-label-expand="▽" data-label-collapse="△"></span>
     </label>
     <pre class="language-html" ><code>
 Three or more...
