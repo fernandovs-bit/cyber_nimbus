@@ -21,10 +21,10 @@ body {
     	opacity: 50%;
 }
 .post {
-    text-align: justify;
+    /*text-align: justify;
     word-spacing:-2px;
     text-justify: inter-word;
-    /*margin: 20px auto;
+    margin: 20px auto;
     word-break: break-all;
     padding: 20px 0;*/
 }
@@ -35,6 +35,18 @@ a:-webkit-any-link {
     text-decoration: none;
 
 }
+.post a:link { color: #7099db; }
+.post a:visited { color: darkgrey; }
+.post a:hover { color: #4f7ab0; }
+
+.post-title a:link { color: #fbfbfb; }
+.post-title a:visited { color: #fbfbfb; }
+
+.post-tags a:link { color: #fbfbfb; }
+.post-tags a:visited { color: #fbfbfb; }
+
+.button__text, .button a { color: #fbfbfb; }
+.button__text, .button a:visited { color: #fbfbfb; }
 
 .post-meta {
     font-size: 1rem;
