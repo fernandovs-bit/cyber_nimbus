@@ -50,7 +50,8 @@ Quote break.
 
 &lt;blockquote&gt;
 &lt;p&gt;Blockquotes are very handy in email to emulate reply text.
-This line is part of the same quote.&lt;/p&gt;
+This line is part of the same quote.&amp;gt;Don&amp;rsquo;t communicate by sharing memory, share memory by communicating.
+— footnote exemple&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Quote break.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -356,6 +357,14 @@ Underscores
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#postindex&#34;&gt;post.INDEX&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;thats the footnote&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
 </content>
     </item>
     
@@ -448,7 +457,7 @@ Lorem ipsum dui sem congue ultrices ad eu hac, consequat augue mi nunc primis da
       <content>&lt;p&gt;Lorem ipsum dui sem congue ultrices ad eu hac, consequat augue mi nunc primis dapibus venenatis congue dui, egestas rhoncus habitant nulla eros massa ullamcorper. ultrices cubilia iaculis turpis lorem cursus pretium per habitasse, cubilia suscipit suspendisse pulvinar quis class curabitur, himenaeos suscipit enim imperdiet at feugiat consequat. imperdiet fames ante vel morbi ac dapibus elementum leo, aptent habitant porta habitant laoreet eu morbi neque commodo, sapien consectetur ad dapibus potenti egestas curae. enim justo tortor laoreet orci volutpat at gravida nisi, sed luctus consequat conubia vulputate odio vehicula. donec molestie tristique vestibulum mattis etiam tellus varius habitasse magna gravida, etiam justo quisque commodo tempor justo a blandit mi donec, lacus hac non mattis aptent tristique cras ut donec.&lt;/p&gt;
 &lt;p&gt;Purus lectus commodo etiam tincidunt amet habitasse magna ad egestas, elementum imperdiet odio nam cubilia euismod duis blandit, nunc viverra ornare auctor congue aptent platea vitae. scelerisque class malesuada nulla ligula aliquam neque arcu molestie taciti, augue facilisis aenean mollis euismod netus porttitor sollicitudin, potenti fusce morbi malesuada eros euismod dapibus ornare. dolor eu sagittis donec integer lacus tincidunt condimentum arcu, tellus congue aenean nam dictumst quam aliquet, ornare senectus magna ipsum congue dolor turpis. bibendum neque adipiscing quam facilisis habitant, mollis torquent himenaeos dictum aliquam, ut at pharetra nostra.&lt;/p&gt;
 
-  &lt;img src=&#34;https://cybernimbus.com.br/glitch-text.jpg&#34;  alt=&#34;Hello Friend&#34;  class=&#34;center&#34;  style=&#34;border-radius: 8px;&#34;  /&gt;
+  &lt;img src=&#34;https://cybernimbus.com.br/boringblue.webp&#34;  alt=&#34;Hello Friend&#34;  class=&#34;center&#34;  style=&#34;border-radius: 8px;&#34;  /&gt;
 
 
 &lt;p&gt;Litora turpis etiam rhoncus odio et sit potenti arcu, quis gravida rhoncus mattis pretium velit aptent condimentum, vulputate diam tempor imperdiet mi torquent consequat. varius ornare velit vivamus id dictum faucibus neque velit nisl, dolor et hac neque cubilia nam sapien in congue, dolor suspendisse lectus ipsum vehicula sodales interdum nisi. quisque cras tempor nisl volutpat rutrum sodales, integer quis pretium sapien vehicula tempus iaculis, vulputate turpis aliquam ac praesent. donec ullamcorper blandit cubilia id condimentum fames quisque, suspendisse sem nisl primis nullam nostra ipsum, eu donec vestibulum integer elit fringilla.&lt;/p&gt;
@@ -465,9 +474,27 @@ Lorem ipsum dui sem congue ultrices ad eu hac, consequat augue mi nunc primis da
       <content>&lt;h3 id=&#34;lorem-ipsum&#34;&gt;Lorem Ipsum&lt;/h3&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper bibendum augue, quis venenatis leo. Vestibulum dignissim lacus in turpis porttitor elementum. Aenean nec consequat ex. Phasellus imperdiet nulla ex, et aliquam nulla luctus et. Vestibulum commodo libero nunc, eget sagittis ex sodales et. Aliquam varius sem ac lacus fringilla, vel egestas eros dictum. Nunc convallis maximus pharetra. Duis eget metus ornare, bibendum elit et, porttitor velit. Vestibulum quam erat, iaculis blandit est quis, blandit sagittis ligula. Suspendisse vulputate a est vitae dapibus.&lt;/p&gt;
 &lt;p&gt;Donec accumsan nunc sed sem posuere rutrum. In leo ante, iaculis nec sapien vitae, semper vehicula turpis. Pellentesque iaculis purus quis tortor pretium ultricies. Cras placerat, felis in rhoncus facilisis, urna elit tincidunt est, ac placerat ex sem in urna. Suspendisse at lorem posuere, rhoncus diam vitae, feugiat dolor. Phasellus mollis tempus rutrum. Nam ullamcorper iaculis urna non ornare. Ut auctor odio sit amet dignissim luctus. Sed efficitur dui et lacus aliquet commodo. Aliquam porttitor mi sed quam efficitur, quis egestas sem viverra. Morbi auctor odio lorem, at efficitur mi lobortis sit amet. Donec eget porta odio.&lt;/p&gt;
-&lt;h1 id=&#34;sed-non-elit-at-mi-ornare-iaculis-morbi-ullamcorper-eget-est-eget-pharetra-cras-consectetur-mi-libero-ut-vestibulum-nisi-tristique-vitae-aenean-dignissim-malesuada-facilisis-sed-feugiat-porta-blandit-sed-et-commodo-purus-etiam-tincidunt-ultrices-dapibus-phasellus-vestibulum-nec-ex-eu-tincidunt-nam-lacinia-neque-vel-elementum-vestibulum&#34;&gt;&amp;ldquo;Sed non elit at mi ornare iaculis. Morbi ullamcorper eget est eget pharetra. Cras consectetur mi libero, ut vestibulum nisi tristique vitae. Aenean dignissim malesuada facilisis. Sed feugiat porta blandit. Sed et commodo purus. Etiam tincidunt ultrices dapibus. Phasellus vestibulum nec ex eu tincidunt. Nam lacinia neque vel elementum vestibulum.&amp;rdquo;&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Sed non elit at mi ornare iaculis. Morbi ullamcorper eget est eget pharetra. Cras consectetur mi libero, ut vestibulum nisi tristique vitae. Aenean dignissim malesuada facilisis. Sed feugiat porta blandit. Sed et commodo purus. Etiam tincidunt ultrices dapibus. Phasellus vestibulum nec ex eu tincidunt. Nam lacinia neque vel elementum vestibulum.
+— Quotum Testum&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Don&amp;rsquo;t communicate by sharing memory, share memory by communicating.
+— Rob Pike&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;Donec bibendum ullamcorper elit, sed tempus nunc auctor vel. Morbi laoreet sed ipsum sed vehicula. Nunc non enim quam. Sed malesuada, sapien sed tempor sodales, dolor diam tempor est, ac dignissim eros eros at risus. Pellentesque vestibulum, metus nec elementum ultricies, leo ante sagittis felis, non molestie diam lorem quis ligula. Duis vel luctus dolor. Aenean pharetra augue in risus fringilla, quis placerat magna sagittis. Vestibulum a pellentesque nulla. Nullam ac elementum urna, eget aliquam dui. Pellentesque venenatis tempor elit eu rutrum. Proin ac viverra odio. Duis lobortis pretium laoreet. Morbi mollis sapien vel nibh pellentesque semper.&lt;/p&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper bibendum augue, quis venenatis leo. Vestibulum dignissim lacus in turpis porttitor elementum. Aenean nec consequat ex. Phasellus imperdiet nulla ex, et aliquam nulla luctus et. Vestibulum commodo libero nunc, eget sagittis ex sodales et. Aliquam varius sem ac lacus fringilla, vel egestas eros dictum. Nunc convallis maximus pharetra. Duis eget metus ornare, bibendum elit et, porttitor velit. Vestibulum quam erat, iaculis blandit est quis, blandit sagittis ligula. Suspendisse vulputate a est vitae dapibus.&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;thats the footnote&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;another footnote&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
 </content>
     </item>
     
@@ -495,13 +522,12 @@ Lorem ipsum dui sem congue ultrices ad eu hac, consequat augue mi nunc primis da
       <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://cybernimbus.com.br/about/</guid>
-      <description>tech.INFO Plataforma: HUGO | Tema: terminal
+      <description>tech.INFO Plataforma: HUGO | Tema: terminal | Color Palete: Nord
  Theme made by panr Hi there
 My name is Radek and I&amp;rsquo;m the author of this theme. I made it to help you present your ideas easier.
-We all know how hard is to start something on the web, especially these days. You need to prepare a bunch of stuff, configure them and when that’s done — create the content.
-This theme is pretty basic and covers all of the essentials.</description>
+We all know how hard is to start something on the web, especially these days. You need to prepare a bunch of stuff, configure them and when that’s done — create the content.</description>
       <content>&lt;h1 id=&#34;techinfo&#34;&gt;tech.INFO&lt;/h1&gt;
-&lt;p&gt;Plataforma: &lt;a href=&#34;https://gohugo.io/&#34;&gt;HUGO&lt;/a&gt; | Tema: &lt;a href=&#34;https://themes.gohugo.io/hugo-theme-terminal&#34;&gt;terminal&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Plataforma: &lt;a href=&#34;https://gohugo.io/&#34;&gt;HUGO&lt;/a&gt; | Tema: &lt;a href=&#34;https://themes.gohugo.io/hugo-theme-terminal&#34;&gt;terminal&lt;/a&gt; | Color Palete: &lt;a href=&#34;https://www.nordtheme.com/docs/colors-and-palettes&#34;&gt;Nord&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;theme-made-by-panrhttpstwittercompanr&#34;&gt;Theme made by &lt;a href=&#34;https://twitter.com/panr&#34;&gt;panr&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Hi there&lt;/p&gt;
