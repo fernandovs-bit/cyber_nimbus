@@ -1,8 +1,0 @@
----
-title: "Cyber Nimbus_vid.test"
-date: 2021-09-12T22:37:44-03:00
-draft: true
----
-Look what I can do!
-
-{{< video "/videos/testvid.mp4" "my-5" >}}
