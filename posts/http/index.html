@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>HTTP? :: cyber_nimbus</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Qual o significado da sigla HTTP? Hypertext Transfer Protocol, em português, Protocolo de Transferência de Hipertexto que é o conjunto de regras para a comunicação por meio do Hipertexto, um tipo de texto que pode carregar diferentes dados.  O protocolo HTTP é usado todos os dias para acessar..." />
+<meta name="keywords" content=", " />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://cybernimbus.com.br/posts/http/" />
+
+
+
+
+<link rel="stylesheet" href="https://cybernimbus.com.br/assets/style.css">
+
+  <link rel="stylesheet" href="https://cybernimbus.com.br/assets/blue.css">
+
+
+
+<link rel="stylesheet" href="https://cybernimbus.com.br/style.css">
+
+
+<link rel="apple-touch-icon" href="https://cybernimbus.com.br/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="https://cybernimbus.com.br/img/favicon/favicon-g.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="HTTP?">
+<meta property="og:description" content="Qual o significado da sigla HTTP? Hypertext Transfer Protocol, em português, Protocolo de Transferência de Hipertexto que é o conjunto de regras para a comunicação por meio do Hipertexto, um tipo de texto que pode carregar diferentes dados.  O protocolo HTTP é usado todos os dias para acessar..." />
+<meta property="og:url" content="https://cybernimbus.com.br/posts/http/" />
+<meta property="og:site_name" content="cyber_nimbus" />
+
+  <meta property="og:image" content="https://cybernimbus.com.br/img/cover/board.webp">
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+  <meta property="article:section" content="WebDev" />
+
+
+  <meta property="article:published_time" content="2021-09-29 14:45:04 -0300 -03" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="blue">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    CYBER.NIMBUS
+  </div>
+</a>
+
+    </div>
+    
+      <div class="menu-trigger" >...</div>
+    
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">&gt; about</a></li>
+        
+      
+        
+          <li><a href="/">&gt; home</a></li>
+        
+      
+        
+          <li><a href="/index.xml">&gt; rss</a></li>
+        
+      
+        
+          <li><a href="/tags">&gt; tags</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">&gt; about</a></li>
+      
+    
+      
+        <li><a href="/">&gt; home</a></li>
+      
+    
+      
+        <li><a href="/index.xml">&gt; rss</a></li>
+      
+    
+      
+        <li><a href="/tags">&gt; tags</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+  
+    
+
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://cybernimbus.com.br/posts/http/">HTTP?</a></h1>
+    <div class="post-meta">
+      
+        <span class="post-date">
+        :: NFO :: 29-09-2021 ::
+        </span>
+      
+      
+        <span class="post-author"> by _fav0 ::</span>
+      
+        <span class="post-meta">
+        
+          #<a href="https://cybernimbus.com.br/tags/webdev/">WebDev</a>&nbsp;
+        
+          #<a href="https://cybernimbus.com.br/tags/o-que-%C3%A9/">O que é?</a>&nbsp;
+        
+        </span>
+    </div>
+  
+
+    
+
+  
+
+  
+    <img src="https://cybernimbus.com.br/img/cover/board.webp" class="in-post-cover" alt="HTTP?" />
+  
+  
+
+  <div class="post-content"><div>
+        <h1 id="sumário">Sumário<a href="#sumário" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<ul>
+<li><a href="#https">HTTP</a>
+<ul>
+<li><a href="#visualizando-essa-comunica%C3%A7%C3%A3o">Visualizando essa Comunicação</a>
+<ul>
+<li><a href="#visualizando-com-devtools">Browser DevTools</a></li>
+<li><a href="#visualizando-com-curl">cURL</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="o-que-%C3%A9-http">O que é HTTP?</a>
+<ul>
+<li><a href="#quem-%C3%A9-o-cliente">Cliente</a></li>
+<li><a href="#o-servidor">Servidor</a></li>
+<li><a href="#proxy">Proxy</a></li>
+</ul>
+</li>
+<li><a href="#recursos-http">Recursos HTTP</a>
+<ul>
+<li><a href="#uri">URI</a></li>
+<li><a href="#url">URL</a></li>
+<li><a href="#urn">URN</a></li>
+<li><a href="#revis%C3%A3o-do-resource">Revisão do Resource</a></li>
+</ul>
+</li>
+<li><a href="#mensagens-http">Mensagens HTTP</a></li>
+<li><a href="#http-methods">Métodos HTTP</a>
+<ul>
+<li><a href="#options">OPTIONS</a></li>
+<li><a href="#get">GET</a></li>
+<li><a href="#head">HEAD</a></li>
+<li><a href="#post">POST</a></li>
+<li><a href="#put">PUT</a></li>
+<li><a href="#patch">PATCH</a></li>
+<li><a href="#delete">DELETE</a></li>
+</ul>
+</li>
+<li><a href="#headers">Headers</a>
+<ul>
+<li><a href="#app-devdocs">app.DevDocs</a></li>
+</ul>
+</li>
+<li><a href="#status-code">Status CODE</a></li>
+<li><a href="#cr%C3%A9ditos">Créditos</a></li>
+</ul>
+<hr>
+<h1 id="http">HTTP<a href="#http" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Qual o significado da sigla HTTP? Hypertext Transfer Protocol, em português, Protocolo de Transferência de Hipertexto que é o conjunto de regras para a comunicação por meio do Hipertexto, um tipo de texto que pode carregar diferentes dados.</p>
+<p>O protocolo HTTP é usado todos os dias para acessar sites pela internet, pois é ele que permite a troca de dados na web, entre esses dados estão códigos HTML e CSS, scripts, imagens e vídeos, entre muitos outros, e para cada um desses recursos um pedido é feito.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">sumário</a></li>
+</ul>
+<h1 id="visualizando-essa-comunicação">Visualizando essa comunicação<a href="#visualizando-essa-comunicação" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>No protocolo HTTP tudo funciona com pedidos e respostas, que são chamados em inglês como Request e Response, mandando mensagens nos dois casos.
+No caso das mensagens de pedidos, você precisa de um verbo HTTP, que chamamos de método, que definirá o tipo de pedido que está sendo feito, por exemplo o método GET, vindo do inglês para “pegar”, pegar um recurso, como um URL para algum local da internet, ou o método POST, que serve para criar um recurso.</p>
+<p>Depois do pedido, a resposta traz um Status Code do servidor, que é um código sobre o estado do seu pedido, entre esses códigos estão:</p>
+<ul>
+<li><em>200</em> onde tudo deu certo e sua página foi enviada.</li>
+<li><em>404</em> onde o servidor não conseguiu encontrar o pedido.</li>
+<li><em>301</em> que é um redirecionamento para outro local.</li>
+</ul>
+<p>Além do Status Code, o servidor pode mandar um <em>header</em> e um <em>body</em>.</p>
+<p>Existem coisas que podem estar tanto no Request quanto na Response, que são o header e o body, os Headers são campos informativos, e o body contém conteúdo, podendo ser em forma de HTML ou JSON.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">sumário</a></li>
+</ul>
+<h1 id="visualizando-com-devtools">Visualizando com DevTools<a href="#visualizando-com-devtools" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Uma forma de ver essa comunicação acontecendo na prática, basta utilizarmos as DevTools (f12 no google chrome), mais especificamente a aba &ldquo;Network&rdquo;, inglês para “Rede”.
+Com a aba aberta, podemos entrar em um site, por exemplo o Google, e iremos ver diversas informações aparecendo, se clicarmos na primeira dessas informações podemos ver na íntegra os detalhes sobre o pedido e a resposta.</p>
+<p>Também pode-se ver, que o navegador faz um pedido para cada link, mídia, texto entre outros, e cada pedido tem sua resposta.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">sumário</a></li>
+</ul>
+<h1 id="visualizando-com-curl">Visualizando com cURL<a href="#visualizando-com-curl" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Por mais que já possamos visualizar algumas informações com o DevTools, precisamos de alguns detalhes a mais para trabalhar, então usaremos uma ferramenta adicional, chamada cURL, que já vem instalada em sistemas baseados em UNIX, e no Windows através da ferramenta Git Bash, que também vem com ela.</p>
+<p>Usando o cURL podemos entender alguns conceitos, primeiramente temos que saber que o cURL está fazendo o papel do cliente, ao invés do navegador, com a ferramenta, também conseguimos ver o corpo da resposta, o que não era possível com o DevTools, e para também pegar os headers com o cURL, podemos adicionar -i ao comando antes do link, com o parâmetro -v (verbose) podemos ver todos os headers, tanto os de saída quanto de chegada.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">sumário</a></li>
+</ul>
+<h1 id="o-que-é-o-http">O que é o HTTP?<a href="#o-que-é-o-http" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>O HTTP foi feito pra ser um protocolo simples e fácil de entender para qualquer pessoa. Ele foi baseado na estrutura de cliente/servidor, ou seja, sempre vão ter uma requisição e uma resposta acontecendo, podemos utilizar como exemplo a forma de comprar um lanche, você faz um pedido, especificando a comida que você quer, e o estabelecimento te “responde” com a comida.</p>
+<p>O HTTP foi criado para também ser <em>stateless</em>, traduzindo, não guardar estado, ou seja, ele não vai guardar nenhuma informação, também não existindo nenhuma relação entre as conexões.</p>
+<p>Outra característica do protocolo é ser extensível, podendo fazer diversas trocas de informação entre o cliente e o servidor, conforme a necessidade.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">sumário</a></li>
+</ul>
+<h1 id="quem-é-o-cliente">Quem é o Cliente?<a href="#quem-é-o-cliente" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>O cliente, que na maioria das vezes é o Browser, ou no nosso caso, também pode ser o cURL. O Cliente é a entidade que dá início a toda comunicação com um pedido, fora em algumas poucas exceções. Esses pedidos são feitos através de ações, que usam os métodos do HTTP, como GET, POST, PUT e DELETE.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">sumário</a></li>
+</ul>
+<h1 id="o-servidor">O Servidor<a href="#o-servidor" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>De forma bastante sucinta , o Servidor é basicamente uma máquina em algum lugar do mundo preparada para lidar com as requisições do cliente e mandar uma reposta. A resposta sempre tem um Status Code, e pode ter <em>headers</em> e <em>body</em>.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">sumário</a></li>
+</ul>
+<h1 id="proxy">Proxy<a href="#proxy" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Basicamente, são coisas que ficam entre o Servidor e o Cliente, como exemplo, podemos utilizar o roteador que está servindo internet para você agora. O Proxy pode ter diversas funções, como o cache, para armazenar algumas informações e acelerar o uso. Filtro, para impedir o acesso de alguns sites para um antivírus ou um controle parental, entre outros.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">sumário</a></li>
+</ul>
+<h1 id="recursosresources-http">Recursos/Resources HTTP<a href="#recursosresources-http" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<hr>
+<h1 id="uri">URI<a href="#uri" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Para entendermos como chegar a um endereço, precisamos entender primeiramente como montar um endereço, para isso usamos o URI, sigla para <strong>Uniform Resource Identifier</strong>, Identificador de Recurso Uniforme em português, que serve para identificar um recurso por seu nome ou sua localização.</p>
+<p>O <strong>recurso</strong>, que é o alvo do pedido feito cliente. Um recurso pode ser qualquer coisa identificável, como uma entidade digital, como um e-mail, uma entidade abstrata, como uma sessão e até uma entidade física, como um produto. Se podemos identificar, nomear, endereçar, estamos falando de um recurso na web/intranet.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">sumário</a></li>
+</ul>
+<h1 id="url">URL<a href="#url" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Um recurso pode ser encontrado pelo locator, localizador em português, ou pelo nome, para encontrar com o locator, utilizamos o URL, sigla para <strong>Uniform Resource Locator</strong>, ou seja, toda URL é um URI, mas o contrário não é verdadeiro.</p>
+<p>Toda URL obrigatoriamente precisa de 2 componentes, um protocolo, que é por exemplo o &ldquo;HTTPS&rdquo; em uma URL, e um domínio, que é por exemplo a parte &ldquo;cybernimbus.com.br&rdquo;.</p>
+<p>A URL pode ter alguns outros componentes opcionais, como o subdomínio, como a parte &ldquo;www.&rdquo; antes de alguns URLs, como o Path(cybernimbus.com.br/<strong>posts</strong>), que serve para acessar partes específicas de um site, como os Parâmetros, como a Porta, que é um componente que é adicionado depois do domínio por um carácter :, e também a Âncora, que serve para apontar algum lugar específico de algum documento.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">sumário</a></li>
+</ul>
+<h1 id="urn">URN<a href="#urn" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Para encontrar um recurso pelo nome, ao invés da URL, utiliza-se a URN, <strong>Uniform Resource Name</strong>. Um exemplo de URN é urn:isbn:0451450523, que basicamente contem todas as informações de um livro, porém a URL é bem mais usada na web.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">sumário</a></li>
+</ul>
+<h1 id="revisão-do-resource">Revisão do Resource<a href="#revisão-do-resource" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>O URI (Uniform Resource Identifier) é a forma de encontrar um recurso, que se trata de qualquer entidade identificável, na internet pelo seu nome ou pelo seu local, a forma mais usada é pelo local, usando a URL (Uniform Resource Locator), que possui 2 componentes obrigatórios, o Protocolo e o Domínio, e 5 opcionais, o subdomínio, o Path, os Parâmetros, a Porta e a Âncora, analisados de maneira mais detalhada mais adiante.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">sumário</a></li>
+</ul>
+<h1 id="mensagens-http">Mensagens HTTP<a href="#mensagens-http" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Para existir a comunicação entre o servidor e o cliente precisamos ter mensagens entre eles, que são denominadas HTTP Messages, que existem tanto no request quanto na response. Elas existem desde a versão 1.1 do protocolo HTTP, onde eram feitas em formato de textos legíveis, agora na versão 2, para aprimorar a otimização, serão feitas em uma estrutura binária, mas basicamente estão no mesmo jeito.</p>
+<ul>
+<li><strong>Request/Pedido</strong>: A mensagem do pedido consiste no método, por exemplo GET, a versão do protocolo e a URI, dependendo do método usado, pode se levar headers e body.</li>
+<li><strong>Response/Resposta</strong>: A mensagens de resposta tem a versão do protocolo, o status code, os headers e a status message.</li>
+</ul>
+<ul>
+<li><a href="#sum%C3%A1rio">sumário</a></li>
+</ul>
+<h1 id="http-methods">HTTP Methods<a href="#http-methods" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Os Métodos, ou verbos do HTTP que apesar de poderem ser chamados assim não necessariamente tem formato de verbos. Eles servem para indicar o intuito da operação que o cliente está realizando, e cada um possui seu significado. Ou seja, indica a ação que o cliente deseja operar.</p>
+<p>Os métodos podem ter 2 características, seguro e idempotente. Métodos seguros não alteram o servidor, são de apenas leitura, então não apresentam carga extra para o servidor e são mantidos seguros por ele, métodos considerados seguros são: GET, HEAD e OPTIONS.</p>
+<p>Os métodos Idempotentes são os métodos que não mudam de resposta, por isso a parte de “idem” no nome, mas podem ter status code diferentes, vale ressaltar que os métodos idempotentes são todos os métodos deveriam ser seguros, entretanto deve se levar em conta algumas observações em relação ao PUT e DELETE.</p>
+<ul>
+<li>
+<p>Seguros</p>
+<ul>
+<li>Não alteram o estado do servidor.</li>
+<li>Somente leitura.</li>
+<li>Cliente não solicita alterações.</li>
+<li>Não há carga extra para o servidor.</li>
+<li>O servidor é responsável em manter o método seguro.
+<ul>
+<li>GET</li>
+<li>HEAD</li>
+<li>OPTIONS</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Idempotentes</p>
+<ul>
+<li>Ao executar o método, a resposta deverá ser a mesma.</li>
+<li>Status code poderá ser diferente.</li>
+<li>O servidor tem a responsabilidade da mesma maneira.</li>
+<li>Essa especificação não é garantia de que todos os servidores aplicarão o conceito corretamente.</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">MÉTODO</th>
+<th style="text-align:center">IDEMPOTENTE</th>
+<th style="text-align:center">SEGURO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">GET</td>
+<td style="text-align:center"><code>SIM</code></td>
+<td style="text-align:center"><code>SIM</code></td>
+</tr>
+<tr>
+<td style="text-align:center">POST</td>
+<td style="text-align:center">NÃO</td>
+<td style="text-align:center">NÃO</td>
+</tr>
+<tr>
+<td style="text-align:center">PUT</td>
+<td style="text-align:center"><code>SIM</code></td>
+<td style="text-align:center">NÃO</td>
+</tr>
+<tr>
+<td style="text-align:center">DELETE</td>
+<td style="text-align:center"><code>SIM</code></td>
+<td style="text-align:center">NÃO</td>
+</tr>
+<tr>
+<td style="text-align:center">HEAD</td>
+<td style="text-align:center"><code>SIM</code></td>
+<td style="text-align:center"><code>SIM</code></td>
+</tr>
+<tr>
+<td style="text-align:center">OPTIONS</td>
+<td style="text-align:center"><code>SIM</code></td>
+<td style="text-align:center"><code>SIM</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><a href="#sum%C3%A1rio">sumário</a></li>
+</ul>
+<h1 id="options">OPTIONS<a href="#options" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>O método OPTIONS, que é um verbo HTTP que <strong>irá nos dar informações sobre a disponibilidade dos métodos da requisição.</strong> Ele é um método seguro, pois não faz alteração alguma, e é idempotente, pois sempre retornará a mesma coisa para a mesma requisição, o OPTIONS não manda nem recebe um body, não é usado em formulários e nem é cacheable.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">sumário</a></li>
+</ul>
+<h1 id="get">GET<a href="#get" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>O método GET, <strong>serve para pegar um recurso, ou seja, só pode receber dados.</strong> Ele é um método seguro e idempotente, que não pode enviar um Body no request, mas pode receber no response, ele também pode ser cacheable e é utilizado em alguns formulários.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">sumário</a></li>
+</ul>
+<h1 id="head">HEAD<a href="#head" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>O método HEAD, que é <strong>semelhante ao GET, porém é recebido somente o cabeçalho.</strong> Ele é um método seguro e idempotente, não tem body nem no envio nem na resposta, não é usado em formulários e é cacheable.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">sumário</a></li>
+</ul>
+<h1 id="post">POST<a href="#post" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Sobre o método POST, que vem do inglês <em>to post</em>, <strong>serve para publicar ou cadastrar um recurso.</strong> Ele não é seguro nem idempotente, pois muda as informações no servidor e não receberá a mesma resposta de uma mesma requisição, o verbo POST tem Body tanto na requisição quanto na resposta, pode ser usado em formulários e é cacheable.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">sumário</a></li>
+</ul>
+<h1 id="put">PUT<a href="#put" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>O método PUT, que <strong>serve para criar ou atualizar por completo um recurso, porém, diferentemente do POST é idempotente e normalmente usado para atualizar recursos.</strong> O status code de criação do PUT é 201, e o de atualização é o 204 ou 200. O verbo PUT não é seguro, pois altera dados no servidor, mas é idempotente, tem Body na requisição mas não na resposta e não é usado em formulários nem é cacheable.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">sumário</a></li>
+</ul>
+<h1 id="patch">PATCH<a href="#patch" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>O método PATCH, que <strong>serve para modificar parcialmente um recurso, diferentemente do PUT, que é usado para modificar o recurso inteiro.</strong> Ele não é um verbo seguro nem idempotente, e recebe um Body tanto na requisição quanto resposta, não é usado em formulários e não é cacheable.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">sumário</a></li>
+</ul>
+<h1 id="delete">DELETE<a href="#delete" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>O método DELETE, que <strong>serve para remover um recurso</strong>, e pode ser respondido com o código 202, que não foi processado mas já foi aceito, 204, que significa que o recurso não existe e 200, que significa que o conteúdo foi deletado. Ele não é um método seguro, mas é idempotente, tem a possibilidade de receber Body tanto na requisição quanto na resposta, não é usado em formulários e não é cacheable.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">sumário</a></li>
+</ul>
+<h1 id="headers">HEADERS<a href="#headers" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Header significa cabeçalho, e <strong>se trata de uma série de informações adicionais para o pedido ou reposta</strong> e geralmente é estruturado da forma &ldquo;nome: valor&rdquo;, por exemplo o Content-type: application/json.</p>
+<p>Para facilitar nossos estudos, vamos dividir os Headers por contextos. Para ver as categorias em prática, abra o DevTools na aba Network e abra o site do Google, onde você poderá clicar no primeiro campo e ver que aparecem 3 listas: General, Response Headers e Request Headers.</p>
+<p>A maioria dos frameworks já vem com alguns headers pré-estabelecidos, mas nesse módulo vamos aprender também como se aprofundar neste conteúdo e procurar mais conhecimento.</p>
+<ul>
+<li>Request e Response
+<ul>
+<li>a aba dos cabeçalhos de request, podemos ver vários headers, como o :authority:, que é a autoridade do pedido, o :method:, que é o método do pedido, o :path:, que é o caminho do pedido, o :schema:, que é o esquema que foi usado, o accept, que é o que é aceito, accept-encoding, que são os tipos de compressão usados, cookie, que são rastros deixados para a próxima conexão, entre outros. O mesmo se aplica para a categoria de <em>response</em>.</li>
+</ul>
+</li>
+</ul>
+<h1 id="app-devdocs">app DevDocs<a href="#app-devdocs" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Devido a grande quantidade de cabeçalhos disponíveis e a impossibilidade de listarmos todos eles nesse post, recomendo a utilização do app <a href="https://devdocs.io/">DevDocs</a>, que basicamente serve para buscar informações sobre diversos frameworks, headers, etc. Uma documentação muito completa, online e offline. Porém, tudo está em inglês, mas pode-se ir usando ferramentas de tradução para facilitar o entendimento</p>
+<ul>
+<li><a href="#sum%C3%A1rio">sumário</a></li>
+</ul>
+<h1 id="status-code">Status CODE<a href="#status-code" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Por se tratar de um conteúdo vasto, assim como os headers logo acima, trataremos apenas dos <em>status code</em> mais comuns. Dessa forma, deve-se saber que a <strong>proposta do status code é ser uma comunicação mais clara entre o back-end com o cliente.</strong></p>
+<ul>
+<li>Os status code do tipo 100 servem pra mostrar que a operação pode ser continuada sem problemas.</li>
+<li><strong>Os status code do tipo 200 podem significar:</strong>
+<ul>
+<li>200 em si, significa que tudo está ok (GET e POST)</li>
+<li>201 significa que o recurso foi criado (PUT)</li>
+<li>204 significa que não há conteúdo (PUT e DELETE).</li>
+</ul>
+</li>
+<li><strong>Os status code do tipo 300 podem significar:</strong>
+<ul>
+<li>301 significa movido permanentemente</li>
+<li>308 significa redirecionamento permanente</li>
+<li>302 significa uma mudança temporária assim como o 307.</li>
+</ul>
+</li>
+<li><strong>Os status code o tipo 400 podem significar:</strong>
+<ul>
+<li>400 significa que o pedido foi mal efetuado</li>
+<li>401 significa que o pedido não teve autorização</li>
+<li>403 significa que a autorização foi negada</li>
+<li>404 que o pedido não foi encontrado</li>
+<li>405 significa que o método usado não é permitido</li>
+<li>429 que significa que foram efetuados muitos pedidos.</li>
+</ul>
+</li>
+<li><strong>Os do tipo 500:</strong> 500, que significa que ocorreu um erro desconhecido no servidor e o 503, que significa que o servidor está indisponível no momento.</li>
+</ul>
+<p>Saliento mais uma vez a importância da utilização do aplicativo <a href="https://devdocs.io/http/response_codes">DevDocs</a>, pois a partir de agora, será um auxiliar fundamental no processo de aprendizagem.</p>
+<p>Por fim, vale ressaltar a importância e relevância do HTTP para entendermos como as aplicações web se comunicam com os usuários e entre si, também como seu entendimento mais aprofundado resultará em trabalhos de qualidade excepcional.</p>
+<p>Em postagens futuras, ainda abordaremos o HTML, CSS, JavaScript, GIT e GITHUB.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">sumário</a></li>
+</ul>
+<hr>
+<h1 id="créditos">Créditos<a href="#créditos" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Fonte: <a href="https://rocketseat.com.br/">ROCKETSEAT</a></p>
+
+      </div></div>
+
+  
+  
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">...</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        <span class="button previous">
+            <a href="https://cybernimbus.com.br/posts/html/">
+                <span class="button__icon">←</span>
+                <span class="button__text">HTML?</span>
+            </a>
+        </span>
+        
+        
+        <span class="button next">
+            <a href="https://cybernimbus.com.br/posts/web-e-dev/">
+                <span class="button__text">WEB e DEV?</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>TCN © 2021 :: Licensed under <a href=http://creativecommons.org/licenses/by-sa/4.0/>CC BY-SA 4.0</a></span>
+    
+        <span></span>
+      </div>
+  </div>
+</footer>
+
+<script src="https://cybernimbus.com.br/assets/main.js"></script>
+<script src="https://cybernimbus.com.br/assets/prism.js"></script>
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

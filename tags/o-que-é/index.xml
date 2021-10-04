@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>O que é? on cyber_nimbus</title>
+    <link>https://cybernimbus.com.br/tags/o-que-%C3%A9/</link>
+    <description>Recent content in O que é? on cyber_nimbus</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>TCN © 2021 :: Licensed under &lt;a href=http://creativecommons.org/licenses/by-sa/4.0/&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 29 Sep 2021 15:50:58 -0300</lastBuildDate><atom:link href="https://cybernimbus.com.br/tags/o-que-%C3%A9/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HTML?</title>
+      <link>https://cybernimbus.com.br/posts/html/</link>
+      <pubDate>Wed, 29 Sep 2021 15:50:58 -0300</pubDate>
+      
+      <guid>https://cybernimbus.com.br/posts/html/</guid>
+      <description>Sumário  Início VSCode e VSCodium Comentários Anatomia das Tags Atributos Atributos Globais  class contenteditable data-* hidden id style tabindex title   Aninhamento - Hierarquia Anatomia - Documento Créditos  Início O tema desta nova postagem que trata de conceitos inicias e basilares do desenvolvimento web, é sobre o HTML e seus conceitos essenciais, tags, atributos, aninhamentos, hierarquias de tags, elementos de diretórios e muito mais.
+VS Code? O Visual Studio Code (VS Code) é um editor de código aberto desenvolvido pela Microsoft.</description>
+      <content>&lt;h1 id=&#34;sumário&#34;&gt;Sumário&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#in%C3%ADcio&#34;&gt;Início&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#vs-code&#34;&gt;VSCode e VSCodium&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#coment%C3%A1rios&#34;&gt;Comentários&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#anatomia-das-tags&#34;&gt;Anatomia das Tags&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#atributos&#34;&gt;Atributos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#atributos-globais&#34;&gt;Atributos Globais&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#class&#34;&gt;class&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#contenteditable&#34;&gt;contenteditable&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-&#34;&gt;data-*&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#hidden&#34;&gt;hidden&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#id&#34;&gt;id&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#style&#34;&gt;style&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#tabindex&#34;&gt;tabindex&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#title&#34;&gt;title&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#aninhamento---hierarquia&#34;&gt;Aninhamento - Hierarquia&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#anatomia-de-um-documento&#34;&gt;Anatomia - Documento&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#cr%C3%A9ditos&#34;&gt;Créditos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;início&#34;&gt;Início&lt;/h1&gt;
+&lt;p&gt;O tema desta nova postagem que trata de conceitos inicias e basilares do desenvolvimento web, é sobre o HTML e seus conceitos essenciais, tags, atributos, aninhamentos, hierarquias de tags, elementos de diretórios e muito mais.&lt;/p&gt;
+&lt;h1 id=&#34;vs-code&#34;&gt;VS Code?&lt;/h1&gt;
+&lt;p&gt;O Visual Studio Code (VS Code) é um editor de código aberto desenvolvido pela Microsoft. A saber, ele está disponível para Windows, Mac e Linux. É criado com Electron, ferramenta criada pelo GitHub (adquirido pela MS) que permite a criação de softwares Desktop com **HTMLc, &lt;strong&gt;CSS&lt;/strong&gt; e &lt;strong&gt;JavaScript&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Este é o editor que eu prefiro e utilizo, mas sinta-se a vontade para escolher qualquer outro disponível no mercado. O principal objetivo aqui, é você se sentir a vontade com seu editor, o que trará maior fluides no seu estudo também como um ganho significativo na sua produtividade.&lt;/p&gt;
+&lt;p&gt;Um detalhe importante sobre o VS Code e das suas configurações, são as que tratam da telemetria de utilização do app enviadas à Microsoft, caso isso seja um problema para você, é possível desativá-las nas configurações ou até mesmo baixar uma versão do aplicativo onde elas já venham desativadas por padrão, que é a proposta do &lt;a href=&#34;https://vscodium.com/&#34;&gt;VSCodium&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Outra coisa que precisaremos acrescentar no VS Code, visto que trataremos de HTML nesse momento, é uma extensão que nos permita pré-visualizar o código html. Portanto, na seção de &lt;em&gt;plguins&lt;/em&gt; do VS Code, que fica na barra lateral da esquerda em seu último ícone, no campo de pesquisa procure por &amp;ldquo;HTML Preview&amp;rdquo; e instale a extensão.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;É de suma importância que ao decorrer desse post, tudo que se tratar de código escrito, recomendo que você os copie e cole no seu VS Code, vendo como eles funcionam na prática. Fique a vontade também para modificá-los.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;html&#34;&gt;HTML?&lt;/h1&gt;
+&lt;p&gt;HTML é um acrônimo para Hypertext (hipertexto) Markup (marcação) Language (linguagem), ela não é uma linguagem de programação em si, porém é uma linguagem na forma de escrever, tendo sintaxe e semântica.&lt;/p&gt;
+&lt;p&gt;Hypertext é uma marcação específica que nos leva a outro texto, isso mais no passado, agora sendo relacionado a imagens, a vídeos. Bastante simples usar o HTML, podemos ver ele clicando com o botão direito em qualquer página na internet e selecionando a opção &amp;ldquo;view Page Source/ver código fonte&amp;rdquo;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;comentários&#34;&gt;Comentários&lt;/h1&gt;
+&lt;p&gt;Os comentários terão grande utilidade em nossos códigos, muitas vezes nos auxiliando em códigos mais extensos, sua utilização é bastante simples, para abrir um comentário, faremos o seguinte:&lt;/p&gt;
+
+
+
+  &lt;div class=&#34;collapsable-code&#34;&gt;
+    &lt;input id=&#34;1&#34; type=&#34;checkbox&#34; checked /&gt;
+    &lt;label for=&#34;1&#34;&gt;
+      &lt;span class=&#34;collapsable-code__language&#34;&gt;html&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__title&#34;&gt;comentário html&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;▽&#34; data-label-collapse=&#34;△&#34;&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;pre class=&#34;language-html&#34; &gt;&lt;code&gt;
+&amp;lt;!-- cometários 
+O conteúdo escrito dentro do comentário, 
+    não aparecerá como conteúdo no seu código html.
+--&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;anatomia-das-tags&#34;&gt;Anatomia das Tags&lt;/h1&gt;
+&lt;p&gt;Neste tópico, veremos o que constitui o Markup do HTML, as Tags.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;h1&lt;/span&gt;&amp;gt; TÍTULO &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;h1&lt;/span&gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Você faz a abertura delas, coloca o nome da Tag e as fecha como no exemplo acima. No caso dessa Tag, seu conteúdo é de título, juntando a abertura, fechamento e o conteúdo, teremos um Elemento HTML.&lt;/p&gt;
+&lt;p&gt;Existe também Elementos vazios, que diferente do exemplo acima, não fecham daquela forma, mas assim:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;img&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;alt&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Essa tag, &lt;code&gt;img&lt;/code&gt; utilizada para imagem, possuí atributos adicionais e que terão o seu funcionamento vistos mais a adiante.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;atributos&#34;&gt;Atributos&lt;/h1&gt;
+&lt;p&gt;Os atributos booleanos, aqueles que não precisam de conteúdo, pois por serem booleanos possuem apenas dois tipos de valores, verdadeiro ou falso, não havendo texto, apenas essas duas opções.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;input&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;disabled&lt;/span&gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Outro fator que devemos levar em consideração são as aspas, recomendado apenas o uso das aspas duplas, para não desencadear problemas no código.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;atributos-globais&#34;&gt;Atributos Globais&lt;/h1&gt;
+&lt;p&gt;Atributos globais (veremos apenas os mais utilizados), são atributos aplicáveis em todas as Tags, sendo as principais:&lt;/p&gt;
+&lt;h6 id=&#34;class&#34;&gt;&lt;em&gt;class&lt;/em&gt;&lt;/h6&gt;
+&lt;p&gt;além de classificar as Tags, é usada para aplicar estilo css e também para acessar com o Java Script.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;conteúdo&amp;#34;&lt;/span&gt;&amp;gt;
+&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h6 id=&#34;contenteditable&#34;&gt;&lt;em&gt;contenteditable&lt;/em&gt;&lt;/h6&gt;
+&lt;p&gt;usado para editar o conteúdo da página, porém não é mantido após salvar.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;contentedtable&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&amp;gt;
+&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h6 id=&#34;data-&#34;&gt;&lt;em&gt;data-&lt;/em&gt;&lt;/h6&gt;
+&lt;p&gt;usado para expandir os tipos de atributos que podemos usar para fazer mais tarde lógica no Java Script , utilizado em css também.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;data-qualquercoisaaqui&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&amp;gt;
+ &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--    escrito com &amp;#34;-&amp;#34; ou tudo junto. --&amp;gt;&lt;/span&gt;
+&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h6 id=&#34;hidden&#34;&gt;&lt;em&gt;hidden&lt;/em&gt;&lt;/h6&gt;
+&lt;p&gt;usado para esconder uma Tag.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;carrinho&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;hidden&lt;/span&gt;&amp;gt;
+conteúdo
+&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h6 id=&#34;id&#34;&gt;&lt;em&gt;id&lt;/em&gt;&lt;/h6&gt;
+&lt;p&gt;usado apenas 1 por Tag para identificação, podendo também mais tarde utilizar no Java Script e CSS.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;texto&amp;#34;&lt;/span&gt;&amp;gt;
+conteúdo
+&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+
+&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;texto2&amp;#34;&lt;/span&gt;&amp;gt;
+conteúdo
+&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h6 id=&#34;style&#34;&gt;&lt;em&gt;style&lt;/em&gt;&lt;/h6&gt;
+&lt;p&gt;aplica a estilização na Tag, normalmente não se usa &amp;ldquo;style&amp;rdquo; dentro da Tag, mas sim em arquivos externos.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color: red&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h6 id=&#34;tabindex&#34;&gt;&lt;em&gt;tabindex&lt;/em&gt;&lt;/h6&gt;
+&lt;p&gt;usado para ordenar o Tab na página.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;tabindex&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;3&amp;#34;&lt;/span&gt;&amp;gt;
+&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+
+&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;tabindex&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&amp;gt;
+&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+
+&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;tabindex&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2&amp;#34;&lt;/span&gt;&amp;gt;
+&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h6 id=&#34;title&#34;&gt;&lt;em&gt;title&lt;/em&gt;&lt;/h6&gt;
+&lt;p&gt;serve para definir um título para a Tag, que aparece quando colocamos o mouse descansando em cima do conteúdo da página.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;aqui vai o título&amp;#34;&lt;/span&gt;&amp;gt;
+    conteudo
+    &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para estudo de mais Atributos Globais, visite o site &lt;a href=&#34;https://developer.mozilla.org/pt-BR/&#34;&gt;DEVELOPER.MOZILA.ORG&lt;/a&gt; que é uma ótima fonte de conhecimento devido à grandiosidade e facilidade de acesso ao material para estudo.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;aninhamento---hierarquia&#34;&gt;Aninhamento - Hierarquia&lt;/h1&gt;
+&lt;p&gt;Aninhamento em HTML significa colocar uma tag dentro da outra, porém não é se trata de uma tag qualquer, existe uma hierarquia por trás delas que deverão ser seguidas, por exemplo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt; 
+    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;em&lt;/span&gt;&amp;gt;texto&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;em&lt;/span&gt;&amp;gt;
+    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt; texto2&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt; 
+  &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Podemos ver no exemplo acima que a tag &lt;code&gt;&amp;lt;em&amp;gt;&amp;lt;/em&amp;gt;&lt;/code&gt;(usada para dar ênfase em um texto) é pertencente a Tag &lt;code&gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&lt;/code&gt;(usada para criar um parágrafo). Nota-se também que há um fluxo, onde as tags são lidas por ordem de cima para baixo.&lt;/p&gt;
+&lt;p&gt;Por fim, no posicionamento dos elementos, podemos ver que a tag &lt;code&gt;&amp;lt;em&amp;gt;&amp;lt;/em&amp;gt;&lt;/code&gt; não está em uma outra linha como na tag &lt;code&gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&lt;/code&gt;, existem tags que quebram a linha, então mesmo que colocarmos a tag &lt;code&gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&lt;/code&gt; uma do lado da outra, visualmente o resultado será a quebra de linha.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;caracteres-reservados&#34;&gt;Caracteres Reservados&lt;/h1&gt;
+&lt;p&gt;Caracteres reservado são caracteres usados no próprio HTML, como &lt;code&gt;&amp;lt; &amp;gt; &amp;amp; &amp;quot; &amp;quot; &#39; &#39;&lt;/code&gt;. Não será possível utilizarmos elas no conteúdo, pois dão erro, mesmo que apareçam na pré-visualização o navegador vai tentar ler esses caracteres de alguma forma que faça sentido. Para usarmos precisamos trocá-los por outras formas de escrever. Faça o teste em algum documento .html para ver seu funcionamento na prática,:
+
+
+
+  &lt;div class=&#34;collapsable-code&#34;&gt;
+    &lt;input id=&#34;2&#34; type=&#34;checkbox&#34; checked /&gt;
+    &lt;label for=&#34;2&#34;&gt;
+      &lt;span class=&#34;collapsable-code__language&#34;&gt;html&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__title&#34;&gt;Caracteres Reservados&lt;/span&gt;
+      &lt;span class=&#34;collapsable-code__toggle&#34; data-label-expand=&#34;▽&#34; data-label-collapse=&#34;△&#34;&gt;&lt;/span&gt;
+    &lt;/label&gt;
+    &lt;pre class=&#34;language-html&#34; &gt;&lt;code&gt;
+&amp;lt;p&amp;gt;
+    &amp;amp;lt; 
+    os espaços 
+    &amp;amp;gt; 
+    &amp;amp;amp; 
+    
+    &amp;lt;br&amp;gt; 
+    &amp;amp;quot; que colocamos   
+    &amp;amp;quot;
+    &amp;lt;br&amp;gt; 
+    &amp;amp;apos; além das quebras de linha são 
+    ignorados
+
+&amp;lt;/p&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;anatomia-de-um-documento&#34;&gt;Anatomia de um Documento&lt;/h1&gt;
+&lt;p&gt;Se abrirmos o documento .html pelo navegador estaremos vendo a página como ela deve ser mostrada ao utilizador, mas se clicarmos em ver o código fonte dela, estaremos vendo o HTML puro. Para testarmos isso na prática, veremos a anatomia de um documento HTML, vide o exemplo abaixo.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt;&amp;gt;
+    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;head&lt;/span&gt;&amp;gt;
+        &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;meta&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;charset&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;utf-8&amp;#34;&lt;/span&gt;&amp;gt;
+        &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;&amp;gt;Anatomia do Documento&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;&amp;gt;
+    &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;head&lt;/span&gt;&amp;gt;
+
+    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
+        &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;h1&lt;/span&gt;&amp;gt;Título&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;h1&lt;/span&gt;&amp;gt;
+        &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt;
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt;
+        &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt;
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt;
+    &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
+&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;O padrão seria esta forma.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/code&gt; — diz ao navegador que estamos trabalhando com HTML 5.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;html&amp;gt;&amp;lt;/html&amp;gt;&lt;/code&gt; — o próprio HTML, elemento raiz, o início da cadeia.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;&lt;/code&gt; — contém configurações importantes para página, mas não ainda o que o usuário vai ver.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;meta&amp;gt;&lt;/code&gt; — onde vai representar vários tipos de metadados da página.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;&lt;/code&gt; — título da página.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;body&amp;gt;&amp;lt;/body&amp;gt;&lt;/code&gt; — onde haverá conteúdo visual da página.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;créditos&#34;&gt;Créditos&lt;/h1&gt;
+&lt;p&gt;Fonte: &lt;a href=&#34;https://rocketseat.com.br/&#34;&gt;ROCKETSEAT&lt;/a&gt;&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>HTTP?</title>
+      <link>https://cybernimbus.com.br/posts/http/</link>
+      <pubDate>Wed, 29 Sep 2021 14:45:04 -0300</pubDate>
+      
+      <guid>https://cybernimbus.com.br/posts/http/</guid>
+      <description>Sumário  HTTP  Visualizando essa Comunicação  Browser DevTools cURL     O que é HTTP?  Cliente Servidor Proxy   Recursos HTTP  URI URL URN Revisão do Resource   Mensagens HTTP Métodos HTTP  OPTIONS GET HEAD POST PUT PATCH DELETE   Headers  app.DevDocs   Status CODE Créditos   HTTP Qual o significado da sigla HTTP? Hypertext Transfer Protocol, em português, Protocolo de Transferência de Hipertexto que é o conjunto de regras para a comunicação por meio do Hipertexto, um tipo de texto que pode carregar diferentes dados.</description>
+      <content>&lt;h1 id=&#34;sumário&#34;&gt;Sumário&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#https&#34;&gt;HTTP&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#visualizando-essa-comunica%C3%A7%C3%A3o&#34;&gt;Visualizando essa Comunicação&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#visualizando-com-devtools&#34;&gt;Browser DevTools&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#visualizando-com-curl&#34;&gt;cURL&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;o-que-%C3%A9-http&#34;&gt;O que é HTTP?&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#quem-%C3%A9-o-cliente&#34;&gt;Cliente&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#o-servidor&#34;&gt;Servidor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#proxy&#34;&gt;Proxy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#recursos-http&#34;&gt;Recursos HTTP&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#uri&#34;&gt;URI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#url&#34;&gt;URL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#urn&#34;&gt;URN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#revis%C3%A3o-do-resource&#34;&gt;Revisão do Resource&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#mensagens-http&#34;&gt;Mensagens HTTP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#http-methods&#34;&gt;Métodos HTTP&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#options&#34;&gt;OPTIONS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#get&#34;&gt;GET&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#head&#34;&gt;HEAD&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#post&#34;&gt;POST&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#put&#34;&gt;PUT&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#patch&#34;&gt;PATCH&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#delete&#34;&gt;DELETE&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#headers&#34;&gt;Headers&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#app-devdocs&#34;&gt;app.DevDocs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#status-code&#34;&gt;Status CODE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#cr%C3%A9ditos&#34;&gt;Créditos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;http&#34;&gt;HTTP&lt;/h1&gt;
+&lt;p&gt;Qual o significado da sigla HTTP? Hypertext Transfer Protocol, em português, Protocolo de Transferência de Hipertexto que é o conjunto de regras para a comunicação por meio do Hipertexto, um tipo de texto que pode carregar diferentes dados.&lt;/p&gt;
+&lt;p&gt;O protocolo HTTP é usado todos os dias para acessar sites pela internet, pois é ele que permite a troca de dados na web, entre esses dados estão códigos HTML e CSS, scripts, imagens e vídeos, entre muitos outros, e para cada um desses recursos um pedido é feito.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;visualizando-essa-comunicação&#34;&gt;Visualizando essa comunicação&lt;/h1&gt;
+&lt;p&gt;No protocolo HTTP tudo funciona com pedidos e respostas, que são chamados em inglês como Request e Response, mandando mensagens nos dois casos.
+No caso das mensagens de pedidos, você precisa de um verbo HTTP, que chamamos de método, que definirá o tipo de pedido que está sendo feito, por exemplo o método GET, vindo do inglês para “pegar”, pegar um recurso, como um URL para algum local da internet, ou o método POST, que serve para criar um recurso.&lt;/p&gt;
+&lt;p&gt;Depois do pedido, a resposta traz um Status Code do servidor, que é um código sobre o estado do seu pedido, entre esses códigos estão:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;200&lt;/em&gt; onde tudo deu certo e sua página foi enviada.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;404&lt;/em&gt; onde o servidor não conseguiu encontrar o pedido.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;301&lt;/em&gt; que é um redirecionamento para outro local.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Além do Status Code, o servidor pode mandar um &lt;em&gt;header&lt;/em&gt; e um &lt;em&gt;body&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Existem coisas que podem estar tanto no Request quanto na Response, que são o header e o body, os Headers são campos informativos, e o body contém conteúdo, podendo ser em forma de HTML ou JSON.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;visualizando-com-devtools&#34;&gt;Visualizando com DevTools&lt;/h1&gt;
+&lt;p&gt;Uma forma de ver essa comunicação acontecendo na prática, basta utilizarmos as DevTools (f12 no google chrome), mais especificamente a aba &amp;ldquo;Network&amp;rdquo;, inglês para “Rede”.
+Com a aba aberta, podemos entrar em um site, por exemplo o Google, e iremos ver diversas informações aparecendo, se clicarmos na primeira dessas informações podemos ver na íntegra os detalhes sobre o pedido e a resposta.&lt;/p&gt;
+&lt;p&gt;Também pode-se ver, que o navegador faz um pedido para cada link, mídia, texto entre outros, e cada pedido tem sua resposta.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;visualizando-com-curl&#34;&gt;Visualizando com cURL&lt;/h1&gt;
+&lt;p&gt;Por mais que já possamos visualizar algumas informações com o DevTools, precisamos de alguns detalhes a mais para trabalhar, então usaremos uma ferramenta adicional, chamada cURL, que já vem instalada em sistemas baseados em UNIX, e no Windows através da ferramenta Git Bash, que também vem com ela.&lt;/p&gt;
+&lt;p&gt;Usando o cURL podemos entender alguns conceitos, primeiramente temos que saber que o cURL está fazendo o papel do cliente, ao invés do navegador, com a ferramenta, também conseguimos ver o corpo da resposta, o que não era possível com o DevTools, e para também pegar os headers com o cURL, podemos adicionar -i ao comando antes do link, com o parâmetro -v (verbose) podemos ver todos os headers, tanto os de saída quanto de chegada.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;o-que-é-o-http&#34;&gt;O que é o HTTP?&lt;/h1&gt;
+&lt;p&gt;O HTTP foi feito pra ser um protocolo simples e fácil de entender para qualquer pessoa. Ele foi baseado na estrutura de cliente/servidor, ou seja, sempre vão ter uma requisição e uma resposta acontecendo, podemos utilizar como exemplo a forma de comprar um lanche, você faz um pedido, especificando a comida que você quer, e o estabelecimento te “responde” com a comida.&lt;/p&gt;
+&lt;p&gt;O HTTP foi criado para também ser &lt;em&gt;stateless&lt;/em&gt;, traduzindo, não guardar estado, ou seja, ele não vai guardar nenhuma informação, também não existindo nenhuma relação entre as conexões.&lt;/p&gt;
+&lt;p&gt;Outra característica do protocolo é ser extensível, podendo fazer diversas trocas de informação entre o cliente e o servidor, conforme a necessidade.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;quem-é-o-cliente&#34;&gt;Quem é o Cliente?&lt;/h1&gt;
+&lt;p&gt;O cliente, que na maioria das vezes é o Browser, ou no nosso caso, também pode ser o cURL. O Cliente é a entidade que dá início a toda comunicação com um pedido, fora em algumas poucas exceções. Esses pedidos são feitos através de ações, que usam os métodos do HTTP, como GET, POST, PUT e DELETE.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;o-servidor&#34;&gt;O Servidor&lt;/h1&gt;
+&lt;p&gt;De forma bastante sucinta , o Servidor é basicamente uma máquina em algum lugar do mundo preparada para lidar com as requisições do cliente e mandar uma reposta. A resposta sempre tem um Status Code, e pode ter &lt;em&gt;headers&lt;/em&gt; e &lt;em&gt;body&lt;/em&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;proxy&#34;&gt;Proxy&lt;/h1&gt;
+&lt;p&gt;Basicamente, são coisas que ficam entre o Servidor e o Cliente, como exemplo, podemos utilizar o roteador que está servindo internet para você agora. O Proxy pode ter diversas funções, como o cache, para armazenar algumas informações e acelerar o uso. Filtro, para impedir o acesso de alguns sites para um antivírus ou um controle parental, entre outros.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;recursosresources-http&#34;&gt;Recursos/Resources HTTP&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;uri&#34;&gt;URI&lt;/h1&gt;
+&lt;p&gt;Para entendermos como chegar a um endereço, precisamos entender primeiramente como montar um endereço, para isso usamos o URI, sigla para &lt;strong&gt;Uniform Resource Identifier&lt;/strong&gt;, Identificador de Recurso Uniforme em português, que serve para identificar um recurso por seu nome ou sua localização.&lt;/p&gt;
+&lt;p&gt;O &lt;strong&gt;recurso&lt;/strong&gt;, que é o alvo do pedido feito cliente. Um recurso pode ser qualquer coisa identificável, como uma entidade digital, como um e-mail, uma entidade abstrata, como uma sessão e até uma entidade física, como um produto. Se podemos identificar, nomear, endereçar, estamos falando de um recurso na web/intranet.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;url&#34;&gt;URL&lt;/h1&gt;
+&lt;p&gt;Um recurso pode ser encontrado pelo locator, localizador em português, ou pelo nome, para encontrar com o locator, utilizamos o URL, sigla para &lt;strong&gt;Uniform Resource Locator&lt;/strong&gt;, ou seja, toda URL é um URI, mas o contrário não é verdadeiro.&lt;/p&gt;
+&lt;p&gt;Toda URL obrigatoriamente precisa de 2 componentes, um protocolo, que é por exemplo o &amp;ldquo;HTTPS&amp;rdquo; em uma URL, e um domínio, que é por exemplo a parte &amp;ldquo;cybernimbus.com.br&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;A URL pode ter alguns outros componentes opcionais, como o subdomínio, como a parte &amp;ldquo;www.&amp;rdquo; antes de alguns URLs, como o Path(cybernimbus.com.br/&lt;strong&gt;posts&lt;/strong&gt;), que serve para acessar partes específicas de um site, como os Parâmetros, como a Porta, que é um componente que é adicionado depois do domínio por um carácter :, e também a Âncora, que serve para apontar algum lugar específico de algum documento.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;urn&#34;&gt;URN&lt;/h1&gt;
+&lt;p&gt;Para encontrar um recurso pelo nome, ao invés da URL, utiliza-se a URN, &lt;strong&gt;Uniform Resource Name&lt;/strong&gt;. Um exemplo de URN é urn:isbn:0451450523, que basicamente contem todas as informações de um livro, porém a URL é bem mais usada na web.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;revisão-do-resource&#34;&gt;Revisão do Resource&lt;/h1&gt;
+&lt;p&gt;O URI (Uniform Resource Identifier) é a forma de encontrar um recurso, que se trata de qualquer entidade identificável, na internet pelo seu nome ou pelo seu local, a forma mais usada é pelo local, usando a URL (Uniform Resource Locator), que possui 2 componentes obrigatórios, o Protocolo e o Domínio, e 5 opcionais, o subdomínio, o Path, os Parâmetros, a Porta e a Âncora, analisados de maneira mais detalhada mais adiante.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;mensagens-http&#34;&gt;Mensagens HTTP&lt;/h1&gt;
+&lt;p&gt;Para existir a comunicação entre o servidor e o cliente precisamos ter mensagens entre eles, que são denominadas HTTP Messages, que existem tanto no request quanto na response. Elas existem desde a versão 1.1 do protocolo HTTP, onde eram feitas em formato de textos legíveis, agora na versão 2, para aprimorar a otimização, serão feitas em uma estrutura binária, mas basicamente estão no mesmo jeito.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Request/Pedido&lt;/strong&gt;: A mensagem do pedido consiste no método, por exemplo GET, a versão do protocolo e a URI, dependendo do método usado, pode se levar headers e body.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Response/Resposta&lt;/strong&gt;: A mensagens de resposta tem a versão do protocolo, o status code, os headers e a status message.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;http-methods&#34;&gt;HTTP Methods&lt;/h1&gt;
+&lt;p&gt;Os Métodos, ou verbos do HTTP que apesar de poderem ser chamados assim não necessariamente tem formato de verbos. Eles servem para indicar o intuito da operação que o cliente está realizando, e cada um possui seu significado. Ou seja, indica a ação que o cliente deseja operar.&lt;/p&gt;
+&lt;p&gt;Os métodos podem ter 2 características, seguro e idempotente. Métodos seguros não alteram o servidor, são de apenas leitura, então não apresentam carga extra para o servidor e são mantidos seguros por ele, métodos considerados seguros são: GET, HEAD e OPTIONS.&lt;/p&gt;
+&lt;p&gt;Os métodos Idempotentes são os métodos que não mudam de resposta, por isso a parte de “idem” no nome, mas podem ter status code diferentes, vale ressaltar que os métodos idempotentes são todos os métodos deveriam ser seguros, entretanto deve se levar em conta algumas observações em relação ao PUT e DELETE.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Seguros&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Não alteram o estado do servidor.&lt;/li&gt;
+&lt;li&gt;Somente leitura.&lt;/li&gt;
+&lt;li&gt;Cliente não solicita alterações.&lt;/li&gt;
+&lt;li&gt;Não há carga extra para o servidor.&lt;/li&gt;
+&lt;li&gt;O servidor é responsável em manter o método seguro.
+&lt;ul&gt;
+&lt;li&gt;GET&lt;/li&gt;
+&lt;li&gt;HEAD&lt;/li&gt;
+&lt;li&gt;OPTIONS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Idempotentes&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ao executar o método, a resposta deverá ser a mesma.&lt;/li&gt;
+&lt;li&gt;Status code poderá ser diferente.&lt;/li&gt;
+&lt;li&gt;O servidor tem a responsabilidade da mesma maneira.&lt;/li&gt;
+&lt;li&gt;Essa especificação não é garantia de que todos os servidores aplicarão o conceito corretamente.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;MÉTODO&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;IDEMPOTENTE&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;SEGURO&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;GET&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;SIM&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;SIM&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;POST&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;NÃO&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;NÃO&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;PUT&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;SIM&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;NÃO&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;DELETE&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;SIM&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;NÃO&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;HEAD&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;SIM&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;SIM&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;OPTIONS&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;SIM&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;SIM&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;options&#34;&gt;OPTIONS&lt;/h1&gt;
+&lt;p&gt;O método OPTIONS, que é um verbo HTTP que &lt;strong&gt;irá nos dar informações sobre a disponibilidade dos métodos da requisição.&lt;/strong&gt; Ele é um método seguro, pois não faz alteração alguma, e é idempotente, pois sempre retornará a mesma coisa para a mesma requisição, o OPTIONS não manda nem recebe um body, não é usado em formulários e nem é cacheable.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;get&#34;&gt;GET&lt;/h1&gt;
+&lt;p&gt;O método GET, &lt;strong&gt;serve para pegar um recurso, ou seja, só pode receber dados.&lt;/strong&gt; Ele é um método seguro e idempotente, que não pode enviar um Body no request, mas pode receber no response, ele também pode ser cacheable e é utilizado em alguns formulários.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;head&#34;&gt;HEAD&lt;/h1&gt;
+&lt;p&gt;O método HEAD, que é &lt;strong&gt;semelhante ao GET, porém é recebido somente o cabeçalho.&lt;/strong&gt; Ele é um método seguro e idempotente, não tem body nem no envio nem na resposta, não é usado em formulários e é cacheable.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;post&#34;&gt;POST&lt;/h1&gt;
+&lt;p&gt;Sobre o método POST, que vem do inglês &lt;em&gt;to post&lt;/em&gt;, &lt;strong&gt;serve para publicar ou cadastrar um recurso.&lt;/strong&gt; Ele não é seguro nem idempotente, pois muda as informações no servidor e não receberá a mesma resposta de uma mesma requisição, o verbo POST tem Body tanto na requisição quanto na resposta, pode ser usado em formulários e é cacheable.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;put&#34;&gt;PUT&lt;/h1&gt;
+&lt;p&gt;O método PUT, que &lt;strong&gt;serve para criar ou atualizar por completo um recurso, porém, diferentemente do POST é idempotente e normalmente usado para atualizar recursos.&lt;/strong&gt; O status code de criação do PUT é 201, e o de atualização é o 204 ou 200. O verbo PUT não é seguro, pois altera dados no servidor, mas é idempotente, tem Body na requisição mas não na resposta e não é usado em formulários nem é cacheable.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;patch&#34;&gt;PATCH&lt;/h1&gt;
+&lt;p&gt;O método PATCH, que &lt;strong&gt;serve para modificar parcialmente um recurso, diferentemente do PUT, que é usado para modificar o recurso inteiro.&lt;/strong&gt; Ele não é um verbo seguro nem idempotente, e recebe um Body tanto na requisição quanto resposta, não é usado em formulários e não é cacheable.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;delete&#34;&gt;DELETE&lt;/h1&gt;
+&lt;p&gt;O método DELETE, que &lt;strong&gt;serve para remover um recurso&lt;/strong&gt;, e pode ser respondido com o código 202, que não foi processado mas já foi aceito, 204, que significa que o recurso não existe e 200, que significa que o conteúdo foi deletado. Ele não é um método seguro, mas é idempotente, tem a possibilidade de receber Body tanto na requisição quanto na resposta, não é usado em formulários e não é cacheable.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;headers&#34;&gt;HEADERS&lt;/h1&gt;
+&lt;p&gt;Header significa cabeçalho, e &lt;strong&gt;se trata de uma série de informações adicionais para o pedido ou reposta&lt;/strong&gt; e geralmente é estruturado da forma &amp;ldquo;nome: valor&amp;rdquo;, por exemplo o Content-type: application/json.&lt;/p&gt;
+&lt;p&gt;Para facilitar nossos estudos, vamos dividir os Headers por contextos. Para ver as categorias em prática, abra o DevTools na aba Network e abra o site do Google, onde você poderá clicar no primeiro campo e ver que aparecem 3 listas: General, Response Headers e Request Headers.&lt;/p&gt;
+&lt;p&gt;A maioria dos frameworks já vem com alguns headers pré-estabelecidos, mas nesse módulo vamos aprender também como se aprofundar neste conteúdo e procurar mais conhecimento.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Request e Response
+&lt;ul&gt;
+&lt;li&gt;a aba dos cabeçalhos de request, podemos ver vários headers, como o :authority:, que é a autoridade do pedido, o :method:, que é o método do pedido, o :path:, que é o caminho do pedido, o :schema:, que é o esquema que foi usado, o accept, que é o que é aceito, accept-encoding, que são os tipos de compressão usados, cookie, que são rastros deixados para a próxima conexão, entre outros. O mesmo se aplica para a categoria de &lt;em&gt;response&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;app-devdocs&#34;&gt;app DevDocs&lt;/h1&gt;
+&lt;p&gt;Devido a grande quantidade de cabeçalhos disponíveis e a impossibilidade de listarmos todos eles nesse post, recomendo a utilização do app &lt;a href=&#34;https://devdocs.io/&#34;&gt;DevDocs&lt;/a&gt;, que basicamente serve para buscar informações sobre diversos frameworks, headers, etc. Uma documentação muito completa, online e offline. Porém, tudo está em inglês, mas pode-se ir usando ferramentas de tradução para facilitar o entendimento&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;status-code&#34;&gt;Status CODE&lt;/h1&gt;
+&lt;p&gt;Por se tratar de um conteúdo vasto, assim como os headers logo acima, trataremos apenas dos &lt;em&gt;status code&lt;/em&gt; mais comuns. Dessa forma, deve-se saber que a &lt;strong&gt;proposta do status code é ser uma comunicação mais clara entre o back-end com o cliente.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Os status code do tipo 100 servem pra mostrar que a operação pode ser continuada sem problemas.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Os status code do tipo 200 podem significar:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;200 em si, significa que tudo está ok (GET e POST)&lt;/li&gt;
+&lt;li&gt;201 significa que o recurso foi criado (PUT)&lt;/li&gt;
+&lt;li&gt;204 significa que não há conteúdo (PUT e DELETE).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Os status code do tipo 300 podem significar:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;301 significa movido permanentemente&lt;/li&gt;
+&lt;li&gt;308 significa redirecionamento permanente&lt;/li&gt;
+&lt;li&gt;302 significa uma mudança temporária assim como o 307.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Os status code o tipo 400 podem significar:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;400 significa que o pedido foi mal efetuado&lt;/li&gt;
+&lt;li&gt;401 significa que o pedido não teve autorização&lt;/li&gt;
+&lt;li&gt;403 significa que a autorização foi negada&lt;/li&gt;
+&lt;li&gt;404 que o pedido não foi encontrado&lt;/li&gt;
+&lt;li&gt;405 significa que o método usado não é permitido&lt;/li&gt;
+&lt;li&gt;429 que significa que foram efetuados muitos pedidos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Os do tipo 500:&lt;/strong&gt; 500, que significa que ocorreu um erro desconhecido no servidor e o 503, que significa que o servidor está indisponível no momento.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Saliento mais uma vez a importância da utilização do aplicativo &lt;a href=&#34;https://devdocs.io/http/response_codes&#34;&gt;DevDocs&lt;/a&gt;, pois a partir de agora, será um auxiliar fundamental no processo de aprendizagem.&lt;/p&gt;
+&lt;p&gt;Por fim, vale ressaltar a importância e relevância do HTTP para entendermos como as aplicações web se comunicam com os usuários e entre si, também como seu entendimento mais aprofundado resultará em trabalhos de qualidade excepcional.&lt;/p&gt;
+&lt;p&gt;Em postagens futuras, ainda abordaremos o HTML, CSS, JavaScript, GIT e GITHUB.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;créditos&#34;&gt;Créditos&lt;/h1&gt;
+&lt;p&gt;Fonte: &lt;a href=&#34;https://rocketseat.com.br/&#34;&gt;ROCKETSEAT&lt;/a&gt;&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>WEB e DEV?</title>
+      <link>https://cybernimbus.com.br/posts/web-e-dev/</link>
+      <pubDate>Thu, 23 Sep 2021 15:46:45 -0300</pubDate>
+      
+      <guid>https://cybernimbus.com.br/posts/web-e-dev/</guid>
+      <description>O que é WEB? Na internet significa uma maneira de estruturar trocas de comunicações entre computadores, por exemplo, você possui o seu computador e do outro lado do mundo há outro, que tem um site que você queira acessar.
+Importante sabermos a “mágica” para que essa troca de informações ocorra e para isso precisamos compreender de forma mais detalhada como funciona essa tecnologia que será fundamental para a construção de nossas futuras aplicações.</description>
+      <content>&lt;h1 id=&#34;o-que-é-web&#34;&gt;O que é WEB?&lt;/h1&gt;
+&lt;p&gt;Na internet &lt;strong&gt;significa uma maneira de estruturar trocas de comunicações entre computadores&lt;/strong&gt;, por exemplo, você possui o seu computador e do outro lado do mundo há outro, que tem um site que você queira acessar.&lt;/p&gt;
+&lt;p&gt;Importante sabermos a “mágica” para que essa troca de informações ocorra e para isso precisamos compreender de forma mais detalhada como funciona essa tecnologia que será fundamental para a construção de nossas futuras aplicações. Além disso, precisamos também entender o que é e como programar, para que possamos nos comunicar com o computador.&lt;/p&gt;
+&lt;p&gt;No próximo tópico veremos os fundamentos da programação, como transformar as ideias e como funciona a WEB.&lt;/p&gt;
+&lt;h1 id=&#34;o-que-é-programar&#34;&gt;O que é Programar?&lt;/h1&gt;
+&lt;p&gt;Programar é entender de algorítimos, que são por sua vez uma sequência lógica, passos para resolver um problema, usando a lógica de programação, que é como você aplica esses passos, ou seja, a construção do algorítimo.&lt;/p&gt;
+&lt;p&gt;Porém, como o computador entende? Ele pensa? A resposta é não, ele apenas processa e calcula as instruções passadas por você através da linguagem de programação com expressões que suportam os mais diferentes tipos de dados,&lt;/p&gt;
+&lt;p&gt;De maneira introdutória, rápida e de maneira bem superficial, podemos ver as &amp;ldquo;strings&amp;rdquo;, que são uma sequência de caracteres — numéricos, o nome já diz, números, boleano é um tipo de dado que diz se é verdadeiro ou falso — e esses dados são fundamentais para computador entender as instruções.&lt;/p&gt;
+&lt;p&gt;Desta forma, através da manipulação desses dados, é possível criar o seu algorítimo, porém é necessário ser bem detalhista quanto as instruções, já que um computador não pensam.&lt;/p&gt;
+&lt;p&gt;Em suma, programar é resolver problemas através da lógica, tendo isso bem claro em mente, tudo ficará mais fácil.&lt;/p&gt;
+&lt;h1 id=&#34;como-funciona-a-web&#34;&gt;Como funciona a WEB?&lt;/h1&gt;
+&lt;p&gt;A Web, ela é mais complexa do que apenas digitar o site no navegador, existe todo um processo por trás e é isso que veremos.&lt;/p&gt;
+&lt;p&gt;A Web como as pessoas normais conhecem é somente digitar o nome do site e entrar, esse seria o caminho fácil, mas não se limita a somente isso, veremos agora o caminho avançado, onde você digita, por exemplo &lt;a href=&#34;https://cybernimbus.com.br&#34;&gt;https://cybernimbus.com.br&lt;/a&gt;, agora temos uma URL e por detrás das cortinas o que temos é o HTTP um protocolo que significa &amp;ldquo;Hypertext Transfer Protocol&amp;rdquo;, que possui como função trocar mensagem entre computadores, cliente e servidor.&lt;/p&gt;
+&lt;p&gt;Essa mensagem será enviada a um computador em diversos pedaços que chamamos de &amp;ldquo;chunks&amp;rdquo; e só então temos a URL, que significa &amp;ldquo;Uniform Resource Locator&amp;rdquo;, localizador e identificador de recursos, nesse caso o site. Essa primeira parte é apenas o processo de digitar e pressionar ENTER, então haverá o uso do protocolo para começar a comunicação.&lt;/p&gt;
+&lt;p&gt;Após a essa primeira etapa é então iniciada uma linha de comunicação, através de um outro protocolo chamado TCP, entre o cliente, que é o computador, dispositivo ou aplicativo que fez o pedido, no nosso caso o Browser, e o servidor, computador configurado para receber os pedidos e enviar respostas aos pedidos, e o TCP, que significa &amp;ldquo;Transmission Control Protocol&amp;rdquo;, que tem como função garantir que os pacotes(chunks) cheguem corretamente ao destino, já que eles vêm em diversos pedaços.&lt;/p&gt;
+&lt;p&gt;Feito isso, a linha de comunicação foi criada, mas quando você apenas digita cybernimbus.com o endereço precisa ser convertido em endereço de IP, através do DNS. IP significando &amp;ldquo;Internet Protocol&amp;rdquo;, mais um conjunto de regras, que possui como função endereçar os computadores — todos os computadores que estão conectados à internet possuem um IP — e DNS significando &amp;ldquo;Domain Name Servers&amp;rdquo;, tendo a função de converter um domínio em um endereço IP, domínio sendo de maneira simples, uma forma mais fácil de lembrarmos o IP, sem precisar digitar aquele grande aglomerado de números e pontos, bastando apenas digitar o nome associado aquele endereço.&lt;/p&gt;
+&lt;p&gt;A linha de comunicação foi feita, o endereço convertido em IP e agora você quer que esse pedido seja feito, no nosso caso queremos ver o site, que está percorrendo através de diversos Proxys — Proxy é qualquer dispositivo no meio do caminho entre o computador e o servidor — outros computadores, tendo a função de encaminhar os pacotes, passando de um para o outro, até chegar ao servidor.&lt;/p&gt;
+&lt;p&gt;O servidor analisa seu pedido e irá lhe responder, no caso de resposta positiva, retornará pela linha de comunicação, também em diversos pedacinhos até o dispositivo, Browser, montando o site para você, e esse processo ocorre diversas vezes para um único pedido, já que cada recurso (html, css, javascript, imagens, etc) é feita uma nova conexão.&lt;/p&gt;
+&lt;p&gt;Importante ressaltar que todo esse processo analisado serve apenas como uma visão geral de como funciona a Web, neste caso em específico, o que ocorre quando digitamos um endereço de site e pressionamos o ENTER, sendo o mesmo processo em se tratando de aplicativos para smartphones.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;créditos&#34;&gt;Créditos&lt;/h1&gt;
+&lt;p&gt;Fonte: &lt;a href=&#34;https://rocketseat.com.br/&#34;&gt;ROCKETSEAT&lt;/a&gt;&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

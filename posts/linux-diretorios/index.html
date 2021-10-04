@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Guia Básico de Linux - Diretórios :: cyber_nimbus</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Diretório é o local utilizado para armazenar conjuntos arquivos para melhor organização e localização. Em outras palavras,o diretório pode ser entendido como uma pasta onde você guarda seus papeis (arquivos). O diretório, como o arquivo, também..." />
+<meta name="keywords" content=", " />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://cybernimbus.com.br/posts/linux-diretorios/" />
+
+
+
+
+<link rel="stylesheet" href="https://cybernimbus.com.br/assets/style.css">
+
+  <link rel="stylesheet" href="https://cybernimbus.com.br/assets/blue.css">
+
+
+
+<link rel="stylesheet" href="https://cybernimbus.com.br/style.css">
+
+
+<link rel="apple-touch-icon" href="https://cybernimbus.com.br/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="https://cybernimbus.com.br/img/favicon/favicon-g.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Guia Básico de Linux - Diretórios">
+<meta property="og:description" content="Diretório é o local utilizado para armazenar conjuntos arquivos para melhor organização e localização. Em outras palavras,o diretório pode ser entendido como uma pasta onde você guarda seus papeis (arquivos). O diretório, como o arquivo, também..." />
+<meta property="og:url" content="https://cybernimbus.com.br/posts/linux-diretorios/" />
+<meta property="og:site_name" content="cyber_nimbus" />
+
+  <meta property="og:image" content="https://cybernimbus.com.br/img/cover/tux.webp">
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+  <meta property="article:section" content="linux" />
+
+  <meta property="article:section" content="linux-iniciante" />
+
+
+  <meta property="article:published_time" content="2021-10-02 15:28:47 -0300 -03" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="blue">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    CYBER.NIMBUS
+  </div>
+</a>
+
+    </div>
+    
+      <div class="menu-trigger" >...</div>
+    
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">&gt; about</a></li>
+        
+      
+        
+          <li><a href="/">&gt; home</a></li>
+        
+      
+        
+          <li><a href="/index.xml">&gt; rss</a></li>
+        
+      
+        
+          <li><a href="/tags">&gt; tags</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">&gt; about</a></li>
+      
+    
+      
+        <li><a href="/">&gt; home</a></li>
+      
+    
+      
+        <li><a href="/index.xml">&gt; rss</a></li>
+      
+    
+      
+        <li><a href="/tags">&gt; tags</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+  
+    
+
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://cybernimbus.com.br/posts/linux-diretorios/">Guia Básico de Linux - Diretórios</a></h1>
+    <div class="post-meta">
+      
+        <span class="post-date">
+        :: NFO :: 02-10-2021 ::
+        </span>
+      
+      
+        <span class="post-author"> by _fav0 ::</span>
+      
+        <span class="post-meta">
+        
+          #<a href="https://cybernimbus.com.br/tags/linux/">linux</a>&nbsp;
+        
+          #<a href="https://cybernimbus.com.br/tags/linux-iniciante/">linux-iniciante</a>&nbsp;
+        
+        </span>
+    </div>
+  
+
+    
+
+  
+
+  
+    <img src="https://cybernimbus.com.br/img/cover/tux.webp" class="in-post-cover" alt="Guia Básico de Linux - Diretórios" />
+  
+  
+
+  <div class="post-content"><div>
+        <h1 id="sumário">Sumário<a href="#sumário" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<ul>
+<li><a href="#diret%C3%B3rio">Diretório</a>
+<ul>
+<li><a href="#mkdir">mkdir</a></li>
+</ul>
+</li>
+<li><a href="#diret%C3%B3rio-ra%C3%ADz">Diretório Raíz</a></li>
+<li><a href="#diret%C3%B3rio-atual">Diretório atual</a></li>
+<li><a href="#diret%C3%B3rio-home">Diretório Home</a></li>
+<li><a href="#diret%C3%B3rio-superior">Diretório Superior</a></li>
+<li><a href="#diret%C3%B3rio-anterior">Diretório Anterior</a></li>
+<li><a href="#caminho-na-estrutura-de-diret%C3%B3rios">Caminhos na estrutura de diretórios</a></li>
+<li><a href="#estrutura-b%C3%A1sica-de-diret%C3%B3rios-do-sistema-linux">Estrutura básica de diretórios no Linux</a></li>
+<li><a href="#cr%C3%A9ditos">Créditos</a></li>
+</ul>
+<h1 id="diretório">Diretório<a href="#diretório" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Diretório é o local utilizado para armazenar conjuntos arquivos para melhor organização e localização. Em outras palavras, o diretório pode ser entendido como uma pasta onde você guarda seus papeis (arquivos). O diretório, como o arquivo, também é &ldquo;Case Sensitive&rdquo; (diretório /teste é completamente diferente do diretório /Teste).</p>
+<p>Não podem existir dois arquivos com o mesmo nome em um diretório, ou um sub-diretório com um mesmo nome de um arquivo em um mesmo diretório.</p>
+<p>Um diretório nos sistemas Linux/UNIX são especificados por uma &ldquo;/&rdquo; e não uma &ldquo;&quot; como é feito no DOS. Para detalhes sobre como criar um diretório, vejamos o comando <code>mkdir</code>.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">Sumário</a></li>
+</ul>
+<h1 id="mkdir">mkdir<a href="#mkdir" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>O comando <code>mkdir</code> cria um diretório no sistema.</p>
+<p>mkdir [opções] [caminho/diretório] [caminho1/diretório1]</p>
+<p>Onde:</p>
+<ul>
+<li><strong>caminho</strong>
+<ul>
+<li>representa onde o diretório será criado.</li>
+</ul>
+</li>
+<li><strong>diretório</strong>
+<ul>
+<li>o nome do diretório que será criado.</li>
+</ul>
+</li>
+<li><strong>opções:, -p</strong>
+<ul>
+<li>caso os diretórios dos níveis acima não existam, eles também serão criados.</li>
+</ul>
+</li>
+<li><strong>&ndash;verbose</strong>
+<ul>
+<li>mostra uma mensagem para cada diretório criado. As mensagens de erro serão mostradas mesmo que esta opção não seja usada.</li>
+</ul>
+</li>
+</ul>
+<p>Para criar um diretório, você deve ter permissão de gravação. Por exemplo, para criar um diretório em /tmp com o nome de teste, você deve usar o comando <code>mkdir /tmp/teste</code>. Nada impede que seja criado mais de um diretório com um único comando, exemplo: <code>mkdir /tmp/teste /tmp/teste1 /tmp/teste2</code>.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">Sumário</a></li>
+</ul>
+<h1 id="diretório-raíz">Diretório Raíz<a href="#diretório-raíz" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Este é o diretório principal do sistema. Dentro dele estão todos os diretórios do sistema. O diretório Raíz é representado por uma <code>/</code>, assim se você digitar o comando <code>cd /</code> você acessará este diretório.</p>
+<p>Nele estão localizados outros diretórios como o <code>/bin, /sbin, /usr, /usr/local, /mnt, /tmp, /var, /home,</code> etc. Estes são chamados de sub-diretórios pois estão dentro do diretório <code>/</code>.</p>
+<p>A estrutura de diretório e sub-diretório pode ser identificada da seguinte maneira:</p>
+<ul>
+<li>
+<p><code>/</code></p>
+</li>
+<li>
+<p><code>/bin</code></p>
+</li>
+<li>
+<p><code>/sbin</code></p>
+</li>
+<li>
+<p><code>/usr</code></p>
+</li>
+<li>
+<p><code>/usr/local</code></p>
+</li>
+<li>
+<p><code>/mnt</code></p>
+</li>
+<li>
+<p><code>/tmp</code></p>
+</li>
+<li>
+<p><code>/var</code></p>
+</li>
+<li>
+<p><code>/home</code></p>
+</li>
+</ul>
+<p>A estrutura de diretórios também é chamada de <strong>Árvore de Diretórios</strong> devido a sua semelhança com uma árvore de cabeça para baixo. Vale ressaltar também que cada diretório do sistema, possuí seus respectivos arquivos, que são armazenados conforme regras definidas pela FHS (FileSystem Hierarchy Standard—Hierarquia Padrão do Sistema de Arquivos) versão 2.0, definindo que tipo de arquivo deve ser armazenado em cada diretório.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">Sumário</a></li>
+</ul>
+<h1 id="diretório-atual">Diretório atual<a href="#diretório-atual" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>É o diretório em que nos encontramos no momento. Você pode digitar no terminal <code>pwd</code> para verificar qual é seu diretório atual.</p>
+<p>O diretório atual também é identificado por um <code>.</code> (ponto). O comando <code>ls .</code> pode ser usado para listar seus arquivos. Obviamente que devido ao funcionamento do comando <code>ls</code>, torna-se desnecessário a utilização do <code>.</code> logo em seguida, visto que o comando <code>ls</code> listará o conteúdo do diretório atual, porém, serve para ilustrar a situação.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">Sumário</a></li>
+</ul>
+<h1 id="diretório-home">Diretório Home<a href="#diretório-home" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Também chamado de diretório de usuário. Em sistemas GNU/Linux cada usuário (inclusive o root) possui seu próprio diretório onde poderá armazenar seus programas e arquivos pessoais.</p>
+<p>Este diretório está localizado em <code>/home/[login]</code>, neste caso se o seu login for &ldquo;joao&rdquo; o seu diretório home será <code>/home/joao</code>.
+O diretório home também é identificado por um <code>~</code>(til), você pode digitar tanto o comando <code>ls /home/joao</code> como <code>ls ~</code> para listar os arquivos de seu diretório home.</p>
+<p>O diretório home do usuário root (na maioria das distribuições GNU/Linux) está localizado em <code>/root</code>.</p>
+<p>Dependendo da sua configuração e do número de usuários em seu sistema, o diretório de usuário pode ter a seguinte forma: <code>/home/[1letra_do_nome]/[login]</code>, neste caso se o seu login for &ldquo;joao&rdquo; o seu diretório home será <code>/home/j/joao</code>.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">Sumário</a></li>
+</ul>
+<h1 id="diretório-superior">Diretório Superior<a href="#diretório-superior" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>O diretório superior (Upper Directory) é identificado por <code>..</code> (2 pontos).</p>
+<p>Caso esteja no diretório <code>/usr/local</code> e quiser listar os arquivos do diretório <code>/usr</code> você pode digitar, <code>ls .</code>. Este recurso também pode ser usado para copiar, mover arquivos/diretórios, etc.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">Sumário</a></li>
+</ul>
+<h1 id="diretório-anterior">Diretório Anterior<a href="#diretório-anterior" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>O diretório anterior é identificado por <code>-</code>. É útil para retornar ao último diretório usado.</p>
+<p>Caso você esteja no diretório <code>/usr/local</code> e digitar <code>cd /lib</code>, você pode retornar facilmente para o diretório <code>/usr/local</code> usando <code>cd -</code>.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">Sumário</a></li>
+</ul>
+<h1 id="caminho-na-estrutura-de-diretórios">Caminho na estrutura de diretórios<a href="#caminho-na-estrutura-de-diretórios" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>São os diretórios que teremos que percorrer até chegar no arquivo ou diretório que procuramos. Se deseja ver o arquivo <code>/etc/hosts</code> você tem duas opções:</p>
+<ul>
+<li>
+<p>Mudar o diretório padrão para <code>/etc</code> com o comando <code>cd /etc</code> e usar o comando <code>cat hosts</code></p>
+</li>
+<li>
+<p>Usar o comando <code>cat</code> especificando o caminho completo na estrutura de diretórios e o nome de arquivo: <code>cat /etc/hosts</code></p>
+</li>
+</ul>
+<p>As duas soluções acima permitem que você veja o arquivo hosts. A diferença entre as duas é a seguinte:</p>
+<ul>
+<li>Na primeira, você muda o diretório padrão para <code>/etc</code> (confira digitando pwd) e depois o comando <code>cat hosts</code>. Você pode ver os arquivos de <code>/etc</code> com o comando <code>ls</code>.</li>
+</ul>
+<p>Sendo que <code>/etc</code> é o caminho de diretório que devemos percorrer para chegar até o arquivo hosts.</p>
+<ul>
+<li>Na segunda, é digitado o caminho completo para o <code>cat</code> localizar o arquivo hosts: <code>cat /etc/hosts</code>. Neste caso, você continuará no diretório padrão (confira digitando pwd). Digitando <code>ls</code>, os arquivos do diretório atual serão listados.</li>
+</ul>
+<p>O caminho de diretórios é necessário para dizer ao sistema operacional onde encontrar um arquivo na &ldquo;árvore&rdquo; de diretórios.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">Sumário</a></li>
+</ul>
+<h1 id="estrutura-básica-de-diretórios-do-sistema-linux">Estrutura básica de diretórios do Sistema Linux<a href="#estrutura-básica-de-diretórios-do-sistema-linux" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>O sistema GNU/Linux possui a seguinte estrutura básica de diretórios organizados segundo o FHS (Filesystem Hierarchy Standard):</p>
+<ul>
+<li>
+<p><code>/bin</code></p>
+<ul>
+<li>Contém arquivos programas do sistema que são usados com frequência pelos usuários.</li>
+</ul>
+</li>
+<li>
+<p><code>/boot</code></p>
+<ul>
+<li>Contém arquivos necessários para a inicialização do sistema.</li>
+</ul>
+</li>
+<li>
+<p><code>/cdrom</code></p>
+<ul>
+<li>Ponto de montagem da unidade de CD-ROM.</li>
+</ul>
+</li>
+<li>
+<p><code>/media</code></p>
+<ul>
+<li>Ponto de montagem de dispositivos diversos do sistema (rede, pendrives, CD-ROM em distribuições mais novas).</li>
+</ul>
+</li>
+<li>
+<p><code>/dev</code></p>
+<ul>
+<li>Contém arquivos usados para acessar dispositivos (periféricos) existentes no computador.</li>
+</ul>
+</li>
+<li>
+<p><code>/etc</code></p>
+<ul>
+<li>Arquivos de configuração de seu computador local.</li>
+</ul>
+</li>
+<li>
+<p><code>/floppy</code></p>
+<ul>
+<li>Ponto de montagem de unidade de disquetes.</li>
+</ul>
+</li>
+<li>
+<p><code>/home</code></p>
+<ul>
+<li>Diretórios contendo os arquivos dos usuários.</li>
+</ul>
+</li>
+<li>
+<p><code>/lib</code></p>
+<ul>
+<li>Bibliotecas compartilhadas pelos programas do sistema e módulos do kernel.</li>
+</ul>
+</li>
+<li>
+<p><code>/lost+found</code></p>
+<ul>
+<li>Local para a gravação de arquivos/diretórios recuperados pelo utilitário fsck.ext2. Cada partição possui seu próprio diretório lost+found.</li>
+</ul>
+</li>
+<li>
+<p><code>/mnt</code></p>
+<ul>
+<li>Ponto de montagem temporário.</li>
+</ul>
+</li>
+<li>
+<p><code>/proc</code></p>
+<ul>
+<li>Sistema de arquivos do kernel. Este diretório não existe em seu disco rígido, ele é colocado lá pelo kernel e usado por diversos programas que fazem sua leitura, verificam configurações do sistema ou modificar o funcionamento de dispositivos do sistema através da alteração em seus arquivos.</li>
+</ul>
+</li>
+<li>
+<p><code>/sys</code></p>
+<ul>
+<li>Sistema de arquivos do kernel. Este diretório não existe em seu disco rígido, ele é colocado lá pelo kernel e usado por diversos programas que fazem sua leitura, verificam configurações do sistema ou modificar o funcionamento de dispositivos do sistema através da alteração em seus arquivos.</li>
+</ul>
+</li>
+<li>
+<p><code>/root</code></p>
+<ul>
+<li>Diretório do usuário root.</li>
+</ul>
+</li>
+<li>
+<p><code>/sbin</code></p>
+<ul>
+<li>Diretório de programas usados pelo superusuário (root) para administração e controle do funcionamento do sistema.</li>
+</ul>
+</li>
+<li>
+<p><code>/tmp</code></p>
+<ul>
+<li>Diretório para armazenamento de arquivos temporários criados por programas.</li>
+</ul>
+</li>
+<li>
+<p><code>/usr</code></p>
+<ul>
+<li>Contém maior parte de seus programas. Normalmente acessível somente como leitura.</li>
+</ul>
+</li>
+<li>
+<p><code>/var</code></p>
+<ul>
+<li>Contém maior parte dos arquivos que são gravados com frequência pelos programas do sistema, e-mails, spool de impressora, cache, etc.</li>
+</ul>
+</li>
+<li>
+<p><a href="#sum%C3%A1rio">Sumário</a></p>
+</li>
+</ul>
+<h1 id="créditos">Créditos<a href="#créditos" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>fonte: <a href="https://guiafoca.org/">FOCALINUX</a></p>
+<ul>
+<li><a href="#sum%C3%A1rio">Sumário</a></li>
+</ul>
+
+      </div></div>
+
+  
+  
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">...</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        
+        <span class="button next">
+            <a href="https://cybernimbus.com.br/posts/html/">
+                <span class="button__text">HTML?</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>TCN © 2021 :: Licensed under <a href=http://creativecommons.org/licenses/by-sa/4.0/>CC BY-SA 4.0</a></span>
+    
+        <span></span>
+      </div>
+  </div>
+</footer>
+
+<script src="https://cybernimbus.com.br/assets/main.js"></script>
+<script src="https://cybernimbus.com.br/assets/prism.js"></script>
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

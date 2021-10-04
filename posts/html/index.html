@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>HTML? :: cyber_nimbus</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="O que veremos em mais essa postagem de conceitos inicias e basilares do desenvolvimento web, trata-se do HTML, seus conceitos essenciais, tags, atributos, aninhamentos, hierarquias de tags, elementos de diretórios e muito mais." />
+<meta name="keywords" content=", " />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://cybernimbus.com.br/posts/html/" />
+
+
+
+
+<link rel="stylesheet" href="https://cybernimbus.com.br/assets/style.css">
+
+  <link rel="stylesheet" href="https://cybernimbus.com.br/assets/blue.css">
+
+
+
+<link rel="stylesheet" href="https://cybernimbus.com.br/style.css">
+
+
+<link rel="apple-touch-icon" href="https://cybernimbus.com.br/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="https://cybernimbus.com.br/img/favicon/favicon-g.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="HTML?">
+<meta property="og:description" content="O que veremos em mais essa postagem de conceitos inicias e basilares do desenvolvimento web, trata-se do HTML, seus conceitos essenciais, tags, atributos, aninhamentos, hierarquias de tags, elementos de diretórios e muito mais." />
+<meta property="og:url" content="https://cybernimbus.com.br/posts/html/" />
+<meta property="og:site_name" content="cyber_nimbus" />
+
+  <meta property="og:image" content="https://cybernimbus.com.br/img/cover/board.webp">
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+  <meta property="article:section" content="WebDev" />
+
+
+  <meta property="article:published_time" content="2021-09-29 15:50:58 -0300 -03" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="blue">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    CYBER.NIMBUS
+  </div>
+</a>
+
+    </div>
+    
+      <div class="menu-trigger" >...</div>
+    
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">&gt; about</a></li>
+        
+      
+        
+          <li><a href="/">&gt; home</a></li>
+        
+      
+        
+          <li><a href="/index.xml">&gt; rss</a></li>
+        
+      
+        
+          <li><a href="/tags">&gt; tags</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">&gt; about</a></li>
+      
+    
+      
+        <li><a href="/">&gt; home</a></li>
+      
+    
+      
+        <li><a href="/index.xml">&gt; rss</a></li>
+      
+    
+      
+        <li><a href="/tags">&gt; tags</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+  
+    
+
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://cybernimbus.com.br/posts/html/">HTML?</a></h1>
+    <div class="post-meta">
+      
+        <span class="post-date">
+        :: NFO :: 29-09-2021 ::
+        </span>
+      
+      
+        <span class="post-author"> by _fav0 ::</span>
+      
+        <span class="post-meta">
+        
+          #<a href="https://cybernimbus.com.br/tags/webdev/">WebDev</a>&nbsp;
+        
+          #<a href="https://cybernimbus.com.br/tags/o-que-%C3%A9/">O que é?</a>&nbsp;
+        
+          #<a href="https://cybernimbus.com.br/tags/html/">html</a>&nbsp;
+        
+        </span>
+    </div>
+  
+
+    
+
+  
+
+  
+    <img src="https://cybernimbus.com.br/img/cover/board.webp" class="in-post-cover" alt="HTML?" />
+  
+  
+
+  <div class="post-content"><div>
+        <h1 id="sumário">Sumário<a href="#sumário" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<ul>
+<li><a href="#in%C3%ADcio">Início</a></li>
+<li><a href="#vs-code">VSCode e VSCodium</a></li>
+<li><a href="#coment%C3%A1rios">Comentários</a></li>
+<li><a href="#anatomia-das-tags">Anatomia das Tags</a></li>
+<li><a href="#atributos">Atributos</a></li>
+<li><a href="#atributos-globais">Atributos Globais</a>
+<ul>
+<li><a href="#class">class</a></li>
+<li><a href="#contenteditable">contenteditable</a></li>
+<li><a href="#data-">data-*</a></li>
+<li><a href="#hidden">hidden</a></li>
+<li><a href="#id">id</a></li>
+<li><a href="#style">style</a></li>
+<li><a href="#tabindex">tabindex</a></li>
+<li><a href="#title">title</a></li>
+</ul>
+</li>
+<li><a href="#aninhamento---hierarquia">Aninhamento - Hierarquia</a></li>
+<li><a href="#anatomia-de-um-documento">Anatomia - Documento</a></li>
+<li><a href="#cr%C3%A9ditos">Créditos</a></li>
+</ul>
+<h1 id="início">Início<a href="#início" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>O tema desta nova postagem que trata de conceitos inicias e basilares do desenvolvimento web, é sobre o HTML e seus conceitos essenciais, tags, atributos, aninhamentos, hierarquias de tags, elementos de diretórios e muito mais.</p>
+<h1 id="vs-code">VS Code?<a href="#vs-code" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>O Visual Studio Code (VS Code) é um editor de código aberto desenvolvido pela Microsoft. A saber, ele está disponível para Windows, Mac e Linux. É criado com Electron, ferramenta criada pelo GitHub (adquirido pela MS) que permite a criação de softwares Desktop com **HTMLc, <strong>CSS</strong> e <strong>JavaScript</strong>.</p>
+<p>Este é o editor que eu prefiro e utilizo, mas sinta-se a vontade para escolher qualquer outro disponível no mercado. O principal objetivo aqui, é você se sentir a vontade com seu editor, o que trará maior fluides no seu estudo também como um ganho significativo na sua produtividade.</p>
+<p>Um detalhe importante sobre o VS Code e das suas configurações, são as que tratam da telemetria de utilização do app enviadas à Microsoft, caso isso seja um problema para você, é possível desativá-las nas configurações ou até mesmo baixar uma versão do aplicativo onde elas já venham desativadas por padrão, que é a proposta do <a href="https://vscodium.com/">VSCodium</a>.</p>
+<p>Outra coisa que precisaremos acrescentar no VS Code, visto que trataremos de HTML nesse momento, é uma extensão que nos permita pré-visualizar o código html. Portanto, na seção de <em>plguins</em> do VS Code, que fica na barra lateral da esquerda em seu último ícone, no campo de pesquisa procure por &ldquo;HTML Preview&rdquo; e instale a extensão.</p>
+<p><strong>É de suma importância que ao decorrer desse post, tudo que se tratar de código escrito, recomendo que você os copie e cole no seu VS Code, vendo como eles funcionam na prática. Fique a vontade também para modificá-los.</strong></p>
+<ul>
+<li><a href="#sum%C3%A1rio">Sumário</a></li>
+</ul>
+<h1 id="html">HTML?<a href="#html" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>HTML é um acrônimo para Hypertext (hipertexto) Markup (marcação) Language (linguagem), ela não é uma linguagem de programação em si, porém é uma linguagem na forma de escrever, tendo sintaxe e semântica.</p>
+<p>Hypertext é uma marcação específica que nos leva a outro texto, isso mais no passado, agora sendo relacionado a imagens, a vídeos. Bastante simples usar o HTML, podemos ver ele clicando com o botão direito em qualquer página na internet e selecionando a opção &ldquo;view Page Source/ver código fonte&rdquo;.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">Sumário</a></li>
+</ul>
+<h1 id="comentários">Comentários<a href="#comentários" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Os comentários terão grande utilidade em nossos códigos, muitas vezes nos auxiliando em códigos mais extensos, sua utilização é bastante simples, para abrir um comentário, faremos o seguinte:</p>
+
+
+
+  <div class="collapsable-code">
+    <input id="1" type="checkbox" checked />
+    <label for="1">
+      <span class="collapsable-code__language">html</span>
+      <span class="collapsable-code__title">comentário html</span>
+      <span class="collapsable-code__toggle" data-label-expand="▽" data-label-collapse="△"></span>
+    </label>
+    <pre class="language-html" ><code>
+&lt;!-- cometários 
+O conteúdo escrito dentro do comentário, 
+    não aparecerá como conteúdo no seu código html.
+--&gt;
+</code></pre>
+  </div>
+
+
+<ul>
+<li><a href="#sum%C3%A1rio">Sumário</a></li>
+</ul>
+<h1 id="anatomia-das-tags">Anatomia das Tags<a href="#anatomia-das-tags" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Neste tópico, veremos o que constitui o Markup do HTML, as Tags.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">h1</span>&gt; TÍTULO &lt;/<span style="color:#f92672">h1</span>&gt;
+</code></pre></div><p>Você faz a abertura delas, coloca o nome da Tag e as fecha como no exemplo acima. No caso dessa Tag, seu conteúdo é de título, juntando a abertura, fechamento e o conteúdo, teremos um Elemento HTML.</p>
+<p>Existe também Elementos vazios, que diferente do exemplo acima, não fecham daquela forma, mas assim:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34; &#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34; &#34;</span>&gt;
+</code></pre></div><p>Essa tag, <code>img</code> utilizada para imagem, possuí atributos adicionais e que terão o seu funcionamento vistos mais a adiante.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">Sumário</a></li>
+</ul>
+<h1 id="atributos">Atributos<a href="#atributos" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Os atributos booleanos, aqueles que não precisam de conteúdo, pois por serem booleanos possuem apenas dois tipos de valores, verdadeiro ou falso, não havendo texto, apenas essas duas opções.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">disabled</span>&gt;
+</code></pre></div><p>Outro fator que devemos levar em consideração são as aspas, recomendado apenas o uso das aspas duplas, para não desencadear problemas no código.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">Sumário</a></li>
+</ul>
+<h1 id="atributos-globais">Atributos Globais<a href="#atributos-globais" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Atributos globais (veremos apenas os mais utilizados), são atributos aplicáveis em todas as Tags, sendo as principais:</p>
+<h6 id="class"><em>class</em><a href="#class" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h6>
+<p>além de classificar as Tags, é usada para aplicar estilo css e também para acessar com o Java Script.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;conteúdo&#34;</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><ul>
+<li><a href="#sum%C3%A1rio">Sumário</a></li>
+</ul>
+<hr>
+<h6 id="contenteditable"><em>contenteditable</em><a href="#contenteditable" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h6>
+<p>usado para editar o conteúdo da página, porém não é mantido após salvar.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">contentedtable</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><ul>
+<li><a href="#sum%C3%A1rio">Sumário</a></li>
+</ul>
+<hr>
+<h6 id="data-"><em>data-</em><a href="#data-" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h6>
+<p>usado para expandir os tipos de atributos que podemos usar para fazer mais tarde lógica no Java Script , utilizado em css também.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">data-qualquercoisaaqui</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>&gt;
+ <span style="color:#75715e">&lt;!--    escrito com &#34;-&#34; ou tudo junto. --&gt;</span>
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><ul>
+<li><a href="#sum%C3%A1rio">Sumário</a></li>
+</ul>
+<hr>
+<h6 id="hidden"><em>hidden</em><a href="#hidden" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h6>
+<p>usado para esconder uma Tag.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;carrinho&#34;</span> <span style="color:#a6e22e">hidden</span>&gt;
+conteúdo
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><ul>
+<li><a href="#sum%C3%A1rio">Sumário</a></li>
+</ul>
+<hr>
+<h6 id="id"><em>id</em><a href="#id" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h6>
+<p>usado apenas 1 por Tag para identificação, podendo também mais tarde utilizar no Java Script e CSS.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;texto&#34;</span>&gt;
+conteúdo
+&lt;/<span style="color:#f92672">div</span>&gt;
+
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;texto2&#34;</span>&gt;
+conteúdo
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><ul>
+<li><a href="#sum%C3%A1rio">Sumário</a></li>
+</ul>
+<hr>
+<h6 id="style"><em>style</em><a href="#style" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h6>
+<p>aplica a estilização na Tag, normalmente não se usa &ldquo;style&rdquo; dentro da Tag, mas sim em arquivos externos.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color: red&#34;</span>&gt;
+</code></pre></div><ul>
+<li><a href="#sum%C3%A1rio">Sumário</a></li>
+</ul>
+<hr>
+<h6 id="tabindex"><em>tabindex</em><a href="#tabindex" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h6>
+<p>usado para ordenar o Tab na página.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">tabindex</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;3&#34;</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">tabindex</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">tabindex</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2&#34;</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><ul>
+<li><a href="#sum%C3%A1rio">Sumário</a></li>
+</ul>
+<hr>
+<h6 id="title"><em>title</em><a href="#title" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h6>
+<p>serve para definir um título para a Tag, que aparece quando colocamos o mouse descansando em cima do conteúdo da página.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;aqui vai o título&#34;</span>&gt;
+    conteudo
+    &lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><p>Para estudo de mais Atributos Globais, visite o site <a href="https://developer.mozilla.org/pt-BR/">DEVELOPER.MOZILA.ORG</a> que é uma ótima fonte de conhecimento devido à grandiosidade e facilidade de acesso ao material para estudo.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">Sumário</a></li>
+</ul>
+<h1 id="aninhamento---hierarquia">Aninhamento - Hierarquia<a href="#aninhamento---hierarquia" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Aninhamento em HTML significa colocar uma tag dentro da outra, porém não é se trata de uma tag qualquer, existe uma hierarquia por trás delas que deverão ser seguidas, por exemplo:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">  &lt;<span style="color:#f92672">p</span>&gt; 
+    &lt;<span style="color:#f92672">em</span>&gt;texto&lt;<span style="color:#f92672">em</span>&gt;
+    &lt;<span style="color:#f92672">p</span>&gt; texto2&lt;/<span style="color:#f92672">p</span>&gt; 
+  &lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><p>Podemos ver no exemplo acima que a tag <code>&lt;em&gt;&lt;/em&gt;</code>(usada para dar ênfase em um texto) é pertencente a Tag <code>&lt;p&gt;&lt;/p&gt;</code>(usada para criar um parágrafo). Nota-se também que há um fluxo, onde as tags são lidas por ordem de cima para baixo.</p>
+<p>Por fim, no posicionamento dos elementos, podemos ver que a tag <code>&lt;em&gt;&lt;/em&gt;</code> não está em uma outra linha como na tag <code>&lt;p&gt;&lt;/p&gt;</code>, existem tags que quebram a linha, então mesmo que colocarmos a tag <code>&lt;p&gt;&lt;/p&gt;</code> uma do lado da outra, visualmente o resultado será a quebra de linha.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">Sumário</a></li>
+</ul>
+<h1 id="caracteres-reservados">Caracteres Reservados<a href="#caracteres-reservados" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Caracteres reservado são caracteres usados no próprio HTML, como <code>&lt; &gt; &amp; &quot; &quot; ' '</code>. Não será possível utilizarmos elas no conteúdo, pois dão erro, mesmo que apareçam na pré-visualização o navegador vai tentar ler esses caracteres de alguma forma que faça sentido. Para usarmos precisamos trocá-los por outras formas de escrever. Faça o teste em algum documento .html para ver seu funcionamento na prática,:
+
+
+
+  <div class="collapsable-code">
+    <input id="2" type="checkbox" checked />
+    <label for="2">
+      <span class="collapsable-code__language">html</span>
+      <span class="collapsable-code__title">Caracteres Reservados</span>
+      <span class="collapsable-code__toggle" data-label-expand="▽" data-label-collapse="△"></span>
+    </label>
+    <pre class="language-html" ><code>
+&lt;p&gt;
+    &amp;lt; 
+    os espaços 
+    &amp;gt; 
+    &amp;amp; 
+    
+    &lt;br&gt; 
+    &amp;quot; que colocamos   
+    &amp;quot;
+    &lt;br&gt; 
+    &amp;apos; além das quebras de linha são 
+    ignorados
+
+&lt;/p&gt; 
+</code></pre>
+  </div>
+
+</p>
+<ul>
+<li><a href="#sum%C3%A1rio">Sumário</a></li>
+</ul>
+<h1 id="anatomia-de-um-documento">Anatomia de um Documento<a href="#anatomia-de-um-documento" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Se abrirmos o documento .html pelo navegador estaremos vendo a página como ela deve ser mostrada ao utilizador, mas se clicarmos em ver o código fonte dela, estaremos vendo o HTML puro. Para testarmos isso na prática, veremos a anatomia de um documento HTML, vide o exemplo abaixo.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+    &lt;<span style="color:#f92672">head</span>&gt;
+        &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>&gt;
+        &lt;<span style="color:#f92672">title</span>&gt;Anatomia do Documento&lt;/<span style="color:#f92672">title</span>&gt;
+    &lt;/<span style="color:#f92672">head</span>&gt;
+
+    &lt;<span style="color:#f92672">body</span>&gt;
+        &lt;<span style="color:#f92672">h1</span>&gt;Título&lt;/<span style="color:#f92672">h1</span>&gt;
+        &lt;<span style="color:#f92672">p</span>&gt;
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        &lt;/<span style="color:#f92672">p</span>&gt;
+        &lt;<span style="color:#f92672">p</span>&gt;
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        &lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>O padrão seria esta forma.</p>
+<ul>
+<li><code>&lt;!DOCTYPE html&gt;</code> — diz ao navegador que estamos trabalhando com HTML 5.</li>
+<li><code>&lt;html&gt;&lt;/html&gt;</code> — o próprio HTML, elemento raiz, o início da cadeia.</li>
+<li><code>&lt;head&gt;&lt;/head&gt;</code> — contém configurações importantes para página, mas não ainda o que o usuário vai ver.</li>
+<li><code>&lt;meta&gt;</code> — onde vai representar vários tipos de metadados da página.</li>
+<li><code>&lt;title&gt;&lt;/title&gt;</code> — título da página.</li>
+<li><code>&lt;body&gt;&lt;/body&gt;</code> — onde haverá conteúdo visual da página.</li>
+</ul>
+<h1 id="créditos">Créditos<a href="#créditos" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Fonte: <a href="https://rocketseat.com.br/">ROCKETSEAT</a></p>
+
+      </div></div>
+
+  
+  
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">...</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        <span class="button previous">
+            <a href="https://cybernimbus.com.br/posts/linux-diretorios/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Guia Básico de Linux - Diretórios</span>
+            </a>
+        </span>
+        
+        
+        <span class="button next">
+            <a href="https://cybernimbus.com.br/posts/http/">
+                <span class="button__text">HTTP?</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>TCN © 2021 :: Licensed under <a href=http://creativecommons.org/licenses/by-sa/4.0/>CC BY-SA 4.0</a></span>
+    
+        <span></span>
+      </div>
+  </div>
+</footer>
+
+<script src="https://cybernimbus.com.br/assets/main.js"></script>
+<script src="https://cybernimbus.com.br/assets/prism.js"></script>
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

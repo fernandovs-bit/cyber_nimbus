@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on cyber_nimbus</title>
+    <link>https://cybernimbus.com.br/categories/</link>
+    <description>Recent content in Categories on cyber_nimbus</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>TCN © 2021 :: Licensed under &lt;a href=http://creativecommons.org/licenses/by-sa/4.0/&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sat, 02 Oct 2021 15:28:47 -0300</lastBuildDate><atom:link href="https://cybernimbus.com.br/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>linux</title>
+      <link>https://cybernimbus.com.br/categories/linux/</link>
+      <pubDate>Sat, 02 Oct 2021 15:28:47 -0300</pubDate>
+      
+      <guid>https://cybernimbus.com.br/categories/linux/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>linux-iniciante</title>
+      <link>https://cybernimbus.com.br/categories/linux-iniciante/</link>
+      <pubDate>Sat, 02 Oct 2021 15:28:47 -0300</pubDate>
+      
+      <guid>https://cybernimbus.com.br/categories/linux-iniciante/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>WebDev</title>
+      <link>https://cybernimbus.com.br/categories/webdev/</link>
+      <pubDate>Wed, 29 Sep 2021 15:50:58 -0300</pubDate>
+      
+      <guid>https://cybernimbus.com.br/categories/webdev/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+    <item>
+      <title>markdown</title>
+      <link>https://cybernimbus.com.br/categories/markdown/</link>
+      <pubDate>Mon, 13 Sep 2021 00:34:56 -0300</pubDate>
+      
+      <guid>https://cybernimbus.com.br/categories/markdown/</guid>
+      <description></description>
+      <content></content>
+    </item>
+    
+  </channel>
+</rss>
