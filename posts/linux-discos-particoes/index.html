@@ -198,7 +198,7 @@
 <p>Sempre tenha em mente, que:</p>
 <ul>
 <li>
-<p>Quando se apaga uma partição, você estará apagando <strong>TODOS</strong> os arquivos existentes nela!</p>
+<p>Quando se apaga uma partição, irá apagar <strong>TODOS</strong> os arquivos existentes nela!</p>
 </li>
 <li>
 <p>A partição do tipo <em>Linux Native</em> (Tipo 83) é a usada para armazenar arquivos no GNU/Linux, tanto ext2, ext3, ext4, reiserfs, xfs, etc.</p>
@@ -207,7 +207,7 @@
 <p>A partição do tipo <em>Linux Swap</em> (Tipo 82) é usada como memória virtual.</p>
 </li>
 </ul>
-<p>Em maquinas mais novas, é bastante comum encontrar o Windows instalado em uma partição que consome TODO o espaço do disco rígido. Uma solução para instalar o GNU/Linux é apagar a partição Windows e criar três com tamanhos menores (uma para o Windows, uma para o GNU/Linux e outra para a Memória Virtual do Linux (SWAP). Ou criar apenas 2 se você não quiser mais saber mais do Windows.</p>
+<p>Em máquinas mais novas, é bastante comum encontrar o Windows instalado em uma partição que consome TODO o espaço do disco rígido. Uma solução para instalar o GNU/Linux é apagar a partição Windows e criar três com tamanhos menores (uma para o Windows, uma para o GNU/Linux e outra para a Memória Virtual do Linux (SWAP). Ou criar apenas 2 se você não quiser mais saber mais do Windows.</p>
 <p>A outra solução é usar o <em>parted</em> (e <strong>gparted</strong> sua versão gráfica), que trabalha com <em>FAT16, FAT32, NTFS</em>. Esta técnica também é chamada de <em><strong>Reparticionamento não destrutivo</strong></em> (e o outro obviamente <em><strong>Reparticionamento destrutivo</strong></em>). Para sistemas que foram formatados em Windows XP e superiores, é possível que o parted não consiga redimensionar o sistema, neste caso você pode reparticionar usando ferramentas como o <em>ntfsresize</em> ou <em>Partition Magic</em> (para Windows).</p>
 <p>Para mais detalhes sobre discos, partições ou como particionar seu disco, veja algum bom documento sobre particionamento (como a página de manual e documentação do <em>fdisk, cfdisk, parted</em> ou <em>Disk Druid</em>).</p>
 <ul>
@@ -216,7 +216,7 @@
 <h1 id="pontos-de-montagem">Pontos de Montagem<a href="#pontos-de-montagem" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <p>O GNU/Linux acessa as partições existentes em seus discos rígidos através de diretórios. Os diretórios que são usados para acessar (montar) partições são chamados de pontos de montagem.</p>
 <p>No <em>DOS</em> cada letra de unidade <code>C:, D:, E:</code> identifica uma partição de disco, no GNU/Linux os pontos de montagem fazem parte da grande estrutura do sistema de arquivos raiz.</p>
-<p>Existem muitas vantagens de se usar pontos de montagem ao invés de unidade de disco para identificar partições (método usado no Windows), vejamos algumas delas:</p>
+<p>Existem muitas vantagens de se usar pontos de montagem em vez daunidade de disco para identificar partições (método utilizado no Windows), vejamos algumas delas:</p>
 <ul>
 <li>
 <p>Você pode montar a partição no diretório em que quiser.</p>
@@ -360,7 +360,7 @@
 </li>
 </ul>
 <p>Existem outras opções que podem ser usadas com o comando <code>mount</code>, mas neste tópico o intento é o de somente mostrar o básico para &ldquo;montar&rdquo; seus discos e partições no GNU/Linux (para mais opções, veja a página de manual do mount).</p>
-<p>Caso você digitar <code>mount</code> sem parâmetros, serão mostrados que sistemas de arquivos estão atualmente montados no sistema. Esta mesma listagem pode ser vista em <code>/etc/mtab</code>. A remontagem de partição também é muito útil, especialmente após reparos nos sistema de arquivos do disco rígido. Alguns exemplos de remontagem abaixo.</p>
+<p>Caso você digitar <code>mount</code> sem parâmetros, serão mostrados que sistemas de arquivos estão atualmente montados no sistema. Esta mesma listagem pode ser vista em <code>/etc/mtab</code>. A remontagem de partição também é muito útil, especialmente após reparos no sistema de arquivos do disco rígido. Alguns exemplos de remontagem abaixo.</p>
 <p>Mas atenção! É necessário permissões de root para montar partições, a não ser que tenha especificado a opção user no arquivo <code>/etc/fstab</code>.</p>
 <p>Exemplo de Montagem:</p>
 <ul>

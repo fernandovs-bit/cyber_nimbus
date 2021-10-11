@@ -35,7 +35,7 @@
 &lt;p&gt;Sempre tenha em mente, que:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Quando se apaga uma partição, você estará apagando &lt;strong&gt;TODOS&lt;/strong&gt; os arquivos existentes nela!&lt;/p&gt;
+&lt;p&gt;Quando se apaga uma partição, irá apagar &lt;strong&gt;TODOS&lt;/strong&gt; os arquivos existentes nela!&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;A partição do tipo &lt;em&gt;Linux Native&lt;/em&gt; (Tipo 83) é a usada para armazenar arquivos no GNU/Linux, tanto ext2, ext3, ext4, reiserfs, xfs, etc.&lt;/p&gt;
@@ -44,7 +44,7 @@
 &lt;p&gt;A partição do tipo &lt;em&gt;Linux Swap&lt;/em&gt; (Tipo 82) é usada como memória virtual.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Em maquinas mais novas, é bastante comum encontrar o Windows instalado em uma partição que consome TODO o espaço do disco rígido. Uma solução para instalar o GNU/Linux é apagar a partição Windows e criar três com tamanhos menores (uma para o Windows, uma para o GNU/Linux e outra para a Memória Virtual do Linux (SWAP). Ou criar apenas 2 se você não quiser mais saber mais do Windows.&lt;/p&gt;
+&lt;p&gt;Em máquinas mais novas, é bastante comum encontrar o Windows instalado em uma partição que consome TODO o espaço do disco rígido. Uma solução para instalar o GNU/Linux é apagar a partição Windows e criar três com tamanhos menores (uma para o Windows, uma para o GNU/Linux e outra para a Memória Virtual do Linux (SWAP). Ou criar apenas 2 se você não quiser mais saber mais do Windows.&lt;/p&gt;
 &lt;p&gt;A outra solução é usar o &lt;em&gt;parted&lt;/em&gt; (e &lt;strong&gt;gparted&lt;/strong&gt; sua versão gráfica), que trabalha com &lt;em&gt;FAT16, FAT32, NTFS&lt;/em&gt;. Esta técnica também é chamada de &lt;em&gt;&lt;strong&gt;Reparticionamento não destrutivo&lt;/strong&gt;&lt;/em&gt; (e o outro obviamente &lt;em&gt;&lt;strong&gt;Reparticionamento destrutivo&lt;/strong&gt;&lt;/em&gt;). Para sistemas que foram formatados em Windows XP e superiores, é possível que o parted não consiga redimensionar o sistema, neste caso você pode reparticionar usando ferramentas como o &lt;em&gt;ntfsresize&lt;/em&gt; ou &lt;em&gt;Partition Magic&lt;/em&gt; (para Windows).&lt;/p&gt;
 &lt;p&gt;Para mais detalhes sobre discos, partições ou como particionar seu disco, veja algum bom documento sobre particionamento (como a página de manual e documentação do &lt;em&gt;fdisk, cfdisk, parted&lt;/em&gt; ou &lt;em&gt;Disk Druid&lt;/em&gt;).&lt;/p&gt;
 &lt;ul&gt;
@@ -53,7 +53,7 @@
 &lt;h1 id=&#34;pontos-de-montagem&#34;&gt;Pontos de Montagem&lt;/h1&gt;
 &lt;p&gt;O GNU/Linux acessa as partições existentes em seus discos rígidos através de diretórios. Os diretórios que são usados para acessar (montar) partições são chamados de pontos de montagem.&lt;/p&gt;
 &lt;p&gt;No &lt;em&gt;DOS&lt;/em&gt; cada letra de unidade &lt;code&gt;C:, D:, E:&lt;/code&gt; identifica uma partição de disco, no GNU/Linux os pontos de montagem fazem parte da grande estrutura do sistema de arquivos raiz.&lt;/p&gt;
-&lt;p&gt;Existem muitas vantagens de se usar pontos de montagem ao invés de unidade de disco para identificar partições (método usado no Windows), vejamos algumas delas:&lt;/p&gt;
+&lt;p&gt;Existem muitas vantagens de se usar pontos de montagem em vez daunidade de disco para identificar partições (método utilizado no Windows), vejamos algumas delas:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Você pode montar a partição no diretório em que quiser.&lt;/p&gt;
@@ -197,7 +197,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Existem outras opções que podem ser usadas com o comando &lt;code&gt;mount&lt;/code&gt;, mas neste tópico o intento é o de somente mostrar o básico para &amp;ldquo;montar&amp;rdquo; seus discos e partições no GNU/Linux (para mais opções, veja a página de manual do mount).&lt;/p&gt;
-&lt;p&gt;Caso você digitar &lt;code&gt;mount&lt;/code&gt; sem parâmetros, serão mostrados que sistemas de arquivos estão atualmente montados no sistema. Esta mesma listagem pode ser vista em &lt;code&gt;/etc/mtab&lt;/code&gt;. A remontagem de partição também é muito útil, especialmente após reparos nos sistema de arquivos do disco rígido. Alguns exemplos de remontagem abaixo.&lt;/p&gt;
+&lt;p&gt;Caso você digitar &lt;code&gt;mount&lt;/code&gt; sem parâmetros, serão mostrados que sistemas de arquivos estão atualmente montados no sistema. Esta mesma listagem pode ser vista em &lt;code&gt;/etc/mtab&lt;/code&gt;. A remontagem de partição também é muito útil, especialmente após reparos no sistema de arquivos do disco rígido. Alguns exemplos de remontagem abaixo.&lt;/p&gt;
 &lt;p&gt;Mas atenção! É necessário permissões de root para montar partições, a não ser que tenha especificado a opção user no arquivo &lt;code&gt;/etc/fstab&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Exemplo de Montagem:&lt;/p&gt;
 &lt;ul&gt;
