@@ -7,7 +7,427 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>TCN © 2021 :: Licensed under &lt;a href=http://creativecommons.org/licenses/by-sa/4.0/&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sat, 02 Oct 2021 15:28:47 -0300</lastBuildDate><atom:link href="https://cybernimbus.com.br/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Oct 2021 17:30:57 -0300</lastBuildDate><atom:link href="https://cybernimbus.com.br/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Guia Básico de Linux - Discos e Partições</title>
+      <link>https://cybernimbus.com.br/posts/linux-discos-particoes/</link>
+      <pubDate>Sun, 10 Oct 2021 17:30:57 -0300</pubDate>
+      
+      <guid>https://cybernimbus.com.br/posts/linux-discos-particoes/</guid>
+      <description>Sumário  Partições Pontos de Montagem Identificação de discos e partições Montando Partições  fstab   Desmontando Partições Créditos  Partições As partições, são divisões existentes no disco rígido que marcam onde começa onde termina um sistema de arquivos. As partições nos permitem utilizar mais de um sistema operacional no mesmo computador (como o GNU/Linux e Windows), ou dividir o disco rígido em uma ou mais partes para ser usado por um único sistema operacional ou até mesmo por diferentes arquiteturas (32 e 64 bits).</description>
+      <content>&lt;h1 id=&#34;sumário&#34;&gt;Sumário&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#parti%C3%A7%C3%B5es&#34;&gt;Partições&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#pontos-de-montagem&#34;&gt;Pontos de Montagem&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#identifica%C3%A7%C3%A3o-de-discos-e-parti%C3%A7%C3%B5es-em-sistemas-linux&#34;&gt;Identificação de discos e partições&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#montando-acessando-uma-parti%C3%A7%C3%A3o-de-disco&#34;&gt;Montando Partições&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#fstab&#34;&gt;fstab&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#desmontando-uma-parti%C3%A7%C3%A3o-de-disco&#34;&gt;Desmontando Partições&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#cr%C3%A9ditos&#34;&gt;Créditos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;partições&#34;&gt;Partições&lt;/h1&gt;
+&lt;p&gt;As partições, &lt;strong&gt;são divisões existentes no disco rígido que marcam onde começa onde termina um sistema de arquivos&lt;/strong&gt;. As partições nos permitem utilizar mais de um sistema operacional no mesmo computador (como o GNU/Linux e Windows), ou dividir o disco rígido em uma ou mais partes para ser usado por um único sistema operacional ou até mesmo por diferentes arquiteturas (32 e 64 bits).&lt;/p&gt;
+&lt;p&gt;Uma partição de disco não interfere em outras partições existentes, por este motivo é possível usar o Windows, GNU/Linux e qualquer outro sistema operacional no mesmo disco.&lt;/p&gt;
+&lt;p&gt;Para particionar (dividir) o disco rígido em uma ou mais partes é necessário o uso de um programa de particionamento. Os programas mais conhecidos para particionamento de discos no GNU/Linux são &lt;em&gt;fdisk, cfdisk&lt;/em&gt; e o &lt;em&gt;Disk Druid&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Sempre tenha em mente, que:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Quando se apaga uma partição, você estará apagando &lt;strong&gt;TODOS&lt;/strong&gt; os arquivos existentes nela!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A partição do tipo &lt;em&gt;Linux Native&lt;/em&gt; (Tipo 83) é a usada para armazenar arquivos no GNU/Linux, tanto ext2, ext3, ext4, reiserfs, xfs, etc.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A partição do tipo &lt;em&gt;Linux Swap&lt;/em&gt; (Tipo 82) é usada como memória virtual.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Em maquinas mais novas, é bastante comum encontrar o Windows instalado em uma partição que consome TODO o espaço do disco rígido. Uma solução para instalar o GNU/Linux é apagar a partição Windows e criar três com tamanhos menores (uma para o Windows, uma para o GNU/Linux e outra para a Memória Virtual do Linux (SWAP). Ou criar apenas 2 se você não quiser mais saber mais do Windows.&lt;/p&gt;
+&lt;p&gt;A outra solução é usar o &lt;em&gt;parted&lt;/em&gt; (e &lt;strong&gt;gparted&lt;/strong&gt; sua versão gráfica), que trabalha com &lt;em&gt;FAT16, FAT32, NTFS&lt;/em&gt;. Esta técnica também é chamada de &lt;em&gt;&lt;strong&gt;Reparticionamento não destrutivo&lt;/strong&gt;&lt;/em&gt; (e o outro obviamente &lt;em&gt;&lt;strong&gt;Reparticionamento destrutivo&lt;/strong&gt;&lt;/em&gt;). Para sistemas que foram formatados em Windows XP e superiores, é possível que o parted não consiga redimensionar o sistema, neste caso você pode reparticionar usando ferramentas como o &lt;em&gt;ntfsresize&lt;/em&gt; ou &lt;em&gt;Partition Magic&lt;/em&gt; (para Windows).&lt;/p&gt;
+&lt;p&gt;Para mais detalhes sobre discos, partições ou como particionar seu disco, veja algum bom documento sobre particionamento (como a página de manual e documentação do &lt;em&gt;fdisk, cfdisk, parted&lt;/em&gt; ou &lt;em&gt;Disk Druid&lt;/em&gt;).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;pontos-de-montagem&#34;&gt;Pontos de Montagem&lt;/h1&gt;
+&lt;p&gt;O GNU/Linux acessa as partições existentes em seus discos rígidos através de diretórios. Os diretórios que são usados para acessar (montar) partições são chamados de pontos de montagem.&lt;/p&gt;
+&lt;p&gt;No &lt;em&gt;DOS&lt;/em&gt; cada letra de unidade &lt;code&gt;C:, D:, E:&lt;/code&gt; identifica uma partição de disco, no GNU/Linux os pontos de montagem fazem parte da grande estrutura do sistema de arquivos raiz.&lt;/p&gt;
+&lt;p&gt;Existem muitas vantagens de se usar pontos de montagem ao invés de unidade de disco para identificar partições (método usado no Windows), vejamos algumas delas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Você pode montar a partição no diretório em que quiser.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Em caso de um sistema de arquivos cheio, você pode copiar o conteúdo de um grande diretório para outro sistema de arquivos, apagar o conteúdo do diretório original e montar o disco onde foram copiados os arquivos naquele local (caso não use um sistema de LVM).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Reduz riscos de corrompimento do sistema operacional. Caso isto aconteça, será necessário apenas restaurar o backup do sistema de arquivos afetado.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tempo de boot reduzido quando um sistema de arquivos for verificado por ferramentas como o &lt;strong&gt;fsck&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;O uso de pontos de montagem torna o gerenciamento mais flexível.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A adição de novas partições ou substituição de discos rígidos não afeta a ordem de identificação dos discos e pontos de montagem (como não acontece no DOS).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;identificação-de-discos-e-partições-em-sistemas-linux&#34;&gt;Identificação de discos e partições em sistemas Linux&lt;/h1&gt;
+&lt;p&gt;No GNU/Linux, os dispositivos existentes em seu computador (como discos rígidos, pen-drives, flash, storages remotas, disquetes, tela, portas de impressora, modem, etc) são identificados por um arquivo referente a este dispositivo no diretório &lt;code&gt;/dev&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;A identificação de discos rígidos no GNU/Linux é feita da seguinte forma:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;/dev/sda1
+|    | ||
+|    | ||_Número que identifica o número da partição no disco rígido.
+|    | |
+|    | |_Letra que identifica o disco rígido (a=primeiro, b=segundo, etc...).
+|    |
+|    |_Sigla que identifica o tipo do disco rígido (sd=SATA/SCSI, sd=IDE, xt=MFM).
+|
+|_Diretório onde são armazenados os dispositivos existentes no sistema.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Abaixo algumas identificações de discos e partições em sistemas Linux:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ev/fd0&lt;/code&gt; - Primeira unidade de disquetes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;/dev/fd1&lt;/code&gt; - Segunda unidade de disquetes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;/dev/sda&lt;/code&gt; - Primeiro disco rígido na primeira controladora SATA ou SCSI.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;/dev/sda1&lt;/code&gt; - Primeira partição do primeiro disco rígido SATA ou.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;/dev/sdb&lt;/code&gt; - Segundo disco rígido na primeira controladora SATA ou SCSI.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;/dev/sdb1&lt;/code&gt; - Primeira partição do segundo disco rígido SATA ou SCSI.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;/dev/sr0&lt;/code&gt; - Primeiro CD-ROM SATA ou SCSI.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;/dev/sr1&lt;/code&gt; - Segundo CD-ROM SATA ou SCSI.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;/dev/hda&lt;/code&gt; - Primeiro disco rígido na primeira controladora IDE do micro (primary master).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;/dev/hda1&lt;/code&gt; - Primeira partição do primeiro disco rígido IDE.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;/dev/hdb&lt;/code&gt; - Segundo disco rígido na primeira controladora IDE do micro (primary slave).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;/dev/hdb1&lt;/code&gt; - Primeira partição do segundo disco rígido IDE.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;/dev/xda&lt;/code&gt; - Primeiro disco rígido XT.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;/dev/xdb&lt;/code&gt; - Segundo disco rígido XT.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As letras de identificação de discos rígidos podem ir além de &lt;code&gt;sdb&lt;/code&gt;, por exemplo, em se tratando de &lt;em&gt;pen-drives, memória flash&lt;/em&gt;, as unidades serão detectadas como &lt;code&gt;sdc, sdd&lt;/code&gt; e assim por diante.&lt;/p&gt;
+&lt;p&gt;É de suma importância entender como os discos e partições são identificados no sistema, pois será necessário usar os parâmetros corretos para monta-los.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;montando-acessando-uma-partição-de-disco&#34;&gt;Montando (acessando) uma partição de disco&lt;/h1&gt;
+&lt;p&gt;Você pode acessar uma partição de disco usando o comando &lt;code&gt;mount&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;mount [dispositivo] [ponto de montagem] [opções] &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Onde:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;dispositivo&lt;/p&gt;
+&lt;p&gt;Identificação da unidade de disco/partição que deseja acessar (como &lt;code&gt;/dev/hda1&lt;/code&gt; (disco rígido) ou &lt;code&gt;/dev/fd0&lt;/code&gt; (primeira unidade de disquetes).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ponto de montagem&lt;/p&gt;
+&lt;p&gt;Diretório de onde a unidade de disco/partição será acessado. O diretório deve estar vazio para montagem de um sistema de arquivos. Normalmente é usado o diretório &lt;code&gt;/mnt&lt;/code&gt; para armazenamento de pontos de montagem temporários.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-t [tipo] - tipo do sistema de arquivos utilizado pelo dispositivo. São aceitos os sistemas de arquivos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;/ext2&lt;/code&gt; - Para partições GNU/Linux usando o Extended File System versão 2 (a mais comum).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ext3&lt;/code&gt; - Para partições GNU/Linux usando o Extended File System versão 3, com suporte a journaling.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ext4&lt;/code&gt; - Para partições GNU/Linux usando o Extended File System versão 4, com suporte a journaling.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ntfs&lt;/code&gt; - este é o tipo do Windows mais comum ou discos rígidos externos maiores.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;reiserfs&lt;/code&gt; - Para partições reiserfs, com suporte a journaling.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;xfs&lt;/code&gt; - Para partições xfs, com suporte a journaling.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;vfat&lt;/code&gt; - Este é o tipo mais comum usado para discos rígidos externos menores.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;msdos&lt;/code&gt; - Para partições DOS normais.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;iso9660&lt;/code&gt; - Para montar unidades de CD-ROM. É o padrão.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Na maioria das vezes, caso o sistema de arquivos não seja especificado, o &lt;code&gt;mount&lt;/code&gt; utilizará a &lt;strong&gt;auto-detecção&lt;/strong&gt; e montará a partição usando o sistema de arquivos correto. Para mais detalhes sobre opções usadas com cada sistema de arquivos, veja a página de manual mount.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;-r&lt;/p&gt;
+&lt;p&gt;Caso for especificada, monta a partição somente para leitura.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;-w&lt;/p&gt;
+&lt;p&gt;Caso for especificada, monta a partição como leitura/gravação. É o padrão.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Existem outras opções que podem ser usadas com o comando &lt;code&gt;mount&lt;/code&gt;, mas neste tópico o intento é o de somente mostrar o básico para &amp;ldquo;montar&amp;rdquo; seus discos e partições no GNU/Linux (para mais opções, veja a página de manual do mount).&lt;/p&gt;
+&lt;p&gt;Caso você digitar &lt;code&gt;mount&lt;/code&gt; sem parâmetros, serão mostrados que sistemas de arquivos estão atualmente montados no sistema. Esta mesma listagem pode ser vista em &lt;code&gt;/etc/mtab&lt;/code&gt;. A remontagem de partição também é muito útil, especialmente após reparos nos sistema de arquivos do disco rígido. Alguns exemplos de remontagem abaixo.&lt;/p&gt;
+&lt;p&gt;Mas atenção! É necessário permissões de root para montar partições, a não ser que tenha especificado a opção user no arquivo &lt;code&gt;/etc/fstab&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Exemplo de Montagem:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Montar uma partição Windows (vfat) de &lt;code&gt;/dev/sda1&lt;/code&gt; em &lt;code&gt;/mnt&lt;/code&gt; somente para leitura: &lt;code&gt;mount /dev/sda1 /mnt -r -t vfat&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Montar um pen-drive detectado em &lt;code&gt;/dev/sdc1&lt;/code&gt; em &lt;code&gt;/mnt&lt;/code&gt;: &lt;code&gt;mount /dev/sdc1 /mnt -t vfat&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Montar uma partição DOS localizada em um segundo disco rígido &lt;code&gt;/dev/hdb1&lt;/code&gt; em &lt;code&gt;/mnt&lt;/code&gt;: &lt;code&gt;mount /dev/hdb1 /mnt -t msdos&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Remontar a partição raíz como somente leitura: &lt;code&gt;mount -o remount,ro /&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Remontar a partição raíz como leitura/gravação (a opção -n é usada porque o &lt;code&gt;mount&lt;/code&gt; não conseguirá atualizar o arquivo &lt;code&gt;/etc/mtab&lt;/code&gt; devido ao sistema de arquivos &lt;code&gt;/&lt;/code&gt; estar montado como somente leitura atualmente: &lt;code&gt;mount -n -o remount,rw /&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;fstab&#34;&gt;fstab&lt;/h1&gt;
+&lt;p&gt;O arquivo &lt;code&gt;/etc/fstab&lt;/code&gt; permite que as partições do sistema sejam montadas facilmente especificando somente o dispositivo ou o ponto de montagem. Este arquivo contém parâmetros sobre as partições que são lidos pelo comando &lt;code&gt;mount&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Cada linha deste arquivo contém a partição que desejamos montar, o ponto de montagem, o sistema de arquivos usado pela partição e outras opções.&lt;/p&gt;
+&lt;p&gt;A &lt;code&gt;fstab&lt;/code&gt; tem a seguinte forma:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Sistema_de_arquivos&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Ponto_de_Montagem&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Tipo&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Opções&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;dump&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;ordem&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;/dev/sda1&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;/&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;ext4&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;defaults&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;/dev/sda2&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;/boot&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;ext4&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;defaults&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;/dev/sda3&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;/dos&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;msdos&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;defaults,noauto,rw&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;/dev/hdg&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;/cdroom&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;iso9660&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;defaults,noauto&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Onde:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Sistema de Arquivos&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Partição que deseja montar.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Ponto de montagem&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Diretório do GNU/Linux onde a partição montada será acessada.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Tipo&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tipo de sistema de arquivos usado na partição que será montada. Para partições GNU/Linux use &lt;code&gt;ext3,ext4, reiserfs, xfs&lt;/code&gt; (de acordo com o tipo de partição selecionada durante a formatação), para partições DOS (sem nomes extensos de arquivos) use &lt;code&gt;msdos&lt;/code&gt;, para partições Win 95 (com suporte a nomes extensos de arquivos) use &lt;code&gt;vfat&lt;/code&gt;, para unidades de CD-ROM use &lt;code&gt;iso9660&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Opções&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Especifica as opções usadas com o sistema de arquivos. Abaixo, algumas opções de montagem para &lt;code&gt;ext2/3/4&lt;/code&gt; (a lista completa pode ser encontrada na página de manual do mount)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;defaults&lt;/strong&gt; - Utiliza valores padrão de montagem.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;noauto&lt;/strong&gt; - Não monta os sistemas de arquivos durante a inicialização.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;ro&lt;/strong&gt; - Monta como somente leitura.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;user&lt;/strong&gt; - Permite que usuários montem o sistema de arquivos (não recomendado por motivos de segurança).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;sync&lt;/strong&gt; - é recomendado para uso com discos removíveis (disquetes, zip drives, nfs, etc) para que os dados sejam gravados imediatamente na unidade (caso não seja usada, você deve usar o comando “sync” antes de retirar o dispositivo da unidade.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;*&lt;em&gt;dump&lt;/em&gt; - Especifica a frequência de backup feita com o programa dump no sistema de arquivos. 0 desativa o backup.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Ordem&lt;/strong&gt; - Define a ordem que os sistemas de arquivos serão verificados na inicialização do sistema. Se usar 0, o sistema de arquivos não é verificado. O sistema de arquivos raíz que deverá ser verificado primeiro é o raíz &lt;code&gt;&amp;quot;/&amp;quot;&lt;/code&gt; (a não ser que você tenha um sistema de arquivos de outro tipo que não é montado dentro do diretório raíz e possui seu suporte embutido no kernel).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Após configurar o &lt;code&gt;/etc/fstab&lt;/code&gt;, basta digitar o comando &lt;code&gt;mount /dev/hdg&lt;/code&gt; ou &lt;code&gt;mount /cdrom&lt;/code&gt; para que a unidade de CD-ROM seja montada. Você deve ter notado que não é necessário especificar o sistema de arquivos da partição pois o mount verificará se ele já existe no &lt;code&gt;/etc/fstab&lt;/code&gt; e caso exista, então utilizara as opções especificadas neste arquivo. Para maiores detalhes veja as páginas de manual &lt;code&gt;fstab&lt;/code&gt; e &lt;code&gt;mount&lt;/code&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;desmontando-uma-partição-de-disco&#34;&gt;Desmontando uma partição de disco&lt;/h1&gt;
+&lt;p&gt;Utilize o comando &lt;code&gt;umount&lt;/code&gt; para desmontar um sistema de arquivos que foi montado com o &lt;code&gt;mount&lt;/code&gt;. Você deve ter permissões de root para desmontar uma partição.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;umount [dispositivo/ponto de montagem]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;É possível usar &lt;code&gt;umount /dev/sda1&lt;/code&gt; como &lt;code&gt;umount /mnt&lt;/code&gt; para desmontar um sistema de arquivos &lt;code&gt;/dev/sda1&lt;/code&gt; montado em &lt;code&gt;/mnt&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Observação: O comando &lt;code&gt;umount&lt;/code&gt; executa o &lt;code&gt;sync&lt;/code&gt; automaticamente no momento da desmontagem, para garantir que todos os dados ainda em memória RAM sejam salvos.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;créditos&#34;&gt;Créditos&lt;/h1&gt;
+&lt;p&gt;fonte: &lt;a href=&#34;https://guiafoca.org/&#34;&gt;FOCALINUX&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+    <item>
+      <title>Guia Básico de Linux - Coringas</title>
+      <link>https://cybernimbus.com.br/posts/linux-coringas/</link>
+      <pubDate>Sun, 10 Oct 2021 16:10:40 -0300</pubDate>
+      
+      <guid>https://cybernimbus.com.br/posts/linux-coringas/</guid>
+      <description>Sumário  Coringas  Utilizando   Créditos  Coringas O coringa (ou referência global) é um recurso utilizado para especificar um ou mais arquivos e/ou diretórios do sistema de uma só vez. Este é um recurso permite que você faça a filtragem do que será listado, copiado, apagado, etc. São usados 4 tipos de coringas no GNU/Linux:
+ * - Faz referência a um nome completo/restante de um arquivo/diretório. ?</description>
+      <content>&lt;h1 id=&#34;sumário&#34;&gt;Sumário&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#coringas&#34;&gt;Coringas&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#utiliza%C3%A7%C3%A3o&#34;&gt;Utilizando&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#cr%C3%A9ditos&#34;&gt;Créditos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;coringas&#34;&gt;Coringas&lt;/h1&gt;
+&lt;p&gt;O coringa (ou referência global) é um recurso utilizado para especificar um ou mais arquivos e/ou diretórios do sistema de uma só vez. Este é um recurso permite que você faça a filtragem do que será listado, copiado, apagado, etc. São usados 4 tipos de coringas no GNU/Linux:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;*&lt;/code&gt; - Faz referência a um nome completo/restante de um arquivo/diretório.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;?&lt;/code&gt; - Faz referência a uma letra naquela posição.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[padrão]&lt;/code&gt; - Faz referência a uma faixa de caracteres de um arquivo/diretório. Padrão pode ser:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;[a-z][0-9]&lt;/code&gt; - Faz referência a caracteres de a até z seguido de um caracter de 0 até 9.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[a,z][1,0]&lt;/code&gt; - Faz a referência aos caracteres a e z seguido de um caracter 1 ou 0 naquela posição.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[a-z,1,0]&lt;/code&gt; - Faz referência a intervalo de caracteres de a até z ou 1 ou 0 naquela posição.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A procura de caracteres é &amp;ldquo;Case Sensitive&amp;rdquo; assim se você deseja que sejam localizados todos os caracteres alfabéticos você deve usar &lt;code&gt;[a-zA-Z]&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Caso a expressão seja precedida por um &lt;code&gt;^&lt;/code&gt;, faz referência a qualquer caracter exceto o da expressão. Por exemplo &lt;code&gt;[^abc]&lt;/code&gt; faz referência a qualquer caracter exceto &lt;em&gt;&lt;strong&gt;a, b e c&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;{padrões}&lt;/code&gt; - Expande e gera strings para pesquisa de padrões de um arquivo/diretório.
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;X{ab,01}&lt;/code&gt; - Faz referência a sequência de caracteres Xab ou X01&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;X{a-z,10}&lt;/code&gt;- Faz referência a sequência de caracteres Xa-z e X10.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;O que difere este método de expansão dos demais é que a existência do arquivo/diretório é opcional para geração do resultado, sendo assim bastante útil para a criação de diretórios. Lembrando que os 4 tipos de coringas &lt;code&gt;&amp;quot;*&amp;quot;, &amp;quot;?&amp;quot;, &amp;quot;[]&amp;quot;, &amp;quot;{}&amp;quot;&lt;/code&gt; podem ser usados juntos.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;utilização&#34;&gt;Utilização&lt;/h1&gt;
+&lt;p&gt;Para entender melhor vamos a prática:&lt;/p&gt;
+&lt;p&gt;Vamos dizer que tenha 5 arquivos no diretório &lt;code&gt;/usr/teste&lt;/code&gt;: &lt;em&gt;teste1.txt, teste2.txt, teste3.txt, teste4.new, teste5.new&lt;/em&gt;.
+Caso deseje listar &lt;strong&gt;todos&lt;/strong&gt; os arquivos do diretório &lt;code&gt;/usr/teste&lt;/code&gt; você pode usar o coringa &lt;code&gt;*&lt;/code&gt; para especificar todos os arquivos do diretório: &lt;code&gt;cd /usr/teste e ls *&lt;/code&gt; &lt;strong&gt;ou&lt;/strong&gt; &lt;code&gt;ls /usr/teste/*. &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Não tem muito sentido usar o comando &lt;code&gt;ls&lt;/code&gt; com &lt;code&gt;*&lt;/code&gt; porque todos os arquivos serão listados se o &lt;code&gt;ls&lt;/code&gt; for usado sem nenhum Coringa. Utilizamos aqui apenas para exemplificar.&lt;/p&gt;
+&lt;p&gt;Agora para listar todos os arquivos &lt;em&gt;teste1.txt, teste2.txt, teste3.txt&lt;/em&gt; com exceção de &lt;em&gt;teste4.new, teste5.new&lt;/em&gt;, podemos usar inicialmente 3 métodos:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Usando o comando &lt;code&gt;ls *.txt&lt;/code&gt; que pega todos os arquivos que começam com qualquer nome e terminam com &lt;code&gt;.txt&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Usando o comando &lt;code&gt;ls teste?.txt&lt;/code&gt;, que pega todos os arquivos que começam com o nome &lt;strong&gt;teste&lt;/strong&gt;, tenham qualquer caracter no lugar do coringa &lt;code&gt;?&lt;/code&gt; e terminem com &lt;code&gt;.txt&lt;/code&gt;. Com o exemplo acima &lt;code&gt;teste*.txt&lt;/code&gt; também faria a mesma coisa, mas se também tivéssemos um arquivo chamado &lt;code&gt;teste10.txt&lt;/code&gt; este também seria listado.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Usando o comando &lt;code&gt;ls teste[1-3].txt&lt;/code&gt;, que pega todos os arquivos que começam com o nome &lt;strong&gt;teste&lt;/strong&gt;, tenham qualquer caracter entre o &lt;em&gt;número 1-3&lt;/em&gt; no lugar da &lt;em&gt;6a (sexta)&lt;/em&gt; letra e terminem com &lt;code&gt;.txt&lt;/code&gt;. Neste caso se obtém uma filtragem mais exata, pois o coringa &lt;code&gt;?&lt;/code&gt; especifica qualquer caracter naquela posição e &lt;code&gt;[]&lt;/code&gt; especifica números, letras ou intervalo que será usado.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Agora para listar somente &lt;em&gt;teste4.new e teste5.new&lt;/em&gt; podemos usar os seguintes métodos:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ls *.new&lt;/code&gt; que lista todos os arquivos que terminam com &lt;code&gt;.new&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ls teste?.new&lt;/code&gt; que lista todos os arquivos que começam com &lt;strong&gt;teste&lt;/strong&gt;, contenham qualquer caracter na posição do coringa &lt;code&gt;?&lt;/code&gt; e terminem com &lt;code&gt;.new&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ls teste[4,5].*&lt;/code&gt; que lista todos os arquivos que começam com teste &lt;strong&gt;contenham números de 4 e 5 naquela posição&lt;/strong&gt; e terminem com qualquer extensão.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Existem várias outras formas de se fazer a mesma coisa, indo de acordo com a preferência do utilizador ao executar tais comandos. O intuito deste tópico, é mostrar como especificar mais de um arquivo de uma só vez. O uso de coringas terá grande utilidade ao copiar &lt;em&gt;arquivos, apagar, mover, renomear&lt;/em&gt;, nas mais diversas partes do sistema.&lt;/p&gt;
+&lt;p&gt;Alias, esta é uma característica do &lt;strong&gt;GNU/Linux:&lt;/strong&gt; &lt;em&gt;permitir que uma tarefa seja feita da forma como o utilizador queira, dando-lhe a liberdade de fazer a seu gosto&lt;/em&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;créditos&#34;&gt;Créditos&lt;/h1&gt;
+&lt;p&gt;fonte: &lt;a href=&#34;https://guiafoca.org/&#34;&gt;FOCALINUX&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
     <item>
       <title>Guia Básico de Linux - Diretórios</title>
       <link>https://cybernimbus.com.br/posts/linux-diretorios/</link>
@@ -32,9 +452,9 @@
 &lt;li&gt;&lt;a href=&#34;#cr%C3%A9ditos&#34;&gt;Créditos&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;diretório&#34;&gt;Diretório&lt;/h1&gt;
-&lt;p&gt;Diretório é o local utilizado para armazenar conjuntos arquivos para melhor organização e localização. Em outras palavras, o diretório pode ser entendido como uma pasta onde você guarda seus papeis (arquivos). O diretório, como o arquivo, também é &amp;ldquo;Case Sensitive&amp;rdquo; (diretório /teste é completamente diferente do diretório /Teste).&lt;/p&gt;
+&lt;p&gt;Diretório é o local utilizado para armazenar conjuntos arquivos para melhor organização e localização. Em outras palavras, o diretório pode ser entendido como uma pasta onde você guarda seus papeis (arquivos). O diretório, como o arquivo, também é &amp;ldquo;Case Sensitive&amp;rdquo; (diretório &lt;code&gt;/teste&lt;/code&gt; é completamente diferente do diretório &lt;code&gt;/Teste&lt;/code&gt;).&lt;/p&gt;
 &lt;p&gt;Não podem existir dois arquivos com o mesmo nome em um diretório, ou um sub-diretório com um mesmo nome de um arquivo em um mesmo diretório.&lt;/p&gt;
-&lt;p&gt;Um diretório nos sistemas Linux/UNIX são especificados por uma &amp;ldquo;/&amp;rdquo; e não uma &amp;ldquo;&amp;quot; como é feito no DOS. Para detalhes sobre como criar um diretório, vejamos o comando &lt;code&gt;mkdir&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Um diretório nos sistemas Linux/UNIX são especificados por uma &lt;code&gt;/&lt;/code&gt; e não uma &lt;code&gt;\&lt;/code&gt; como é feito no DOS. Para detalhes sobre como criar um diretório, vejamos o comando &lt;code&gt;mkdir&lt;/code&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -122,7 +542,7 @@ O diretório home também é identificado por um &lt;code&gt;~&lt;/code&gt;(til)
 &lt;/ul&gt;
 &lt;h1 id=&#34;diretório-superior&#34;&gt;Diretório Superior&lt;/h1&gt;
 &lt;p&gt;O diretório superior (Upper Directory) é identificado por &lt;code&gt;..&lt;/code&gt; (2 pontos).&lt;/p&gt;
-&lt;p&gt;Caso esteja no diretório &lt;code&gt;/usr/local&lt;/code&gt; e quiser listar os arquivos do diretório &lt;code&gt;/usr&lt;/code&gt; você pode digitar, &lt;code&gt;ls .&lt;/code&gt;. Este recurso também pode ser usado para copiar, mover arquivos/diretórios, etc.&lt;/p&gt;
+&lt;p&gt;Caso esteja no diretório &lt;code&gt;/usr/local&lt;/code&gt; e quiser listar os arquivos do diretório &lt;code&gt;/usr&lt;/code&gt; você pode digitar, &lt;code&gt;ls ..&lt;/code&gt;. Este recurso também pode ser usado para copiar, mover arquivos/diretórios, etc.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -269,6 +689,7 @@ O diretório home também é identificado por um &lt;code&gt;~&lt;/code&gt;(til)
 &lt;p&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr&gt;
 &lt;h1 id=&#34;créditos&#34;&gt;Créditos&lt;/h1&gt;
 &lt;p&gt;fonte: &lt;a href=&#34;https://guiafoca.org/&#34;&gt;FOCALINUX&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;

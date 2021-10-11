@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Guia Básico de Linux - Discos e Partições :: cyber_nimbus</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="As partições, **são divisões existentes no disco rígido que marcam onde começa onde termina um sistema de arquivos**. As partições nos permitem utilizar mais de um sistema operacional no mesmo computador (como o GNU/Linux e Windows), ou..." />
+<meta name="keywords" content=", " />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://cybernimbus.com.br/posts/linux-discos-particoes/" />
+
+
+
+
+<link rel="stylesheet" href="https://cybernimbus.com.br/assets/style.css">
+
+  <link rel="stylesheet" href="https://cybernimbus.com.br/assets/blue.css">
+
+
+
+<link rel="stylesheet" href="https://cybernimbus.com.br/style.css">
+
+
+<link rel="apple-touch-icon" href="https://cybernimbus.com.br/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="https://cybernimbus.com.br/img/favicon/favicon-g.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Guia Básico de Linux - Discos e Partições">
+<meta property="og:description" content="As partições, **são divisões existentes no disco rígido que marcam onde começa onde termina um sistema de arquivos**. As partições nos permitem utilizar mais de um sistema operacional no mesmo computador (como o GNU/Linux e Windows), ou..." />
+<meta property="og:url" content="https://cybernimbus.com.br/posts/linux-discos-particoes/" />
+<meta property="og:site_name" content="cyber_nimbus" />
+
+  <meta property="og:image" content="https://cybernimbus.com.br/img/cover/tux.webp">
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+  <meta property="article:section" content="linux" />
+
+  <meta property="article:section" content="linux-iniciante" />
+
+
+  <meta property="article:published_time" content="2021-10-10 17:30:57 -0300 -03" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="blue">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    CYBER.NIMBUS
+  </div>
+</a>
+
+    </div>
+    
+      <div class="menu-trigger" >...</div>
+    
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">&gt; about</a></li>
+        
+      
+        
+          <li><a href="/">&gt; home</a></li>
+        
+      
+        
+          <li><a href="/index.xml">&gt; rss</a></li>
+        
+      
+        
+          <li><a href="/tags">&gt; tags</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">&gt; about</a></li>
+      
+    
+      
+        <li><a href="/">&gt; home</a></li>
+      
+    
+      
+        <li><a href="/index.xml">&gt; rss</a></li>
+      
+    
+      
+        <li><a href="/tags">&gt; tags</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+  
+    
+
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://cybernimbus.com.br/posts/linux-discos-particoes/">Guia Básico de Linux - Discos e Partições</a></h1>
+    <div class="post-meta">
+      
+        <span class="post-date">
+        :: NFO :: 10-10-2021 ::
+        </span>
+      
+      
+        <span class="post-author"> by _fav0 ::</span>
+      
+        <span class="post-meta">
+        
+          #<a href="https://cybernimbus.com.br/tags/linux/">linux</a>&nbsp;
+        
+          #<a href="https://cybernimbus.com.br/tags/linux-iniciante/">linux-iniciante</a>&nbsp;
+        
+        </span>
+    </div>
+  
+
+    
+
+  
+
+  
+    <img src="https://cybernimbus.com.br/img/cover/tux.webp" class="in-post-cover" alt="Guia Básico de Linux - Discos e Partições" />
+  
+  
+
+  <div class="post-content"><div>
+        <h1 id="sumário">Sumário<a href="#sumário" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<ul>
+<li><a href="#parti%C3%A7%C3%B5es">Partições</a></li>
+<li><a href="#pontos-de-montagem">Pontos de Montagem</a></li>
+<li><a href="#identifica%C3%A7%C3%A3o-de-discos-e-parti%C3%A7%C3%B5es-em-sistemas-linux">Identificação de discos e partições</a></li>
+<li><a href="#montando-acessando-uma-parti%C3%A7%C3%A3o-de-disco">Montando Partições</a>
+<ul>
+<li><a href="#fstab">fstab</a></li>
+</ul>
+</li>
+<li><a href="#desmontando-uma-parti%C3%A7%C3%A3o-de-disco">Desmontando Partições</a></li>
+<li><a href="#cr%C3%A9ditos">Créditos</a></li>
+</ul>
+<h1 id="partições">Partições<a href="#partições" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>As partições, <strong>são divisões existentes no disco rígido que marcam onde começa onde termina um sistema de arquivos</strong>. As partições nos permitem utilizar mais de um sistema operacional no mesmo computador (como o GNU/Linux e Windows), ou dividir o disco rígido em uma ou mais partes para ser usado por um único sistema operacional ou até mesmo por diferentes arquiteturas (32 e 64 bits).</p>
+<p>Uma partição de disco não interfere em outras partições existentes, por este motivo é possível usar o Windows, GNU/Linux e qualquer outro sistema operacional no mesmo disco.</p>
+<p>Para particionar (dividir) o disco rígido em uma ou mais partes é necessário o uso de um programa de particionamento. Os programas mais conhecidos para particionamento de discos no GNU/Linux são <em>fdisk, cfdisk</em> e o <em>Disk Druid</em>.</p>
+<p>Sempre tenha em mente, que:</p>
+<ul>
+<li>
+<p>Quando se apaga uma partição, você estará apagando <strong>TODOS</strong> os arquivos existentes nela!</p>
+</li>
+<li>
+<p>A partição do tipo <em>Linux Native</em> (Tipo 83) é a usada para armazenar arquivos no GNU/Linux, tanto ext2, ext3, ext4, reiserfs, xfs, etc.</p>
+</li>
+<li>
+<p>A partição do tipo <em>Linux Swap</em> (Tipo 82) é usada como memória virtual.</p>
+</li>
+</ul>
+<p>Em maquinas mais novas, é bastante comum encontrar o Windows instalado em uma partição que consome TODO o espaço do disco rígido. Uma solução para instalar o GNU/Linux é apagar a partição Windows e criar três com tamanhos menores (uma para o Windows, uma para o GNU/Linux e outra para a Memória Virtual do Linux (SWAP). Ou criar apenas 2 se você não quiser mais saber mais do Windows.</p>
+<p>A outra solução é usar o <em>parted</em> (e <strong>gparted</strong> sua versão gráfica), que trabalha com <em>FAT16, FAT32, NTFS</em>. Esta técnica também é chamada de <em><strong>Reparticionamento não destrutivo</strong></em> (e o outro obviamente <em><strong>Reparticionamento destrutivo</strong></em>). Para sistemas que foram formatados em Windows XP e superiores, é possível que o parted não consiga redimensionar o sistema, neste caso você pode reparticionar usando ferramentas como o <em>ntfsresize</em> ou <em>Partition Magic</em> (para Windows).</p>
+<p>Para mais detalhes sobre discos, partições ou como particionar seu disco, veja algum bom documento sobre particionamento (como a página de manual e documentação do <em>fdisk, cfdisk, parted</em> ou <em>Disk Druid</em>).</p>
+<ul>
+<li><a href="#sum%C3%A1rio">Sumário</a></li>
+</ul>
+<h1 id="pontos-de-montagem">Pontos de Montagem<a href="#pontos-de-montagem" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>O GNU/Linux acessa as partições existentes em seus discos rígidos através de diretórios. Os diretórios que são usados para acessar (montar) partições são chamados de pontos de montagem.</p>
+<p>No <em>DOS</em> cada letra de unidade <code>C:, D:, E:</code> identifica uma partição de disco, no GNU/Linux os pontos de montagem fazem parte da grande estrutura do sistema de arquivos raiz.</p>
+<p>Existem muitas vantagens de se usar pontos de montagem ao invés de unidade de disco para identificar partições (método usado no Windows), vejamos algumas delas:</p>
+<ul>
+<li>
+<p>Você pode montar a partição no diretório em que quiser.</p>
+</li>
+<li>
+<p>Em caso de um sistema de arquivos cheio, você pode copiar o conteúdo de um grande diretório para outro sistema de arquivos, apagar o conteúdo do diretório original e montar o disco onde foram copiados os arquivos naquele local (caso não use um sistema de LVM).</p>
+</li>
+<li>
+<p>Reduz riscos de corrompimento do sistema operacional. Caso isto aconteça, será necessário apenas restaurar o backup do sistema de arquivos afetado.</p>
+</li>
+<li>
+<p>Tempo de boot reduzido quando um sistema de arquivos for verificado por ferramentas como o <strong>fsck</strong>.</p>
+</li>
+<li>
+<p>O uso de pontos de montagem torna o gerenciamento mais flexível.</p>
+</li>
+<li>
+<p>A adição de novas partições ou substituição de discos rígidos não afeta a ordem de identificação dos discos e pontos de montagem (como não acontece no DOS).</p>
+</li>
+<li>
+<p><a href="#sum%C3%A1rio">Sumário</a></p>
+</li>
+</ul>
+<h1 id="identificação-de-discos-e-partições-em-sistemas-linux">Identificação de discos e partições em sistemas Linux<a href="#identificação-de-discos-e-partições-em-sistemas-linux" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>No GNU/Linux, os dispositivos existentes em seu computador (como discos rígidos, pen-drives, flash, storages remotas, disquetes, tela, portas de impressora, modem, etc) são identificados por um arquivo referente a este dispositivo no diretório <code>/dev</code>.</p>
+<p>A identificação de discos rígidos no GNU/Linux é feita da seguinte forma:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">/dev/sda1
+|    | ||
+|    | ||_Número que identifica o número da partição no disco rígido.
+|    | |
+|    | |_Letra que identifica o disco rígido (a=primeiro, b=segundo, etc...).
+|    |
+|    |_Sigla que identifica o tipo do disco rígido (sd=SATA/SCSI, sd=IDE, xt=MFM).
+|
+|_Diretório onde são armazenados os dispositivos existentes no sistema.
+</code></pre></div><p>Abaixo algumas identificações de discos e partições em sistemas Linux:</p>
+<ul>
+<li>
+<p><code>ev/fd0</code> - Primeira unidade de disquetes.</p>
+</li>
+<li>
+<p><code>/dev/fd1</code> - Segunda unidade de disquetes.</p>
+</li>
+<li>
+<p><code>/dev/sda</code> - Primeiro disco rígido na primeira controladora SATA ou SCSI.</p>
+</li>
+<li>
+<p><code>/dev/sda1</code> - Primeira partição do primeiro disco rígido SATA ou.</p>
+</li>
+<li>
+<p><code>/dev/sdb</code> - Segundo disco rígido na primeira controladora SATA ou SCSI.</p>
+</li>
+<li>
+<p><code>/dev/sdb1</code> - Primeira partição do segundo disco rígido SATA ou SCSI.</p>
+</li>
+<li>
+<p><code>/dev/sr0</code> - Primeiro CD-ROM SATA ou SCSI.</p>
+</li>
+<li>
+<p><code>/dev/sr1</code> - Segundo CD-ROM SATA ou SCSI.</p>
+</li>
+<li>
+<p><code>/dev/hda</code> - Primeiro disco rígido na primeira controladora IDE do micro (primary master).</p>
+</li>
+<li>
+<p><code>/dev/hda1</code> - Primeira partição do primeiro disco rígido IDE.</p>
+</li>
+<li>
+<p><code>/dev/hdb</code> - Segundo disco rígido na primeira controladora IDE do micro (primary slave).</p>
+</li>
+<li>
+<p><code>/dev/hdb1</code> - Primeira partição do segundo disco rígido IDE.</p>
+</li>
+<li>
+<p><code>/dev/xda</code> - Primeiro disco rígido XT.</p>
+</li>
+<li>
+<p><code>/dev/xdb</code> - Segundo disco rígido XT.</p>
+</li>
+</ul>
+<p>As letras de identificação de discos rígidos podem ir além de <code>sdb</code>, por exemplo, em se tratando de <em>pen-drives, memória flash</em>, as unidades serão detectadas como <code>sdc, sdd</code> e assim por diante.</p>
+<p>É de suma importância entender como os discos e partições são identificados no sistema, pois será necessário usar os parâmetros corretos para monta-los.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">Sumário</a></li>
+</ul>
+<h1 id="montando-acessando-uma-partição-de-disco">Montando (acessando) uma partição de disco<a href="#montando-acessando-uma-partição-de-disco" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Você pode acessar uma partição de disco usando o comando <code>mount</code>.</p>
+<p><code>mount [dispositivo] [ponto de montagem] [opções] </code></p>
+<p>Onde:</p>
+<ul>
+<li>
+<p>dispositivo</p>
+<p>Identificação da unidade de disco/partição que deseja acessar (como <code>/dev/hda1</code> (disco rígido) ou <code>/dev/fd0</code> (primeira unidade de disquetes).</p>
+</li>
+<li>
+<p>ponto de montagem</p>
+<p>Diretório de onde a unidade de disco/partição será acessado. O diretório deve estar vazio para montagem de um sistema de arquivos. Normalmente é usado o diretório <code>/mnt</code> para armazenamento de pontos de montagem temporários.</p>
+</li>
+<li>
+<p>-t [tipo] - tipo do sistema de arquivos utilizado pelo dispositivo. São aceitos os sistemas de arquivos:</p>
+<ul>
+<li>
+<p><code>/ext2</code> - Para partições GNU/Linux usando o Extended File System versão 2 (a mais comum).</p>
+</li>
+<li>
+<p><code>ext3</code> - Para partições GNU/Linux usando o Extended File System versão 3, com suporte a journaling.</p>
+</li>
+<li>
+<p><code>ext4</code> - Para partições GNU/Linux usando o Extended File System versão 4, com suporte a journaling.</p>
+</li>
+<li>
+<p><code>ntfs</code> - este é o tipo do Windows mais comum ou discos rígidos externos maiores.</p>
+</li>
+<li>
+<p><code>reiserfs</code> - Para partições reiserfs, com suporte a journaling.</p>
+</li>
+<li>
+<p><code>xfs</code> - Para partições xfs, com suporte a journaling.</p>
+</li>
+<li>
+<p><code>vfat</code> - Este é o tipo mais comum usado para discos rígidos externos menores.</p>
+</li>
+<li>
+<p><code>msdos</code> - Para partições DOS normais.</p>
+</li>
+<li>
+<p><code>iso9660</code> - Para montar unidades de CD-ROM. É o padrão.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Na maioria das vezes, caso o sistema de arquivos não seja especificado, o <code>mount</code> utilizará a <strong>auto-detecção</strong> e montará a partição usando o sistema de arquivos correto. Para mais detalhes sobre opções usadas com cada sistema de arquivos, veja a página de manual mount.</p>
+<ul>
+<li>
+<p>-r</p>
+<p>Caso for especificada, monta a partição somente para leitura.</p>
+</li>
+<li>
+<p>-w</p>
+<p>Caso for especificada, monta a partição como leitura/gravação. É o padrão.</p>
+</li>
+</ul>
+<p>Existem outras opções que podem ser usadas com o comando <code>mount</code>, mas neste tópico o intento é o de somente mostrar o básico para &ldquo;montar&rdquo; seus discos e partições no GNU/Linux (para mais opções, veja a página de manual do mount).</p>
+<p>Caso você digitar <code>mount</code> sem parâmetros, serão mostrados que sistemas de arquivos estão atualmente montados no sistema. Esta mesma listagem pode ser vista em <code>/etc/mtab</code>. A remontagem de partição também é muito útil, especialmente após reparos nos sistema de arquivos do disco rígido. Alguns exemplos de remontagem abaixo.</p>
+<p>Mas atenção! É necessário permissões de root para montar partições, a não ser que tenha especificado a opção user no arquivo <code>/etc/fstab</code>.</p>
+<p>Exemplo de Montagem:</p>
+<ul>
+<li>
+<p>Montar uma partição Windows (vfat) de <code>/dev/sda1</code> em <code>/mnt</code> somente para leitura: <code>mount /dev/sda1 /mnt -r -t vfat</code></p>
+</li>
+<li>
+<p>Montar um pen-drive detectado em <code>/dev/sdc1</code> em <code>/mnt</code>: <code>mount /dev/sdc1 /mnt -t vfat</code></p>
+</li>
+<li>
+<p>Montar uma partição DOS localizada em um segundo disco rígido <code>/dev/hdb1</code> em <code>/mnt</code>: <code>mount /dev/hdb1 /mnt -t msdos</code>.</p>
+</li>
+<li>
+<p>Remontar a partição raíz como somente leitura: <code>mount -o remount,ro /</code></p>
+</li>
+<li>
+<p>Remontar a partição raíz como leitura/gravação (a opção -n é usada porque o <code>mount</code> não conseguirá atualizar o arquivo <code>/etc/mtab</code> devido ao sistema de arquivos <code>/</code> estar montado como somente leitura atualmente: <code>mount -n -o remount,rw /</code>.</p>
+</li>
+<li>
+<p><a href="#sum%C3%A1rio">Sumário</a></p>
+</li>
+</ul>
+<h1 id="fstab">fstab<a href="#fstab" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>O arquivo <code>/etc/fstab</code> permite que as partições do sistema sejam montadas facilmente especificando somente o dispositivo ou o ponto de montagem. Este arquivo contém parâmetros sobre as partições que são lidos pelo comando <code>mount</code>.</p>
+<p>Cada linha deste arquivo contém a partição que desejamos montar, o ponto de montagem, o sistema de arquivos usado pela partição e outras opções.</p>
+<p>A <code>fstab</code> tem a seguinte forma:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Sistema_de_arquivos</th>
+<th style="text-align:center">Ponto_de_Montagem</th>
+<th style="text-align:center">Tipo</th>
+<th style="text-align:center">Opções</th>
+<th style="text-align:center">dump</th>
+<th style="text-align:center">ordem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">/dev/sda1</td>
+<td style="text-align:center">/</td>
+<td style="text-align:center">ext4</td>
+<td style="text-align:center">defaults</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">/dev/sda2</td>
+<td style="text-align:center">/boot</td>
+<td style="text-align:center">ext4</td>
+<td style="text-align:center">defaults</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">/dev/sda3</td>
+<td style="text-align:center">/dos</td>
+<td style="text-align:center">msdos</td>
+<td style="text-align:center">defaults,noauto,rw</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">/dev/hdg</td>
+<td style="text-align:center">/cdroom</td>
+<td style="text-align:center">iso9660</td>
+<td style="text-align:center">defaults,noauto</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+</tr>
+</tbody>
+</table>
+<p>Onde:</p>
+<ul>
+<li>
+<p><strong>Sistema de Arquivos</strong></p>
+<ul>
+<li>Partição que deseja montar.</li>
+</ul>
+</li>
+<li>
+<p><strong>Ponto de montagem</strong></p>
+<ul>
+<li>Diretório do GNU/Linux onde a partição montada será acessada.</li>
+</ul>
+</li>
+<li>
+<p><strong>Tipo</strong></p>
+<ul>
+<li>Tipo de sistema de arquivos usado na partição que será montada. Para partições GNU/Linux use <code>ext3,ext4, reiserfs, xfs</code> (de acordo com o tipo de partição selecionada durante a formatação), para partições DOS (sem nomes extensos de arquivos) use <code>msdos</code>, para partições Win 95 (com suporte a nomes extensos de arquivos) use <code>vfat</code>, para unidades de CD-ROM use <code>iso9660</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Opções</strong></p>
+<ul>
+<li>
+<p>Especifica as opções usadas com o sistema de arquivos. Abaixo, algumas opções de montagem para <code>ext2/3/4</code> (a lista completa pode ser encontrada na página de manual do mount)</p>
+</li>
+<li>
+<p><strong>defaults</strong> - Utiliza valores padrão de montagem.</p>
+</li>
+<li>
+<p><strong>noauto</strong> - Não monta os sistemas de arquivos durante a inicialização.</p>
+</li>
+<li>
+<p><strong>ro</strong> - Monta como somente leitura.</p>
+</li>
+<li>
+<p><strong>user</strong> - Permite que usuários montem o sistema de arquivos (não recomendado por motivos de segurança).</p>
+</li>
+<li>
+<p><strong>sync</strong> - é recomendado para uso com discos removíveis (disquetes, zip drives, nfs, etc) para que os dados sejam gravados imediatamente na unidade (caso não seja usada, você deve usar o comando “sync” antes de retirar o dispositivo da unidade.</p>
+</li>
+<li>
+<p>*<em>dump</em> - Especifica a frequência de backup feita com o programa dump no sistema de arquivos. 0 desativa o backup.</p>
+</li>
+<li>
+<p><strong>Ordem</strong> - Define a ordem que os sistemas de arquivos serão verificados na inicialização do sistema. Se usar 0, o sistema de arquivos não é verificado. O sistema de arquivos raíz que deverá ser verificado primeiro é o raíz <code>&quot;/&quot;</code> (a não ser que você tenha um sistema de arquivos de outro tipo que não é montado dentro do diretório raíz e possui seu suporte embutido no kernel).</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Após configurar o <code>/etc/fstab</code>, basta digitar o comando <code>mount /dev/hdg</code> ou <code>mount /cdrom</code> para que a unidade de CD-ROM seja montada. Você deve ter notado que não é necessário especificar o sistema de arquivos da partição pois o mount verificará se ele já existe no <code>/etc/fstab</code> e caso exista, então utilizara as opções especificadas neste arquivo. Para maiores detalhes veja as páginas de manual <code>fstab</code> e <code>mount</code>.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">Sumário</a></li>
+</ul>
+<h1 id="desmontando-uma-partição-de-disco">Desmontando uma partição de disco<a href="#desmontando-uma-partição-de-disco" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Utilize o comando <code>umount</code> para desmontar um sistema de arquivos que foi montado com o <code>mount</code>. Você deve ter permissões de root para desmontar uma partição.</p>
+<p><code>umount [dispositivo/ponto de montagem]</code></p>
+<p>É possível usar <code>umount /dev/sda1</code> como <code>umount /mnt</code> para desmontar um sistema de arquivos <code>/dev/sda1</code> montado em <code>/mnt</code>.</p>
+<p>Observação: O comando <code>umount</code> executa o <code>sync</code> automaticamente no momento da desmontagem, para garantir que todos os dados ainda em memória RAM sejam salvos.</p>
+<ul>
+<li><a href="#sum%C3%A1rio">Sumário</a></li>
+</ul>
+<hr>
+<h1 id="créditos">Créditos<a href="#créditos" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>fonte: <a href="https://guiafoca.org/">FOCALINUX</a></p>
+<ul>
+<li><a href="#sum%C3%A1rio">Sumário</a></li>
+</ul>
+
+      </div></div>
+
+  
+  
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">...</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        
+        <span class="button next">
+            <a href="https://cybernimbus.com.br/posts/linux-coringas/">
+                <span class="button__text">Guia Básico de Linux - Coringas</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>TCN © 2021 :: Licensed under <a href=http://creativecommons.org/licenses/by-sa/4.0/>CC BY-SA 4.0</a></span>
+    
+        <span></span>
+      </div>
+  </div>
+</footer>
+
+<script src="https://cybernimbus.com.br/assets/main.js"></script>
+<script src="https://cybernimbus.com.br/assets/prism.js"></script>
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
