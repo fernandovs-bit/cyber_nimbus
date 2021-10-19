@@ -6,7 +6,7 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="As partições, **são divisões existentes no disco rígido que marcam onde começa onde termina um sistema de arquivos**. As partições nos permitem utilizar mais de um sistema operacional no mesmo computador (como o GNU/Linux e Windows), ou..." />
+<meta name="description" content="As partições, são divisões existentes no disco rígido que marcam onde começa onde termina um sistema de arquivos. As partições nos permitem utilizar mais de um sistema operacional no mesmo computador (como o GNU/Linux e Windows), ou..." />
 <meta name="keywords" content=", " />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="https://cybernimbus.com.br/posts/linux-discos-particoes/" />
@@ -41,7 +41,7 @@
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Guia Básico de Linux - Discos e Partições">
-<meta property="og:description" content="As partições, **são divisões existentes no disco rígido que marcam onde começa onde termina um sistema de arquivos**. As partições nos permitem utilizar mais de um sistema operacional no mesmo computador (como o GNU/Linux e Windows), ou..." />
+<meta property="og:description" content="As partições, são divisões existentes no disco rígido que marcam onde começa onde termina um sistema de arquivos. As partições nos permitem utilizar mais de um sistema operacional no mesmo computador (como o GNU/Linux e Windows), ou..." />
 <meta property="og:url" content="https://cybernimbus.com.br/posts/linux-discos-particoes/" />
 <meta property="og:site_name" content="cyber_nimbus" />
 
@@ -68,6 +68,7 @@
 
 
 
+
 </head>
 <body class="blue">
 
@@ -75,7 +76,7 @@
 <div class="container center headings--one-size">
 
   <header class="header">
-  <div class="header__inner">
+<div class="header__inner">
     <div class="header__logo">
       <a href="/">
   <div class="logo">
@@ -140,7 +141,6 @@
   
   
     
-
 </header>
 
 
@@ -194,11 +194,11 @@
 <h1 id="partições">Partições<a href="#partições" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <p>As partições, <strong>são divisões existentes no disco rígido que marcam onde começa onde termina um sistema de arquivos</strong>. As partições nos permitem utilizar mais de um sistema operacional no mesmo computador (como o GNU/Linux e Windows), ou dividir o disco rígido em uma ou mais partes para ser usado por um único sistema operacional ou até mesmo por diferentes arquiteturas (32 e 64 bits).</p>
 <p>Uma partição de disco não interfere em outras partições existentes, por este motivo é possível usar o Windows, GNU/Linux e qualquer outro sistema operacional no mesmo disco.</p>
-<p>Para particionar (dividir) o disco rígido em uma ou mais partes é necessário o uso de um programa de particionamento. Os programas mais conhecidos para particionamento de discos no GNU/Linux são <em>fdisk, cfdisk</em> e o <em>Disk Druid</em>.</p>
+<p>Para particionar (dividir) o disco rígido em uma ou mais partes é necessário o uso de um programa de particionamento. Os programas mais conhecidos para particionamento de discos no GNU/Linux são <em><strong>fdisk, cfdisk</strong></em>.</p>
 <p>Sempre tenha em mente, que:</p>
 <ul>
 <li>
-<p>Quando se apaga uma partição, irá apagar <strong>TODOS</strong> os arquivos existentes nela!</p>
+<p>Quando se apaga uma partição, <strong>TODOS</strong> os arquivos existentes nela serão removidos!</p>
 </li>
 <li>
 <p>A partição do tipo <em>Linux Native</em> (Tipo 83) é a usada para armazenar arquivos no GNU/Linux, tanto ext2, ext3, ext4, reiserfs, xfs, etc.</p>
@@ -216,7 +216,7 @@
 <h1 id="pontos-de-montagem">Pontos de Montagem<a href="#pontos-de-montagem" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <p>O GNU/Linux acessa as partições existentes em seus discos rígidos através de diretórios. Os diretórios que são usados para acessar (montar) partições são chamados de pontos de montagem.</p>
 <p>No <em>DOS</em> cada letra de unidade <code>C:, D:, E:</code> identifica uma partição de disco, no GNU/Linux os pontos de montagem fazem parte da grande estrutura do sistema de arquivos raiz.</p>
-<p>Existem muitas vantagens de se usar pontos de montagem em vez daunidade de disco para identificar partições (método utilizado no Windows), vejamos algumas delas:</p>
+<p>Existem muitas vantagens de se usar pontos de montagem em vez da unidade de disco para identificar partições (método utilizado no Windows), vejamos algumas delas:</p>
 <ul>
 <li>
 <p>Você pode montar a partição no diretório em que quiser.</p>
@@ -264,7 +264,7 @@
 <p><code>/dev/sda</code> - Primeiro disco rígido na primeira controladora SATA ou SCSI.</p>
 </li>
 <li>
-<p><code>/dev/sda1</code> - Primeira partição do primeiro disco rígido SATA ou.</p>
+<p><code>/dev/sda1</code> - Primeira partição do primeiro disco rígido SATA ou SCSI.</p>
 </li>
 <li>
 <p><code>/dev/sdb</code> - Segundo disco rígido na primeira controladora SATA ou SCSI.</p>
@@ -348,19 +348,20 @@
 </ul>
 </li>
 </ul>
-<p>Na maioria das vezes, caso o sistema de arquivos não seja especificado, o <code>mount</code> utilizará a <strong>auto-detecção</strong> e montará a partição usando o sistema de arquivos correto. Para mais detalhes sobre opções usadas com cada sistema de arquivos, veja a página de manual mount.</p>
+<p>Não sendo especificado o sistema de arquivos, o <code>mount</code> utilizará a <strong>auto-detecção</strong> e montará a partição usando o sistema de arquivos correto. Para mais detalhes sobre opções usadas com cada sistema de arquivos, veja a página de manual mount.</p>
 <ul>
 <li>
 <p>-r</p>
-<p>Caso for especificada, monta a partição somente para leitura.</p>
+<p>Caso especificada, monta a partição somente para leitura.</p>
 </li>
 <li>
 <p>-w</p>
-<p>Caso for especificada, monta a partição como leitura/gravação. É o padrão.</p>
+<p>Caso especificada, monta a partição como leitura/gravação. É o padrão.</p>
 </li>
 </ul>
-<p>Existem outras opções que podem ser usadas com o comando <code>mount</code>, mas neste tópico o intento é o de somente mostrar o básico para &ldquo;montar&rdquo; seus discos e partições no GNU/Linux (para mais opções, veja a página de manual do mount).</p>
-<p>Caso você digitar <code>mount</code> sem parâmetros, serão mostrados que sistemas de arquivos estão atualmente montados no sistema. Esta mesma listagem pode ser vista em <code>/etc/mtab</code>. A remontagem de partição também é muito útil, especialmente após reparos no sistema de arquivos do disco rígido. Alguns exemplos de remontagem abaixo.</p>
+<p>Existem ainda outras opções que podem ser utilizadas com o comando <code>mount</code>, mas neste tópico o intento é o de somente mostrar o básico para “montar” seus discos e partições no GNU/Linux (para mais opções, veja a página de manual do mount).</p>
+<p>Caso você digite <code>mount</code> no terminal, sem parâmetros, terá como resposta os sistemas de arquivos que estão atualmente montados no sistema. Esta mesma listagem pode ser vista em <code>/etc/mtab</code>.</p>
+<p>A remontagem de partições é outra funcionalidade bastante útil, especialmente após reparos no sistema de arquivos do disco rígido. Alguns exemplos de remontagem abaixo.</p>
 <p>Mas atenção! É necessário permissões de root para montar partições, a não ser que tenha especificado a opção user no arquivo <code>/etc/fstab</code>.</p>
 <p>Exemplo de Montagem:</p>
 <ul>
@@ -457,7 +458,7 @@
 <p><strong>Opções</strong></p>
 <ul>
 <li>
-<p>Especifica as opções usadas com o sistema de arquivos. Abaixo, algumas opções de montagem para <code>ext2/3/4</code> (a lista completa pode ser encontrada na página de manual do mount)</p>
+<p>Destaca as opções usadas com o sistema de arquivos. Abaixo, algumas opções de montagem para <code>ext2/3/4</code> (a lista completa pode ser encontrada na página de manual do mount)</p>
 </li>
 <li>
 <p><strong>defaults</strong> - Utiliza valores padrão de montagem.</p>
@@ -469,10 +470,10 @@
 <p><strong>ro</strong> - Monta como somente leitura.</p>
 </li>
 <li>
-<p><strong>user</strong> - Permite que usuários montem o sistema de arquivos (não recomendado por motivos de segurança).</p>
+<p><strong>user</strong> - Permite que usuários “montem” o sistema de arquivos (não recomendado por motivos de segurança).</p>
 </li>
 <li>
-<p><strong>sync</strong> - é recomendado para uso com discos removíveis (disquetes, zip drives, nfs, etc) para que os dados sejam gravados imediatamente na unidade (caso não seja usada, você deve usar o comando “sync” antes de retirar o dispositivo da unidade.</p>
+<p><strong>sync</strong> - é recomendado para uso com discos removíveis, para que os dados sejam gravados imediatamente na unidade (caso não seja usada, você deve usar o comando <code>sync</code> antes de retirar o dispositivo da unidade.</p>
 </li>
 <li>
 <p>*<em>dump</em> - Especifica a frequência de backup feita com o programa dump no sistema de arquivos. 0 desativa o backup.</p>
@@ -483,7 +484,7 @@
 </ul>
 </li>
 </ul>
-<p>Após configurar o <code>/etc/fstab</code>, basta digitar o comando <code>mount /dev/hdg</code> ou <code>mount /cdrom</code> para que a unidade de CD-ROM seja montada. Você deve ter notado que não é necessário especificar o sistema de arquivos da partição pois o mount verificará se ele já existe no <code>/etc/fstab</code> e caso exista, então utilizara as opções especificadas neste arquivo. Para maiores detalhes veja as páginas de manual <code>fstab</code> e <code>mount</code>.</p>
+<p>Após configurar o <code>/etc/fstab</code>, basta digitar o comando <code>mount /dev/hdg</code> ou <code>mount /cdrom</code> para que a unidade de CD-ROM seja montada. Você deve ter notado que não é necessário especificar o sistema de arquivos da partição pois o mount verificará se ele já existe no <code>/etc/fstab</code> e caso exista, então utilizara as opções especificadas neste arquivo. Para mais detalhes veja as páginas de manual <code>fstab</code> e <code>mount</code>.</p>
 <ul>
 <li><a href="#sum%C3%A1rio">Sumário</a></li>
 </ul>
@@ -503,7 +504,6 @@
 </ul>
 
       </div></div>
-
   
   
 <div class="pagination">
@@ -529,6 +529,8 @@
 
 </div>
 
+    
+    <a id="button" href="#">▲</a>
   </div>
 
   
@@ -549,11 +551,10 @@
 
 
 
-
+  
 
 
   
-</div>
-
+  </div>
 </body>
 </html>

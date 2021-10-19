@@ -68,6 +68,7 @@
 
 
 
+
 </head>
 <body class="blue">
 
@@ -75,7 +76,7 @@
 <div class="container center headings--one-size">
 
   <header class="header">
-  <div class="header__inner">
+<div class="header__inner">
     <div class="header__logo">
       <a href="/">
   <div class="logo">
@@ -140,7 +141,6 @@
   
   
     
-
 </header>
 
 
@@ -216,22 +216,22 @@
 </ul>
 <h1 id="utilização">Utilização<a href="#utilização" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <p>Para entender melhor vamos a prática:</p>
-<p>Vamos dizer que tenha 5 arquivos no diretório <code>/usr/teste</code>: <em>teste1.txt, teste2.txt, teste3.txt, teste4.new, teste5.new</em>.
+<p>Vamos dizer que tenha 5 arquivos no diretório <code>/usr/teste</code>: <em><strong>teste1.txt, teste2.txt, teste3.txt, teste4.new, teste5.new</strong></em>.
 Caso deseje listar <strong>todos</strong> os arquivos do diretório <code>/usr/teste</code> você pode usar o coringa <code>*</code> para especificar todos os arquivos do diretório: <code>cd /usr/teste e ls *</code> <strong>ou</strong> <code>ls /usr/teste/*. </code></p>
-<p>Não tem muito sentido usar o comando <code>ls</code> com <code>*</code> porque todos os arquivos serão listados se o <code>ls</code> for usado sem nenhum Coringa. Utilizamos aqui apenas para exemplificar.</p>
-<p>Agora para listar todos os arquivos <em>teste1.txt, teste2.txt, teste3.txt</em> com exceção de <em>teste4.new, teste5.new</em>, podemos usar inicialmente 3 métodos:</p>
+<p>Não tem muito sentido usar o comando <code>ls</code> com <code>*</code> pois todos os arquivos serão listados se o <code>ls</code> for usado sem nenhum Coringa. Utilizamos aqui apenas para exemplificar.</p>
+<p>Para listar todos os arquivos <em><strong>teste1.txt, teste2.txt, teste3.txt</strong></em> com exceção de <em><strong>teste4.new, teste5.new</strong></em>, inicialmente, podemos fazer isso de três maneiras:</p>
 <ol>
 <li>
-<p>Usando o comando <code>ls *.txt</code> que pega todos os arquivos que começam com qualquer nome e terminam com <code>.txt</code>.</p>
+<p>Utilizando o comando <code>ls *.txt</code> que lista todos os arquivos que começam com qualquer nome e terminam com <code>.txt</code>.</p>
 </li>
 <li>
-<p>Usando o comando <code>ls teste?.txt</code>, que pega todos os arquivos que começam com o nome <strong>teste</strong>, tenham qualquer caracter no lugar do coringa <code>?</code> e terminem com <code>.txt</code>. Com o exemplo acima <code>teste*.txt</code> também faria a mesma coisa, mas se também tivéssemos um arquivo chamado <code>teste10.txt</code> este também seria listado.</p>
+<p>Utilizando o comando <code>ls teste?.txt</code>, que lista todos os arquivos que começam com o nome <strong>teste</strong>, tenham qualquer caracter no lugar do coringa <code>?</code> e terminem com <code>.txt</code>. Com o exemplo acima, <code>teste*.txt</code> também faria a mesma coisa, mas se tivéssemos um arquivo intitulado <code>teste10.txt</code>, este arquivo também seria listado.</p>
 </li>
 <li>
-<p>Usando o comando <code>ls teste[1-3].txt</code>, que pega todos os arquivos que começam com o nome <strong>teste</strong>, tenham qualquer caracter entre o <em>número 1-3</em> no lugar da <em>6a (sexta)</em> letra e terminem com <code>.txt</code>. Neste caso se obtém uma filtragem mais exata, pois o coringa <code>?</code> especifica qualquer caracter naquela posição e <code>[]</code> especifica números, letras ou intervalo que será usado.</p>
+<p>Utilizando o comando <code>ls teste[1-3].txt</code>, que pega todos os arquivos que começam com o nome <strong>teste</strong>, tenham qualquer caracter entre o <em><strong>número 1-3</strong></em> no lugar da <em>6a (sexta)</em> letra e terminem com <code>.txt</code>. Neste caso se obtém uma filtragem mais exata, pois o coringa <code>?</code> especifica qualquer caracter naquela posição e dentro de <code>[]</code>, que pode especificar números, letras ou intervalo que será usado.</p>
 </li>
 </ol>
-<p>Agora para listar somente <em>teste4.new e teste5.new</em> podemos usar os seguintes métodos:</p>
+<p>Agora para listar somente <em><strong>teste4.new e teste5.new</strong></em> podemos usar os seguintes métodos:</p>
 <ol>
 <li>
 <p><code>ls *.new</code> que lista todos os arquivos que terminam com <code>.new</code>.</p>
@@ -243,7 +243,7 @@ Caso deseje listar <strong>todos</strong> os arquivos do diretório <code>/usr/t
 <p><code>ls teste[4,5].*</code> que lista todos os arquivos que começam com teste <strong>contenham números de 4 e 5 naquela posição</strong> e terminem com qualquer extensão.</p>
 </li>
 </ol>
-<p>Existem várias outras formas de se fazer a mesma coisa, indo de acordo com a preferência do utilizador ao executar tais comandos. O intuito deste tópico, é mostrar como especificar mais de um arquivo de uma só vez. O uso de coringas terá grande utilidade ao copiar <em>arquivos, apagar, mover, renomear</em>, nas mais diversas partes do sistema.</p>
+<p>Importante ressaltar, que ainda existem outras maneiras de fazermos esta mesma tarefa, mas tudo gira em torno da preferência do utilizador ao executar tais comandos. Entretanto, o intuito deste tópico, é apenas mostrar algumas maneiras de especificar mais de um arquivo de uma só vez. Importante destacar que o uso dos coringas tem grande importância e utilidade ao <em>copiar arquivos, apagar, mover, renomear, etc</em> em diversas partes do sistema.</p>
 <p>Alias, esta é uma característica do <strong>GNU/Linux:</strong> <em>permitir que uma tarefa seja feita da forma como o utilizador queira, dando-lhe a liberdade de fazer a seu gosto</em>.</p>
 <ul>
 <li><a href="#sum%C3%A1rio">Sumário</a></li>
@@ -256,7 +256,6 @@ Caso deseje listar <strong>todos</strong> os arquivos do diretório <code>/usr/t
 </ul>
 
       </div></div>
-
   
   
 <div class="pagination">
@@ -289,6 +288,8 @@ Caso deseje listar <strong>todos</strong> os arquivos do diretório <code>/usr/t
 
 </div>
 
+    
+    <a id="button" href="#">▲</a>
   </div>
 
   
@@ -309,11 +310,10 @@ Caso deseje listar <strong>todos</strong> os arquivos do diretório <code>/usr/t
 
 
 
-
+  
 
 
   
-</div>
-
+  </div>
 </body>
 </html>

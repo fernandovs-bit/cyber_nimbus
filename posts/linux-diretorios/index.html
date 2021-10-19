@@ -68,6 +68,7 @@
 
 
 
+
 </head>
 <body class="blue">
 
@@ -75,7 +76,7 @@
 <div class="container center headings--one-size">
 
   <header class="header">
-  <div class="header__inner">
+<div class="header__inner">
     <div class="header__logo">
       <a href="/">
   <div class="logo">
@@ -140,7 +141,6 @@
   
   
     
-
 </header>
 
 
@@ -195,8 +195,8 @@
 <li><a href="#cr%C3%A9ditos">Créditos</a></li>
 </ul>
 <h1 id="diretório">Diretório<a href="#diretório" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
-<p>Diretório é o local utilizado para armazenar conjuntos arquivos para melhor organização e localização. Em outras palavras, o diretório pode ser entendido como uma pasta onde você guarda seus papeis (arquivos). O diretório, como o arquivo, também é &ldquo;Case Sensitive&rdquo; (diretório <code>/teste</code> é completamente diferente do diretório <code>/Teste</code>).</p>
-<p>Não podem existir dois arquivos com o mesmo nome em um diretório, ou um sub-diretório com um mesmo nome de um arquivo em um mesmo diretório.</p>
+<p>Diretório é o local utilizado para armazenar conjuntos arquivos para melhor organização e localização. Em outras palavras, o diretório pode ser entendido como uma pasta onde você armazena seus arquivos e documentos. O diretório, como o arquivo, é &ldquo;Case Sensitive&rdquo; ou seja, o diretório <code>/teste</code> é completamente diferente do diretório <code>/Teste</code>.</p>
+<p>Não pode existir dois arquivos com o mesmo nome em um diretório, ou um subdiretório com um mesmo nome de um arquivo em um mesmo diretório.</p>
 <p>Um diretório nos sistemas Linux/UNIX são especificados por uma <code>/</code> e não uma <code>\</code> como é feito no DOS. Para detalhes sobre como criar um diretório, vejamos o comando <code>mkdir</code>.</p>
 <ul>
 <li><a href="#sum%C3%A1rio">Sumário</a></li>
@@ -227,14 +227,14 @@
 </ul>
 </li>
 </ul>
-<p>Para criar um diretório, você deve ter permissão de gravação. Por exemplo, para criar um diretório em /tmp com o nome de teste, você deve usar o comando <code>mkdir /tmp/teste</code>. Nada impede que seja criado mais de um diretório com um único comando, exemplo: <code>mkdir /tmp/teste /tmp/teste1 /tmp/teste2</code>.</p>
+<p>Para criar um diretório, você deve ter permissão de gravação. Por exemplo, para criar um diretório em <code>/tmp</code> intitulado <em><strong>teste</strong></em>, você deve usar o comando <code>mkdir /tmp/teste</code>. Nada impede que seja criado mais de um diretório com um único comando, exemplo: <code>mkdir /tmp/teste /tmp/teste1 /tmp/teste2</code>.</p>
 <ul>
 <li><a href="#sum%C3%A1rio">Sumário</a></li>
 </ul>
 <h1 id="diretório-raíz">Diretório Raíz<a href="#diretório-raíz" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <p>Este é o diretório principal do sistema. Dentro dele estão todos os diretórios do sistema. O diretório Raíz é representado por uma <code>/</code>, assim se você digitar o comando <code>cd /</code> você acessará este diretório.</p>
-<p>Nele estão localizados outros diretórios como o <code>/bin, /sbin, /usr, /usr/local, /mnt, /tmp, /var, /home,</code> etc. Estes são chamados de sub-diretórios pois estão dentro do diretório <code>/</code>.</p>
-<p>A estrutura de diretório e sub-diretório pode ser identificada da seguinte maneira:</p>
+<p>Nele estão localizados outros diretórios como o <code>/bin, /sbin, /usr, /usr/local, /mnt, /tmp, /var, /home,</code> etc. Estes são chamados de subdiretórios pois estão dentro do diretório <code>/</code>.</p>
+<p>A estrutura de diretório e subdiretório pode ser identificada da seguinte maneira:</p>
 <ul>
 <li>
 <p><code>/</code></p>
@@ -264,7 +264,7 @@
 <p><code>/home</code></p>
 </li>
 </ul>
-<p>A estrutura de diretórios também é chamada de <strong>Árvore de Diretórios</strong> devido a sua semelhança com uma árvore de cabeça para baixo. Vale ressaltar também que cada diretório do sistema, possuí seus respectivos arquivos, que são armazenados conforme regras definidas pela FHS (FileSystem Hierarchy Standard—Hierarquia Padrão do Sistema de Arquivos) versão 2.0, definindo que tipo de arquivo deve ser armazenado em cada diretório.</p>
+<p>A estrutura de diretórios também é chamada de <strong>Árvore de Diretórios</strong> devido a sua semelhança com uma árvore de cabeça para baixo. Vale ressaltar também que cada diretório do sistema, possuí seus respectivos arquivos, que são armazenados conforme regras definidas pela FHS (FileSystem Hierarchy Standard — Hierarquia Padrão do Sistema de Arquivos) versão 2.0, definindo que tipo de arquivo deve ser armazenado em cada diretório.</p>
 <ul>
 <li><a href="#sum%C3%A1rio">Sumário</a></li>
 </ul>
@@ -296,10 +296,10 @@ O diretório home também é identificado por um <code>~</code>(til), você pode
 <li><a href="#sum%C3%A1rio">Sumário</a></li>
 </ul>
 <h1 id="caminho-na-estrutura-de-diretórios">Caminho na estrutura de diretórios<a href="#caminho-na-estrutura-de-diretórios" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
-<p>São os diretórios que teremos que percorrer até chegar no arquivo ou diretório que procuramos. Se deseja ver o arquivo <code>/etc/hosts</code> você tem duas opções:</p>
+<p>São os diretórios que teremos que percorrer até chegar no arquivo ou diretório que procuramos. Por exemplo, para vermos o arquivo <code>/etc/hosts</code> temos duas opções:</p>
 <ul>
 <li>
-<p>Mudar o diretório padrão para <code>/etc</code> com o comando <code>cd /etc</code> e usar o comando <code>cat hosts</code></p>
+<p>Navegue até o diretório <code>/etc</code> com o comando <code>cd /etc</code>, para ver o conteúdo do arquivo <code>hosts</code> utilize o comando <code>cat hosts</code></p>
 </li>
 <li>
 <p>Usar o comando <code>cat</code> especificando o caminho completo na estrutura de diretórios e o nome de arquivo: <code>cat /etc/hosts</code></p>
@@ -307,13 +307,13 @@ O diretório home também é identificado por um <code>~</code>(til), você pode
 </ul>
 <p>As duas soluções acima permitem que você veja o arquivo hosts. A diferença entre as duas é a seguinte:</p>
 <ul>
-<li>Na primeira, você muda o diretório padrão para <code>/etc</code> (confira digitando pwd) e depois o comando <code>cat hosts</code>. Você pode ver os arquivos de <code>/etc</code> com o comando <code>ls</code>.</li>
+<li>Na primeira, você muda o diretório padrão para <code>/etc</code> (confira digitando <code>pwd</code>) e depois o comando <code>cat hosts</code>. Você pode ver os arquivos de <code>/etc</code> com o comando <code>ls</code>.</li>
 </ul>
-<p>Sendo que <code>/etc</code> é o caminho de diretório que devemos percorrer para chegar até o arquivo hosts.</p>
+<p>Dessa forma, fica claro que  <code>/etc</code> é o caminho de diretório que devemos percorrer até chegarmos ao arquivo <code>hosts</code>.</p>
 <ul>
-<li>Na segunda, é digitado o caminho completo para o <code>cat</code> localizar o arquivo hosts: <code>cat /etc/hosts</code>. Neste caso, você continuará no diretório padrão (confira digitando pwd). Digitando <code>ls</code>, os arquivos do diretório atual serão listados.</li>
+<li>Na segunda opção, é digitado o caminho completo para o <code>cat</code> localizar o arquivo <em><strong>hosts</strong></em>: <code>cat /etc/hosts</code>. Neste caso, você continuará no diretório padrão atual (confira digitando pwd). Digitando <code>ls</code>, os arquivos do diretório atual serão listados.</li>
 </ul>
-<p>O caminho de diretórios é necessário para dizer ao sistema operacional onde encontrar um arquivo na &ldquo;árvore&rdquo; de diretórios.</p>
+<p>O caminho de diretórios é necessário para dizer ao sistema operacional onde encontrar um arquivo na “árvore” de diretórios.</p>
 <ul>
 <li><a href="#sum%C3%A1rio">Sumário</a></li>
 </ul>
@@ -440,7 +440,6 @@ O diretório home também é identificado por um <code>~</code>(til), você pode
 </ul>
 
       </div></div>
-
   
   
 <div class="pagination">
@@ -473,6 +472,8 @@ O diretório home também é identificado por um <code>~</code>(til), você pode
 
 </div>
 
+    
+    <a id="button" href="#">▲</a>
   </div>
 
   
@@ -493,11 +494,10 @@ O diretório home também é identificado por um <code>~</code>(til), você pode
 
 
 
-
+  
 
 
   
-</div>
-
+  </div>
 </body>
 </html>

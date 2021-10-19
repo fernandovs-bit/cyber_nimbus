@@ -1,7 +1,7 @@
 body {
   color: #d8dee9;
   background-color: #2e3440;
-  font-family: JetBrains Mono Regular;
+  font-family: Quicksand;
 }
 
 :root {
@@ -67,6 +67,7 @@ a {
 
 .post-title a:link {
   color: #eceff4;
+  font-size: Futura;
 }
 
 .post-title a:visited {
@@ -89,6 +90,15 @@ a {
 .button__text,
 .button a:visited {
   color: #d8dee9;
+}
+
+.headings--one-size h1,
+.headings--one-size h2,
+.headings--one-size h3,
+.headings--one-size h4,
+.headings--one-size h5,
+.headings--one-size h6 {
+  font-family: Merriweather;
 }
 
 .post-tags {
@@ -229,6 +239,12 @@ kbd {
   z-index: 1;
 }
 
+.pagination__title {
+  display: flex;
+  position: relative;
+  margin: 50px 0 10px;
+}
+
 .post ul li:not(:empty):before {
   content: "-";
   position: absolute;
@@ -311,4 +327,46 @@ ol li:before {
 
 .header .menu__inner--mobile {
   display: none;
+}
+
+#button {
+  display: inline-block;
+  background-color: #2e3440;
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  border-radius: 2px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  z-index: 1000;
+  border: 0.1em solid #8fbcbb;
+  scroll-behavior: smooth;
+  opacity: 30%;
+}
+
+#button::after {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #3b4252;
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }

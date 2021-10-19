@@ -31,11 +31,11 @@
 &lt;h1 id=&#34;partições&#34;&gt;Partições&lt;/h1&gt;
 &lt;p&gt;As partições, &lt;strong&gt;são divisões existentes no disco rígido que marcam onde começa onde termina um sistema de arquivos&lt;/strong&gt;. As partições nos permitem utilizar mais de um sistema operacional no mesmo computador (como o GNU/Linux e Windows), ou dividir o disco rígido em uma ou mais partes para ser usado por um único sistema operacional ou até mesmo por diferentes arquiteturas (32 e 64 bits).&lt;/p&gt;
 &lt;p&gt;Uma partição de disco não interfere em outras partições existentes, por este motivo é possível usar o Windows, GNU/Linux e qualquer outro sistema operacional no mesmo disco.&lt;/p&gt;
-&lt;p&gt;Para particionar (dividir) o disco rígido em uma ou mais partes é necessário o uso de um programa de particionamento. Os programas mais conhecidos para particionamento de discos no GNU/Linux são &lt;em&gt;fdisk, cfdisk&lt;/em&gt; e o &lt;em&gt;Disk Druid&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Para particionar (dividir) o disco rígido em uma ou mais partes é necessário o uso de um programa de particionamento. Os programas mais conhecidos para particionamento de discos no GNU/Linux são &lt;em&gt;&lt;strong&gt;fdisk, cfdisk&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Sempre tenha em mente, que:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Quando se apaga uma partição, irá apagar &lt;strong&gt;TODOS&lt;/strong&gt; os arquivos existentes nela!&lt;/p&gt;
+&lt;p&gt;Quando se apaga uma partição, &lt;strong&gt;TODOS&lt;/strong&gt; os arquivos existentes nela serão removidos!&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;A partição do tipo &lt;em&gt;Linux Native&lt;/em&gt; (Tipo 83) é a usada para armazenar arquivos no GNU/Linux, tanto ext2, ext3, ext4, reiserfs, xfs, etc.&lt;/p&gt;
@@ -53,7 +53,7 @@
 &lt;h1 id=&#34;pontos-de-montagem&#34;&gt;Pontos de Montagem&lt;/h1&gt;
 &lt;p&gt;O GNU/Linux acessa as partições existentes em seus discos rígidos através de diretórios. Os diretórios que são usados para acessar (montar) partições são chamados de pontos de montagem.&lt;/p&gt;
 &lt;p&gt;No &lt;em&gt;DOS&lt;/em&gt; cada letra de unidade &lt;code&gt;C:, D:, E:&lt;/code&gt; identifica uma partição de disco, no GNU/Linux os pontos de montagem fazem parte da grande estrutura do sistema de arquivos raiz.&lt;/p&gt;
-&lt;p&gt;Existem muitas vantagens de se usar pontos de montagem em vez daunidade de disco para identificar partições (método utilizado no Windows), vejamos algumas delas:&lt;/p&gt;
+&lt;p&gt;Existem muitas vantagens de se usar pontos de montagem em vez da unidade de disco para identificar partições (método utilizado no Windows), vejamos algumas delas:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Você pode montar a partição no diretório em que quiser.&lt;/p&gt;
@@ -101,7 +101,7 @@
 &lt;p&gt;&lt;code&gt;/dev/sda&lt;/code&gt; - Primeiro disco rígido na primeira controladora SATA ou SCSI.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;/dev/sda1&lt;/code&gt; - Primeira partição do primeiro disco rígido SATA ou.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/dev/sda1&lt;/code&gt; - Primeira partição do primeiro disco rígido SATA ou SCSI.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;/dev/sdb&lt;/code&gt; - Segundo disco rígido na primeira controladora SATA ou SCSI.&lt;/p&gt;
@@ -185,19 +185,20 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Na maioria das vezes, caso o sistema de arquivos não seja especificado, o &lt;code&gt;mount&lt;/code&gt; utilizará a &lt;strong&gt;auto-detecção&lt;/strong&gt; e montará a partição usando o sistema de arquivos correto. Para mais detalhes sobre opções usadas com cada sistema de arquivos, veja a página de manual mount.&lt;/p&gt;
+&lt;p&gt;Não sendo especificado o sistema de arquivos, o &lt;code&gt;mount&lt;/code&gt; utilizará a &lt;strong&gt;auto-detecção&lt;/strong&gt; e montará a partição usando o sistema de arquivos correto. Para mais detalhes sobre opções usadas com cada sistema de arquivos, veja a página de manual mount.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;-r&lt;/p&gt;
-&lt;p&gt;Caso for especificada, monta a partição somente para leitura.&lt;/p&gt;
+&lt;p&gt;Caso especificada, monta a partição somente para leitura.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;-w&lt;/p&gt;
-&lt;p&gt;Caso for especificada, monta a partição como leitura/gravação. É o padrão.&lt;/p&gt;
+&lt;p&gt;Caso especificada, monta a partição como leitura/gravação. É o padrão.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Existem outras opções que podem ser usadas com o comando &lt;code&gt;mount&lt;/code&gt;, mas neste tópico o intento é o de somente mostrar o básico para &amp;ldquo;montar&amp;rdquo; seus discos e partições no GNU/Linux (para mais opções, veja a página de manual do mount).&lt;/p&gt;
-&lt;p&gt;Caso você digitar &lt;code&gt;mount&lt;/code&gt; sem parâmetros, serão mostrados que sistemas de arquivos estão atualmente montados no sistema. Esta mesma listagem pode ser vista em &lt;code&gt;/etc/mtab&lt;/code&gt;. A remontagem de partição também é muito útil, especialmente após reparos no sistema de arquivos do disco rígido. Alguns exemplos de remontagem abaixo.&lt;/p&gt;
+&lt;p&gt;Existem ainda outras opções que podem ser utilizadas com o comando &lt;code&gt;mount&lt;/code&gt;, mas neste tópico o intento é o de somente mostrar o básico para “montar” seus discos e partições no GNU/Linux (para mais opções, veja a página de manual do mount).&lt;/p&gt;
+&lt;p&gt;Caso você digite &lt;code&gt;mount&lt;/code&gt; no terminal, sem parâmetros, terá como resposta os sistemas de arquivos que estão atualmente montados no sistema. Esta mesma listagem pode ser vista em &lt;code&gt;/etc/mtab&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;A remontagem de partições é outra funcionalidade bastante útil, especialmente após reparos no sistema de arquivos do disco rígido. Alguns exemplos de remontagem abaixo.&lt;/p&gt;
 &lt;p&gt;Mas atenção! É necessário permissões de root para montar partições, a não ser que tenha especificado a opção user no arquivo &lt;code&gt;/etc/fstab&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Exemplo de Montagem:&lt;/p&gt;
 &lt;ul&gt;
@@ -294,7 +295,7 @@
 &lt;p&gt;&lt;strong&gt;Opções&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Especifica as opções usadas com o sistema de arquivos. Abaixo, algumas opções de montagem para &lt;code&gt;ext2/3/4&lt;/code&gt; (a lista completa pode ser encontrada na página de manual do mount)&lt;/p&gt;
+&lt;p&gt;Destaca as opções usadas com o sistema de arquivos. Abaixo, algumas opções de montagem para &lt;code&gt;ext2/3/4&lt;/code&gt; (a lista completa pode ser encontrada na página de manual do mount)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;defaults&lt;/strong&gt; - Utiliza valores padrão de montagem.&lt;/p&gt;
@@ -306,10 +307,10 @@
 &lt;p&gt;&lt;strong&gt;ro&lt;/strong&gt; - Monta como somente leitura.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;user&lt;/strong&gt; - Permite que usuários montem o sistema de arquivos (não recomendado por motivos de segurança).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;user&lt;/strong&gt; - Permite que usuários “montem” o sistema de arquivos (não recomendado por motivos de segurança).&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;sync&lt;/strong&gt; - é recomendado para uso com discos removíveis (disquetes, zip drives, nfs, etc) para que os dados sejam gravados imediatamente na unidade (caso não seja usada, você deve usar o comando “sync” antes de retirar o dispositivo da unidade.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;sync&lt;/strong&gt; - é recomendado para uso com discos removíveis, para que os dados sejam gravados imediatamente na unidade (caso não seja usada, você deve usar o comando &lt;code&gt;sync&lt;/code&gt; antes de retirar o dispositivo da unidade.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;*&lt;em&gt;dump&lt;/em&gt; - Especifica a frequência de backup feita com o programa dump no sistema de arquivos. 0 desativa o backup.&lt;/p&gt;
@@ -320,7 +321,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Após configurar o &lt;code&gt;/etc/fstab&lt;/code&gt;, basta digitar o comando &lt;code&gt;mount /dev/hdg&lt;/code&gt; ou &lt;code&gt;mount /cdrom&lt;/code&gt; para que a unidade de CD-ROM seja montada. Você deve ter notado que não é necessário especificar o sistema de arquivos da partição pois o mount verificará se ele já existe no &lt;code&gt;/etc/fstab&lt;/code&gt; e caso exista, então utilizara as opções especificadas neste arquivo. Para maiores detalhes veja as páginas de manual &lt;code&gt;fstab&lt;/code&gt; e &lt;code&gt;mount&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Após configurar o &lt;code&gt;/etc/fstab&lt;/code&gt;, basta digitar o comando &lt;code&gt;mount /dev/hdg&lt;/code&gt; ou &lt;code&gt;mount /cdrom&lt;/code&gt; para que a unidade de CD-ROM seja montada. Você deve ter notado que não é necessário especificar o sistema de arquivos da partição pois o mount verificará se ele já existe no &lt;code&gt;/etc/fstab&lt;/code&gt; e caso exista, então utilizara as opções especificadas neste arquivo. Para mais detalhes veja as páginas de manual &lt;code&gt;fstab&lt;/code&gt; e &lt;code&gt;mount&lt;/code&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -387,22 +388,22 @@
 &lt;/ul&gt;
 &lt;h1 id=&#34;utilização&#34;&gt;Utilização&lt;/h1&gt;
 &lt;p&gt;Para entender melhor vamos a prática:&lt;/p&gt;
-&lt;p&gt;Vamos dizer que tenha 5 arquivos no diretório &lt;code&gt;/usr/teste&lt;/code&gt;: &lt;em&gt;teste1.txt, teste2.txt, teste3.txt, teste4.new, teste5.new&lt;/em&gt;.
+&lt;p&gt;Vamos dizer que tenha 5 arquivos no diretório &lt;code&gt;/usr/teste&lt;/code&gt;: &lt;em&gt;&lt;strong&gt;teste1.txt, teste2.txt, teste3.txt, teste4.new, teste5.new&lt;/strong&gt;&lt;/em&gt;.
 Caso deseje listar &lt;strong&gt;todos&lt;/strong&gt; os arquivos do diretório &lt;code&gt;/usr/teste&lt;/code&gt; você pode usar o coringa &lt;code&gt;*&lt;/code&gt; para especificar todos os arquivos do diretório: &lt;code&gt;cd /usr/teste e ls *&lt;/code&gt; &lt;strong&gt;ou&lt;/strong&gt; &lt;code&gt;ls /usr/teste/*. &lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Não tem muito sentido usar o comando &lt;code&gt;ls&lt;/code&gt; com &lt;code&gt;*&lt;/code&gt; porque todos os arquivos serão listados se o &lt;code&gt;ls&lt;/code&gt; for usado sem nenhum Coringa. Utilizamos aqui apenas para exemplificar.&lt;/p&gt;
-&lt;p&gt;Agora para listar todos os arquivos &lt;em&gt;teste1.txt, teste2.txt, teste3.txt&lt;/em&gt; com exceção de &lt;em&gt;teste4.new, teste5.new&lt;/em&gt;, podemos usar inicialmente 3 métodos:&lt;/p&gt;
+&lt;p&gt;Não tem muito sentido usar o comando &lt;code&gt;ls&lt;/code&gt; com &lt;code&gt;*&lt;/code&gt; pois todos os arquivos serão listados se o &lt;code&gt;ls&lt;/code&gt; for usado sem nenhum Coringa. Utilizamos aqui apenas para exemplificar.&lt;/p&gt;
+&lt;p&gt;Para listar todos os arquivos &lt;em&gt;&lt;strong&gt;teste1.txt, teste2.txt, teste3.txt&lt;/strong&gt;&lt;/em&gt; com exceção de &lt;em&gt;&lt;strong&gt;teste4.new, teste5.new&lt;/strong&gt;&lt;/em&gt;, inicialmente, podemos fazer isso de três maneiras:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;Usando o comando &lt;code&gt;ls *.txt&lt;/code&gt; que pega todos os arquivos que começam com qualquer nome e terminam com &lt;code&gt;.txt&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Utilizando o comando &lt;code&gt;ls *.txt&lt;/code&gt; que lista todos os arquivos que começam com qualquer nome e terminam com &lt;code&gt;.txt&lt;/code&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Usando o comando &lt;code&gt;ls teste?.txt&lt;/code&gt;, que pega todos os arquivos que começam com o nome &lt;strong&gt;teste&lt;/strong&gt;, tenham qualquer caracter no lugar do coringa &lt;code&gt;?&lt;/code&gt; e terminem com &lt;code&gt;.txt&lt;/code&gt;. Com o exemplo acima &lt;code&gt;teste*.txt&lt;/code&gt; também faria a mesma coisa, mas se também tivéssemos um arquivo chamado &lt;code&gt;teste10.txt&lt;/code&gt; este também seria listado.&lt;/p&gt;
+&lt;p&gt;Utilizando o comando &lt;code&gt;ls teste?.txt&lt;/code&gt;, que lista todos os arquivos que começam com o nome &lt;strong&gt;teste&lt;/strong&gt;, tenham qualquer caracter no lugar do coringa &lt;code&gt;?&lt;/code&gt; e terminem com &lt;code&gt;.txt&lt;/code&gt;. Com o exemplo acima, &lt;code&gt;teste*.txt&lt;/code&gt; também faria a mesma coisa, mas se tivéssemos um arquivo intitulado &lt;code&gt;teste10.txt&lt;/code&gt;, este arquivo também seria listado.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Usando o comando &lt;code&gt;ls teste[1-3].txt&lt;/code&gt;, que pega todos os arquivos que começam com o nome &lt;strong&gt;teste&lt;/strong&gt;, tenham qualquer caracter entre o &lt;em&gt;número 1-3&lt;/em&gt; no lugar da &lt;em&gt;6a (sexta)&lt;/em&gt; letra e terminem com &lt;code&gt;.txt&lt;/code&gt;. Neste caso se obtém uma filtragem mais exata, pois o coringa &lt;code&gt;?&lt;/code&gt; especifica qualquer caracter naquela posição e &lt;code&gt;[]&lt;/code&gt; especifica números, letras ou intervalo que será usado.&lt;/p&gt;
+&lt;p&gt;Utilizando o comando &lt;code&gt;ls teste[1-3].txt&lt;/code&gt;, que pega todos os arquivos que começam com o nome &lt;strong&gt;teste&lt;/strong&gt;, tenham qualquer caracter entre o &lt;em&gt;&lt;strong&gt;número 1-3&lt;/strong&gt;&lt;/em&gt; no lugar da &lt;em&gt;6a (sexta)&lt;/em&gt; letra e terminem com &lt;code&gt;.txt&lt;/code&gt;. Neste caso se obtém uma filtragem mais exata, pois o coringa &lt;code&gt;?&lt;/code&gt; especifica qualquer caracter naquela posição e dentro de &lt;code&gt;[]&lt;/code&gt;, que pode especificar números, letras ou intervalo que será usado.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Agora para listar somente &lt;em&gt;teste4.new e teste5.new&lt;/em&gt; podemos usar os seguintes métodos:&lt;/p&gt;
+&lt;p&gt;Agora para listar somente &lt;em&gt;&lt;strong&gt;teste4.new e teste5.new&lt;/strong&gt;&lt;/em&gt; podemos usar os seguintes métodos:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;ls *.new&lt;/code&gt; que lista todos os arquivos que terminam com &lt;code&gt;.new&lt;/code&gt;.&lt;/p&gt;
@@ -414,7 +415,7 @@ Caso deseje listar &lt;strong&gt;todos&lt;/strong&gt; os arquivos do diretório 
 &lt;p&gt;&lt;code&gt;ls teste[4,5].*&lt;/code&gt; que lista todos os arquivos que começam com teste &lt;strong&gt;contenham números de 4 e 5 naquela posição&lt;/strong&gt; e terminem com qualquer extensão.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Existem várias outras formas de se fazer a mesma coisa, indo de acordo com a preferência do utilizador ao executar tais comandos. O intuito deste tópico, é mostrar como especificar mais de um arquivo de uma só vez. O uso de coringas terá grande utilidade ao copiar &lt;em&gt;arquivos, apagar, mover, renomear&lt;/em&gt;, nas mais diversas partes do sistema.&lt;/p&gt;
+&lt;p&gt;Importante ressaltar, que ainda existem outras maneiras de fazermos esta mesma tarefa, mas tudo gira em torno da preferência do utilizador ao executar tais comandos. Entretanto, o intuito deste tópico, é apenas mostrar algumas maneiras de especificar mais de um arquivo de uma só vez. Importante destacar que o uso dos coringas tem grande importância e utilidade ao &lt;em&gt;copiar arquivos, apagar, mover, renomear, etc&lt;/em&gt; em diversas partes do sistema.&lt;/p&gt;
 &lt;p&gt;Alias, esta é uma característica do &lt;strong&gt;GNU/Linux:&lt;/strong&gt; &lt;em&gt;permitir que uma tarefa seja feita da forma como o utilizador queira, dando-lhe a liberdade de fazer a seu gosto&lt;/em&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
@@ -434,7 +435,7 @@ Caso deseje listar &lt;strong&gt;todos&lt;/strong&gt; os arquivos do diretório 
       <pubDate>Sat, 02 Oct 2021 15:28:47 -0300</pubDate>
       
       <guid>https://cybernimbus.com.br/posts/linux-diretorios/</guid>
-      <description>Sumário  Diretório  mkdir   Diretório Raíz Diretório atual Diretório Home Diretório Superior Diretório Anterior Caminhos na estrutura de diretórios Estrutura básica de diretórios no Linux Créditos  Diretório Diretório é o local utilizado para armazenar conjuntos arquivos para melhor organização e localização. Em outras palavras, o diretório pode ser entendido como uma pasta onde você guarda seus papeis (arquivos). O diretório, como o arquivo, também é &amp;ldquo;Case Sensitive&amp;rdquo; (diretório /teste é completamente diferente do diretório /Teste).</description>
+      <description>Sumário  Diretório  mkdir   Diretório Raíz Diretório atual Diretório Home Diretório Superior Diretório Anterior Caminhos na estrutura de diretórios Estrutura básica de diretórios no Linux Créditos  Diretório Diretório é o local utilizado para armazenar conjuntos arquivos para melhor organização e localização. Em outras palavras, o diretório pode ser entendido como uma pasta onde você armazena seus arquivos e documentos. O diretório, como o arquivo, é &amp;ldquo;Case Sensitive&amp;rdquo; ou seja, o diretório /teste é completamente diferente do diretório /Teste.</description>
       <content>&lt;h1 id=&#34;sumário&#34;&gt;Sumário&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#diret%C3%B3rio&#34;&gt;Diretório&lt;/a&gt;
@@ -452,8 +453,8 @@ Caso deseje listar &lt;strong&gt;todos&lt;/strong&gt; os arquivos do diretório 
 &lt;li&gt;&lt;a href=&#34;#cr%C3%A9ditos&#34;&gt;Créditos&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;diretório&#34;&gt;Diretório&lt;/h1&gt;
-&lt;p&gt;Diretório é o local utilizado para armazenar conjuntos arquivos para melhor organização e localização. Em outras palavras, o diretório pode ser entendido como uma pasta onde você guarda seus papeis (arquivos). O diretório, como o arquivo, também é &amp;ldquo;Case Sensitive&amp;rdquo; (diretório &lt;code&gt;/teste&lt;/code&gt; é completamente diferente do diretório &lt;code&gt;/Teste&lt;/code&gt;).&lt;/p&gt;
-&lt;p&gt;Não podem existir dois arquivos com o mesmo nome em um diretório, ou um sub-diretório com um mesmo nome de um arquivo em um mesmo diretório.&lt;/p&gt;
+&lt;p&gt;Diretório é o local utilizado para armazenar conjuntos arquivos para melhor organização e localização. Em outras palavras, o diretório pode ser entendido como uma pasta onde você armazena seus arquivos e documentos. O diretório, como o arquivo, é &amp;ldquo;Case Sensitive&amp;rdquo; ou seja, o diretório &lt;code&gt;/teste&lt;/code&gt; é completamente diferente do diretório &lt;code&gt;/Teste&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Não pode existir dois arquivos com o mesmo nome em um diretório, ou um subdiretório com um mesmo nome de um arquivo em um mesmo diretório.&lt;/p&gt;
 &lt;p&gt;Um diretório nos sistemas Linux/UNIX são especificados por uma &lt;code&gt;/&lt;/code&gt; e não uma &lt;code&gt;\&lt;/code&gt; como é feito no DOS. Para detalhes sobre como criar um diretório, vejamos o comando &lt;code&gt;mkdir&lt;/code&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
@@ -484,14 +485,14 @@ Caso deseje listar &lt;strong&gt;todos&lt;/strong&gt; os arquivos do diretório 
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Para criar um diretório, você deve ter permissão de gravação. Por exemplo, para criar um diretório em /tmp com o nome de teste, você deve usar o comando &lt;code&gt;mkdir /tmp/teste&lt;/code&gt;. Nada impede que seja criado mais de um diretório com um único comando, exemplo: &lt;code&gt;mkdir /tmp/teste /tmp/teste1 /tmp/teste2&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Para criar um diretório, você deve ter permissão de gravação. Por exemplo, para criar um diretório em &lt;code&gt;/tmp&lt;/code&gt; intitulado &lt;em&gt;&lt;strong&gt;teste&lt;/strong&gt;&lt;/em&gt;, você deve usar o comando &lt;code&gt;mkdir /tmp/teste&lt;/code&gt;. Nada impede que seja criado mais de um diretório com um único comando, exemplo: &lt;code&gt;mkdir /tmp/teste /tmp/teste1 /tmp/teste2&lt;/code&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;diretório-raíz&#34;&gt;Diretório Raíz&lt;/h1&gt;
 &lt;p&gt;Este é o diretório principal do sistema. Dentro dele estão todos os diretórios do sistema. O diretório Raíz é representado por uma &lt;code&gt;/&lt;/code&gt;, assim se você digitar o comando &lt;code&gt;cd /&lt;/code&gt; você acessará este diretório.&lt;/p&gt;
-&lt;p&gt;Nele estão localizados outros diretórios como o &lt;code&gt;/bin, /sbin, /usr, /usr/local, /mnt, /tmp, /var, /home,&lt;/code&gt; etc. Estes são chamados de sub-diretórios pois estão dentro do diretório &lt;code&gt;/&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;A estrutura de diretório e sub-diretório pode ser identificada da seguinte maneira:&lt;/p&gt;
+&lt;p&gt;Nele estão localizados outros diretórios como o &lt;code&gt;/bin, /sbin, /usr, /usr/local, /mnt, /tmp, /var, /home,&lt;/code&gt; etc. Estes são chamados de subdiretórios pois estão dentro do diretório &lt;code&gt;/&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;A estrutura de diretório e subdiretório pode ser identificada da seguinte maneira:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;/&lt;/code&gt;&lt;/p&gt;
@@ -521,7 +522,7 @@ Caso deseje listar &lt;strong&gt;todos&lt;/strong&gt; os arquivos do diretório 
 &lt;p&gt;&lt;code&gt;/home&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;A estrutura de diretórios também é chamada de &lt;strong&gt;Árvore de Diretórios&lt;/strong&gt; devido a sua semelhança com uma árvore de cabeça para baixo. Vale ressaltar também que cada diretório do sistema, possuí seus respectivos arquivos, que são armazenados conforme regras definidas pela FHS (FileSystem Hierarchy Standard—Hierarquia Padrão do Sistema de Arquivos) versão 2.0, definindo que tipo de arquivo deve ser armazenado em cada diretório.&lt;/p&gt;
+&lt;p&gt;A estrutura de diretórios também é chamada de &lt;strong&gt;Árvore de Diretórios&lt;/strong&gt; devido a sua semelhança com uma árvore de cabeça para baixo. Vale ressaltar também que cada diretório do sistema, possuí seus respectivos arquivos, que são armazenados conforme regras definidas pela FHS (FileSystem Hierarchy Standard — Hierarquia Padrão do Sistema de Arquivos) versão 2.0, definindo que tipo de arquivo deve ser armazenado em cada diretório.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -553,10 +554,10 @@ O diretório home também é identificado por um &lt;code&gt;~&lt;/code&gt;(til)
 &lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;caminho-na-estrutura-de-diretórios&#34;&gt;Caminho na estrutura de diretórios&lt;/h1&gt;
-&lt;p&gt;São os diretórios que teremos que percorrer até chegar no arquivo ou diretório que procuramos. Se deseja ver o arquivo &lt;code&gt;/etc/hosts&lt;/code&gt; você tem duas opções:&lt;/p&gt;
+&lt;p&gt;São os diretórios que teremos que percorrer até chegar no arquivo ou diretório que procuramos. Por exemplo, para vermos o arquivo &lt;code&gt;/etc/hosts&lt;/code&gt; temos duas opções:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Mudar o diretório padrão para &lt;code&gt;/etc&lt;/code&gt; com o comando &lt;code&gt;cd /etc&lt;/code&gt; e usar o comando &lt;code&gt;cat hosts&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Navegue até o diretório &lt;code&gt;/etc&lt;/code&gt; com o comando &lt;code&gt;cd /etc&lt;/code&gt;, para ver o conteúdo do arquivo &lt;code&gt;hosts&lt;/code&gt; utilize o comando &lt;code&gt;cat hosts&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Usar o comando &lt;code&gt;cat&lt;/code&gt; especificando o caminho completo na estrutura de diretórios e o nome de arquivo: &lt;code&gt;cat /etc/hosts&lt;/code&gt;&lt;/p&gt;
@@ -564,13 +565,13 @@ O diretório home também é identificado por um &lt;code&gt;~&lt;/code&gt;(til)
 &lt;/ul&gt;
 &lt;p&gt;As duas soluções acima permitem que você veja o arquivo hosts. A diferença entre as duas é a seguinte:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Na primeira, você muda o diretório padrão para &lt;code&gt;/etc&lt;/code&gt; (confira digitando pwd) e depois o comando &lt;code&gt;cat hosts&lt;/code&gt;. Você pode ver os arquivos de &lt;code&gt;/etc&lt;/code&gt; com o comando &lt;code&gt;ls&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Na primeira, você muda o diretório padrão para &lt;code&gt;/etc&lt;/code&gt; (confira digitando &lt;code&gt;pwd&lt;/code&gt;) e depois o comando &lt;code&gt;cat hosts&lt;/code&gt;. Você pode ver os arquivos de &lt;code&gt;/etc&lt;/code&gt; com o comando &lt;code&gt;ls&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Sendo que &lt;code&gt;/etc&lt;/code&gt; é o caminho de diretório que devemos percorrer para chegar até o arquivo hosts.&lt;/p&gt;
+&lt;p&gt;Dessa forma, fica claro que  &lt;code&gt;/etc&lt;/code&gt; é o caminho de diretório que devemos percorrer até chegarmos ao arquivo &lt;code&gt;hosts&lt;/code&gt;.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Na segunda, é digitado o caminho completo para o &lt;code&gt;cat&lt;/code&gt; localizar o arquivo hosts: &lt;code&gt;cat /etc/hosts&lt;/code&gt;. Neste caso, você continuará no diretório padrão (confira digitando pwd). Digitando &lt;code&gt;ls&lt;/code&gt;, os arquivos do diretório atual serão listados.&lt;/li&gt;
+&lt;li&gt;Na segunda opção, é digitado o caminho completo para o &lt;code&gt;cat&lt;/code&gt; localizar o arquivo &lt;em&gt;&lt;strong&gt;hosts&lt;/strong&gt;&lt;/em&gt;: &lt;code&gt;cat /etc/hosts&lt;/code&gt;. Neste caso, você continuará no diretório padrão atual (confira digitando pwd). Digitando &lt;code&gt;ls&lt;/code&gt;, os arquivos do diretório atual serão listados.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;O caminho de diretórios é necessário para dizer ao sistema operacional onde encontrar um arquivo na &amp;ldquo;árvore&amp;rdquo; de diretórios.&lt;/p&gt;
+&lt;p&gt;O caminho de diretórios é necessário para dizer ao sistema operacional onde encontrar um arquivo na “árvore” de diretórios.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -1266,7 +1267,7 @@ Com a aba aberta, podemos entrar em um site, por exemplo o Google, e iremos ver 
 Importante sabermos a “mágica” para que essa troca de informações ocorra e para isso precisamos compreender de forma mais detalhada como funciona essa tecnologia que será fundamental para a construção de nossas futuras aplicações.</description>
       <content>&lt;h1 id=&#34;o-que-é-web&#34;&gt;O que é WEB?&lt;/h1&gt;
 &lt;p&gt;Na internet &lt;strong&gt;significa uma maneira de estruturar trocas de comunicações entre computadores&lt;/strong&gt;, por exemplo, você possui o seu computador e do outro lado do mundo há outro, que tem um site que você queira acessar.&lt;/p&gt;
-&lt;p&gt;Importante sabermos a “mágica” para que essa troca de informações ocorra e para isso precisamos compreender de forma mais detalhada como funciona essa tecnologia que será fundamental para a construção de nossas futuras aplicações. Além disso, precisamos também entender o que é e como programar, para que possamos nos comunicar com o computador.&lt;/p&gt;
+&lt;p&gt;Importante sabermos a &lt;em&gt;“mágica”&lt;/em&gt; para que essa troca de informações ocorra e para isso precisamos compreender de forma mais detalhada como funciona essa tecnologia que será fundamental para a construção de nossas futuras aplicações. Além disso, precisamos também entender o que é e como programar, para que possamos nos comunicar com o computador.&lt;/p&gt;
 &lt;p&gt;No próximo tópico veremos os fundamentos da programação, como transformar as ideias e como funciona a WEB.&lt;/p&gt;
 &lt;h1 id=&#34;o-que-é-programar&#34;&gt;O que é Programar?&lt;/h1&gt;
 &lt;p&gt;Programar é entender de algorítimos, que são por sua vez uma sequência lógica, passos para resolver um problema, usando a lógica de programação, que é como você aplica esses passos, ou seja, a construção do algorítimo.&lt;/p&gt;
