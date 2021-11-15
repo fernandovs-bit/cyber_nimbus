@@ -7,7 +7,64 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>TCN © 2021 :: Licensed under &lt;a href=http://creativecommons.org/licenses/by-sa/4.0/&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Sun, 10 Oct 2021 17:30:57 -0300</lastBuildDate><atom:link href="https://cybernimbus.com.br/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Oct 2021 15:36:29 -0300</lastBuildDate><atom:link href="https://cybernimbus.com.br/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ghostscript - Reduzindo o tamanho de arquivos PDF</title>
+      <link>https://cybernimbus.com.br/posts/ghostscript-pdf-compress/</link>
+      <pubDate>Wed, 27 Oct 2021 15:36:29 -0300</pubDate>
+      
+      <guid>https://cybernimbus.com.br/posts/ghostscript-pdf-compress/</guid>
+      <description>Utilizando ghostscript com comandos no terminal para reduzir o tamanho de um arquivo PDF de maneira simples, rápida e prática.
+Se o comando não estiver disponível na sua máquina, então será necessário a instalação do pacote ghostscript.
+No Ubuntu, por exemplo, é muito simples, basta utilizar o apt:
+sudo apt install ghostscript Com o pacote devidamente adicionado ao seu sistema, podemos utilizar esse comando &amp;ldquo;mágico&amp;rdquo; para reduzir o tamanho do arquivo PDF, mantendo uma ótima qualidade para leitura e impressão.</description>
+      <content>&lt;p&gt;Utilizando &lt;em&gt;&lt;strong&gt;ghostscript&lt;/strong&gt;&lt;/em&gt; com comandos no terminal para reduzir o tamanho de um arquivo PDF de maneira simples, rápida e prática.&lt;/p&gt;
+&lt;p&gt;Se o comando não estiver disponível na sua máquina, então será necessário a instalação do pacote ghostscript.&lt;/p&gt;
+&lt;p&gt;No Ubuntu, por exemplo, é muito simples, basta utilizar o &lt;code&gt;apt&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt install ghostscript
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Com o pacote devidamente adicionado ao seu sistema, podemos utilizar esse comando &amp;ldquo;&lt;em&gt;&lt;strong&gt;mágico&lt;/strong&gt;&lt;/em&gt;&amp;rdquo; para reduzir o tamanho do arquivo PDF, mantendo uma ótima qualidade para leitura e impressão.&lt;/p&gt;
+&lt;p&gt;Antes de executar o comando, certifique-se de ter alterado a &lt;code&gt;saida.pdf&lt;/code&gt; que será o nome do arquivo comprimido. O novo arquivo comprimido será criado no diretório &lt;code&gt;~&lt;/code&gt; caso nenhum outro seja especificado pelo usuário.&lt;/p&gt;
+&lt;p&gt;Em &lt;code&gt;entrada.pdf&lt;/code&gt; &lt;strong&gt;deverá&lt;/strong&gt; ser especificado o nome do arquivo a ser comprimido e também o diretório onde ele se encontra, exemplo: &lt;code&gt; ~/Downloads/teste.pdf&lt;/code&gt;. Caso o arquivo esteja no seu diretório atual, não sera necessário apontar o caminho.&lt;/p&gt;
+&lt;p&gt;Feito isso, vamos ao comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+gs -sDEVICE&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;pdfwrite -dCompatibilityLevel&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;1.4 -dPDFSETTINGS&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/printer -dNOPAUSE -dQUIET -dBATCH -sOutputFile&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;saida.pdf entrada.pdf
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Podemos ajustar o  &lt;code&gt;-dPDFSETTINGS&lt;/code&gt; de acordo com a nossa necessidade, a tabela abaixo contem as opções que podem ser utilizadas:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;dPDFSETTINGS=/opção&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Descrição&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;-dPDFSETTINGS=/screen&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Qualidade baixa, mas reduz consideravelmente o tamanho do arquivo PDF. (72 dpi)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;-dPDFSETTINGS=/ebook&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Qualidade boa, mas o tamanho do arquivo PDF é um pouco maior. (150 dpi)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;-dPDFSETTINGS=/prepress&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Qualidade alta assim como o tamanho do arquivo PDF. (300 dpi)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;-dPDFSETTINGS=/printer&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Qualidade ideal do arquivo para a sua impressão. &lt;code&gt;Recomendada!&lt;/code&gt; (300 dpi)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;-dPDFSETTINGS=/default&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Qualidade ideal para multiúso do arquivo PDF. Tamanho pode ser &lt;strong&gt;grande&lt;/strong&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id=&#34;créditos&#34;&gt;Créditos&lt;/h1&gt;
+&lt;p&gt;Fonte: &lt;a href=&#34;https://www.journaldev.com/34668/reduce-pdf-file-size-in-linux&#34;&gt;JournalDev&lt;/a&gt;&lt;/p&gt;
+</content>
+    </item>
+    
     <item>
       <title>Guia Básico de Linux - Discos e Partições</title>
       <link>https://cybernimbus.com.br/posts/linux-discos-particoes/</link>
@@ -964,14 +1021,14 @@ conteúdo
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;o-que-%C3%A9-http&#34;&gt;O que é HTTP?&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#o-que-%C3%A9-o-http&#34;&gt;O que é HTTP?&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#quem-%C3%A9-o-cliente&#34;&gt;Cliente&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#o-servidor&#34;&gt;Servidor&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#proxy&#34;&gt;Proxy&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#recursos-http&#34;&gt;Recursos HTTP&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#recursosresources-http&#34;&gt;Recursos HTTP&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#uri&#34;&gt;URI&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#url&#34;&gt;URL&lt;/a&gt;&lt;/li&gt;
