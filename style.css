@@ -1,7 +1,9 @@
 body {
   color: #d8dee9;
   background-color: #2e3440;
-  font-family: Quicksand;
+  font-family: "Share Tech Mono", Monospace, Courier;
+  letter-spacing: 0.1px;
+  font-weight: 400;
 }
 
 :root {
@@ -98,7 +100,7 @@ a {
 .headings--one-size h4,
 .headings--one-size h5,
 .headings--one-size h6 {
-  font-family: Merriweather;
+  font-family: "Share Tech Mono", Monospace, Courier;
 }
 
 .post-tags {
