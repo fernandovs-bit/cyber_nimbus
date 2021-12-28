@@ -9,7 +9,7 @@ body {
 :root {
   --phoneWidth: (max-width: 684px);
   --tabletWidth: (max-width: 900px);
-  --accent: #8fbcbb;
+  --accent: #bf616a;
   --background: #1d212c;
   --color: #d8dee9;
   --border-color: hsla(0, 0%, 100%, 0.1);
@@ -18,7 +18,7 @@ body {
 .in-post-cover {
   background: 0 0;
   margin: 0 0;
-  border: 4px solid #8fbcbb;
+  border: 4px solid #bf616a;
   padding: 0;
   object-fit: cover;
   opacity: 100%;
@@ -29,7 +29,7 @@ body {
 .post-cover {
   background: 0 0;
   margin: 0 0;
-  border: 4px solid #8fbcbb;
+  border: 4px solid #bf616a;
   padding: 0;
   object-fit: cover;
   opacity: 90%;
@@ -56,15 +56,15 @@ a {
 }
 
 .post a:link {
-  color: #8fbcbb;
+  color: #bf616a;
 }
 
 .post a:visited {
-  color: #8fbcbb;
+  color: #bf616a;
 }
 
 .post a:hover {
-  color: #8fbcbb;
+  color: #bf616a;
 }
 
 .post-title a:link {
@@ -158,7 +158,7 @@ a {
 .post-title:after {
   border: 0;
   border-bottom: 1px dotted;
-  border-image: linear-gradient(to right, #8fbcbb, #2e3440);
+  border-image: linear-gradient(to right, #bf616a, #2e3440);
   border-image-slice: 1;
   color: #2e3440;
   margin: auto;
@@ -176,19 +176,19 @@ a {
 
 .collapsable-code__language,
 .collapsable-code__title {
-  color: #8fbcbb;
+  color: #bf616a;
   padding: 3px 10px;
 }
 
 .collapsable-code__toggle {
-  color: #8fbcbb;
+  color: #bf616a;
   font-size: 16px;
   padding: 3px 10px;
 }
 
 .collapsable-code__language {
   border: 1px solid hsla(0, 0%, 100%, 0.1);
-  border: 1px solid #8fbcbb;
+  border: 1px solid #bf616a;
   border-bottom: none;
   text-transform: uppercase;
 }
@@ -198,24 +198,24 @@ a {
   margin: 40px 0;
   margin: var(--code-margin) 0;
   padding: 20px;
-  border: 1px solid #8fbcbb;
+  border: 1px solid #bf616a;
 }
 
 blockquote {
-  border-top: 1px solid #8fbcbb;
-  border-bottom: 1px solid #8fbcbb;
+  border-top: 1px solid #bf616a;
+  border-bottom: 1px solid #bf616a;
   margin: 40px 0;
   padding: 25px;
 }
 
 th {
-  color: #8fbcbb;
+  color: #bf616a;
 }
 
 table,
 td,
 th {
-  border: 1px dashed #8fbcbb;
+  border: 1px dashed #bf616a;
   padding: 10px;
 }
 
@@ -223,8 +223,8 @@ code,
 kbd {
   font-family: Fira Code, Monaco, Consolas, Ubuntu Mono, monospace;
   font-feature-settings: normal;
-  background: #8fbcbb36;
-  color: #8fbcbb;
+  background: #bf616a36;
+  color: #bf616a;
   padding: 1px 6px;
   margin: 0 2px;
   font-size: 0.95rem;
@@ -251,7 +251,7 @@ kbd {
   content: "-";
   position: absolute;
   left: -20px;
-  color: #8fbcbb;
+  color: #bf616a;
 }
 
 blockquote p:first-of-type:before {
@@ -259,7 +259,7 @@ blockquote p:first-of-type:before {
   display: block;
   position: absolute;
   left: -25px;
-  color: #8fbcbb;
+  color: #bf616a;
 }
 
 ::marker {
@@ -274,7 +274,7 @@ blockquote p:first-of-type:before {
   min-height: 30px;
   margin: 0;
   border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
-  border-bottom: 0px solid #8fbcbb;
+  border-bottom: 0px solid #bf616a;
   cursor: pointer;
 }
 
@@ -282,7 +282,7 @@ ol li:before {
   content: counter(li);
   position: absolute;
   right: calc(100% + 10px);
-  color: #8fbcbb;
+  color: #bf616a;
   display: inline-block;
   text-align: right;
 }
@@ -302,7 +302,7 @@ ol li:before {
     background: rgb(29, 33, 44);
     background: #3b4252;
     box-shadow: var(--shadow);
-    color: #8fbcbb;
+    color: #bf616a;
     border: 1px solid;
     margin: -15px 5px 0px 0px;
     padding: 0px 0px 0px 0px;
@@ -343,7 +343,7 @@ ol li:before {
   right: 30px;
   transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
   z-index: 1000;
-  border: 0.1em solid #8fbcbb;
+  border: 0.1em solid #bf616a;
   scroll-behavior: smooth;
   opacity: 30%;
 }
