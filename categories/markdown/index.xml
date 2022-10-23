@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>markdown on cyber_nimbus</title>
+    <title>markdown on obscure_art</title>
     <link>https://obscureart.com.br/categories/markdown/</link>
-    <description>Recent content in markdown on cyber_nimbus</description>
+    <description>Recent content in markdown on obscure_art</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>TCN © 2022 :: Licensed under &lt;a href=http://creativecommons.org/licenses/by-sa/4.0/&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <copyright>ObscureArt © 2022 :: Licensed under &lt;a href=http://creativecommons.org/licenses/by-sa/4.0/&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Mon, 13 Sep 2021 00:34:56 -0300</lastBuildDate><atom:link href="https://obscureart.com.br/categories/markdown/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello Markdown</title>
