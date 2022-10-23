@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cyber_nimbus</title>
-    <link>https://cybernimbus.com.br/</link>
+    <link>https://obscureart.com.br/</link>
     <description>Recent content on cyber_nimbus</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>TCN © 2021 :: Licensed under &lt;a href=http://creativecommons.org/licenses/by-sa/4.0/&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 27 Oct 2021 15:36:29 -0300</lastBuildDate><atom:link href="https://cybernimbus.com.br/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>TCN © 2022 :: Licensed under &lt;a href=http://creativecommons.org/licenses/by-sa/4.0/&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 27 Oct 2021 15:36:29 -0300</lastBuildDate><atom:link href="https://obscureart.com.br/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ghostscript - Reduzindo o tamanho de arquivos PDF</title>
-      <link>https://cybernimbus.com.br/posts/ghostscript-pdf-compress/</link>
+      <link>https://obscureart.com.br/posts/ghostscript-pdf-compress/</link>
       <pubDate>Wed, 27 Oct 2021 15:36:29 -0300</pubDate>
       
-      <guid>https://cybernimbus.com.br/posts/ghostscript-pdf-compress/</guid>
+      <guid>https://obscureart.com.br/posts/ghostscript-pdf-compress/</guid>
       <description>Utilizando ghostscript com comandos no terminal para reduzir o tamanho de um arquivo PDF de maneira simples, rápida e prática.
 Se o comando não estiver disponível na sua máquina, então será necessário a instalação do pacote ghostscript.
 No Ubuntu, por exemplo, é muito simples, basta utilizar o apt:
@@ -21,15 +21,14 @@ sudo apt install ghostscript Com o pacote devidamente adicionado ao seu sistema,
       <content>&lt;p&gt;Utilizando &lt;em&gt;&lt;strong&gt;ghostscript&lt;/strong&gt;&lt;/em&gt; com comandos no terminal para reduzir o tamanho de um arquivo PDF de maneira simples, rápida e prática.&lt;/p&gt;
 &lt;p&gt;Se o comando não estiver disponível na sua máquina, então será necessário a instalação do pacote ghostscript.&lt;/p&gt;
 &lt;p&gt;No Ubuntu, por exemplo, é muito simples, basta utilizar o &lt;code&gt;apt&lt;/code&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo apt install ghostscript
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt install ghostscript
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Com o pacote devidamente adicionado ao seu sistema, podemos utilizar esse comando &amp;ldquo;&lt;em&gt;&lt;strong&gt;mágico&lt;/strong&gt;&lt;/em&gt;&amp;rdquo; para reduzir o tamanho do arquivo PDF, mantendo uma ótima qualidade para leitura e impressão.&lt;/p&gt;
 &lt;p&gt;Antes de executar o comando, certifique-se de ter alterado a &lt;code&gt;saida.pdf&lt;/code&gt; que será o nome do arquivo comprimido. O novo arquivo comprimido será criado no diretório &lt;code&gt;~&lt;/code&gt; caso nenhum outro seja especificado pelo usuário.&lt;/p&gt;
 &lt;p&gt;Em &lt;code&gt;entrada.pdf&lt;/code&gt; &lt;strong&gt;deverá&lt;/strong&gt; ser especificado o nome do arquivo a ser comprimido e também o diretório onde ele se encontra, exemplo: &lt;code&gt; ~/Downloads/teste.pdf&lt;/code&gt;. Caso o arquivo esteja no seu diretório atual, não sera necessário apontar o caminho.&lt;/p&gt;
 &lt;p&gt;Feito isso, vamos ao comando:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
-gs -sDEVICE&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;pdfwrite -dCompatibilityLevel&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;1.4 -dPDFSETTINGS&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/printer -dNOPAUSE -dQUIET -dBATCH -sOutputFile&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;saida.pdf entrada.pdf
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Podemos ajustar o  &lt;code&gt;-dPDFSETTINGS&lt;/code&gt; de acordo com a nossa necessidade, a tabela abaixo contem as opções que podem ser utilizadas:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gs -sDEVICE&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;pdfwrite -dCompatibilityLevel&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;1.4 -dPDFSETTINGS&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/printer -dNOPAUSE -dQUIET -dBATCH -sOutputFile&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;saida.pdf entrada.pdf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Podemos ajustar o  &lt;code&gt;-dPDFSETTINGS&lt;/code&gt; de acordo com a nossa necessidade, a tabela abaixo contem as opções que podem ser utilizadas:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -67,10 +66,10 @@ gs -sDEVICE&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;pdfwrite -dCo
     
     <item>
       <title>Guia Básico de Linux - Discos e Partições</title>
-      <link>https://cybernimbus.com.br/posts/linux-discos-particoes/</link>
+      <link>https://obscureart.com.br/posts/linux-discos-particoes/</link>
       <pubDate>Sun, 10 Oct 2021 17:30:57 -0300</pubDate>
       
-      <guid>https://cybernimbus.com.br/posts/linux-discos-particoes/</guid>
+      <guid>https://obscureart.com.br/posts/linux-discos-particoes/</guid>
       <description>Sumário  Partições Pontos de Montagem Identificação de discos e partições Montando Partições  fstab   Desmontando Partições Créditos  Partições As partições, são divisões existentes no disco rígido que marcam onde começa onde termina um sistema de arquivos. As partições nos permitem utilizar mais de um sistema operacional no mesmo computador (como o GNU/Linux e Windows), ou dividir o disco rígido em uma ou mais partes para ser usado por um único sistema operacional ou até mesmo por diferentes arquiteturas (32 e 64 bits).</description>
       <content>&lt;h1 id=&#34;sumário&#34;&gt;Sumário&lt;/h1&gt;
 &lt;ul&gt;
@@ -137,16 +136,16 @@ gs -sDEVICE&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;pdfwrite -dCo
 &lt;h1 id=&#34;identificação-de-discos-e-partições-em-sistemas-linux&#34;&gt;Identificação de discos e partições em sistemas Linux&lt;/h1&gt;
 &lt;p&gt;No GNU/Linux, os dispositivos existentes em seu computador (como discos rígidos, pen-drives, flash, storages remotas, disquetes, tela, portas de impressora, modem, etc) são identificados por um arquivo referente a este dispositivo no diretório &lt;code&gt;/dev&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;A identificação de discos rígidos no GNU/Linux é feita da seguinte forma:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;/dev/sda1
-|    | ||
-|    | ||_Número que identifica o número da partição no disco rígido.
-|    | |
-|    | |_Letra que identifica o disco rígido (a=primeiro, b=segundo, etc...).
-|    |
-|    |_Sigla que identifica o tipo do disco rígido (sd=SATA/SCSI, sd=IDE, xt=MFM).
-|
-|_Diretório onde são armazenados os dispositivos existentes no sistema.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Abaixo algumas identificações de discos e partições em sistemas Linux:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;/dev/sda1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|    | ||
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|    | ||_Número que identifica o número da partição no disco rígido.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|    | |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|    | |_Letra que identifica o disco rígido (a=primeiro, b=segundo, etc...).
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|    |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|    |_Sigla que identifica o tipo do disco rígido (sd=SATA/SCSI, sd=IDE, xt=MFM).
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|_Diretório onde são armazenados os dispositivos existentes no sistema.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Abaixo algumas identificações de discos e partições em sistemas Linux:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;ev/fd0&lt;/code&gt; - Primeira unidade de disquetes.&lt;/p&gt;
@@ -401,10 +400,10 @@ gs -sDEVICE&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;pdfwrite -dCo
     
     <item>
       <title>Guia Básico de Linux - Coringas</title>
-      <link>https://cybernimbus.com.br/posts/linux-coringas/</link>
+      <link>https://obscureart.com.br/posts/linux-coringas/</link>
       <pubDate>Sun, 10 Oct 2021 16:10:40 -0300</pubDate>
       
-      <guid>https://cybernimbus.com.br/posts/linux-coringas/</guid>
+      <guid>https://obscureart.com.br/posts/linux-coringas/</guid>
       <description>Sumário  Coringas  Utilizando   Créditos  Coringas O coringa (ou referência global) é um recurso utilizado para especificar um ou mais arquivos e/ou diretórios do sistema de uma só vez. Este é um recurso permite que você faça a filtragem do que será listado, copiado, apagado, etc. São usados 4 tipos de coringas no GNU/Linux:
  * - Faz referência a um nome completo/restante de um arquivo/diretório. ?</description>
       <content>&lt;h1 id=&#34;sumário&#34;&gt;Sumário&lt;/h1&gt;
@@ -488,10 +487,10 @@ Caso deseje listar &lt;strong&gt;todos&lt;/strong&gt; os arquivos do diretório 
     
     <item>
       <title>Guia Básico de Linux - Diretórios</title>
-      <link>https://cybernimbus.com.br/posts/linux-diretorios/</link>
+      <link>https://obscureart.com.br/posts/linux-diretorios/</link>
       <pubDate>Sat, 02 Oct 2021 15:28:47 -0300</pubDate>
       
-      <guid>https://cybernimbus.com.br/posts/linux-diretorios/</guid>
+      <guid>https://obscureart.com.br/posts/linux-diretorios/</guid>
       <description>Sumário  Diretório  mkdir   Diretório Raíz Diretório atual Diretório Home Diretório Superior Diretório Anterior Caminhos na estrutura de diretórios Estrutura básica de diretórios no Linux Créditos  Diretório Diretório é o local utilizado para armazenar conjuntos arquivos para melhor organização e localização. Em outras palavras, o diretório pode ser entendido como uma pasta onde você armazena seus arquivos e documentos. O diretório, como o arquivo, é &amp;ldquo;Case Sensitive&amp;rdquo; ou seja, o diretório /teste é completamente diferente do diretório /Teste.</description>
       <content>&lt;h1 id=&#34;sumário&#34;&gt;Sumário&lt;/h1&gt;
 &lt;ul&gt;
@@ -758,10 +757,10 @@ O diretório home também é identificado por um &lt;code&gt;~&lt;/code&gt;(til)
     
     <item>
       <title>HTML?</title>
-      <link>https://cybernimbus.com.br/posts/html/</link>
+      <link>https://obscureart.com.br/posts/html/</link>
       <pubDate>Wed, 29 Sep 2021 15:50:58 -0300</pubDate>
       
-      <guid>https://cybernimbus.com.br/posts/html/</guid>
+      <guid>https://obscureart.com.br/posts/html/</guid>
       <description>Sumário  Início VSCode e VSCodium Comentários Anatomia das Tags Atributos Atributos Globais  class contenteditable data-* hidden id style tabindex title   Aninhamento - Hierarquia Anatomia - Documento Créditos  Início O tema desta nova postagem que trata de conceitos inicias e basilares do desenvolvimento web, é sobre o HTML e seus conceitos essenciais, tags, atributos, aninhamentos, hierarquias de tags, elementos de diretórios e muito mais.
 VS Code? O Visual Studio Code (VS Code) é um editor de código aberto desenvolvido pela Microsoft.</description>
       <content>&lt;h1 id=&#34;sumário&#34;&gt;Sumário&lt;/h1&gt;
@@ -830,18 +829,18 @@ O conteúdo escrito dentro do comentário,
 &lt;/ul&gt;
 &lt;h1 id=&#34;anatomia-das-tags&#34;&gt;Anatomia das Tags&lt;/h1&gt;
 &lt;p&gt;Neste tópico, veremos o que constitui o Markup do HTML, as Tags.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;h1&lt;/span&gt;&amp;gt; TÍTULO &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;h1&lt;/span&gt;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Você faz a abertura delas, coloca o nome da Tag e as fecha como no exemplo acima. No caso dessa Tag, seu conteúdo é de título, juntando a abertura, fechamento e o conteúdo, teremos um Elemento HTML.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;h1&lt;/span&gt;&amp;gt; TÍTULO &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;h1&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Você faz a abertura delas, coloca o nome da Tag e as fecha como no exemplo acima. No caso dessa Tag, seu conteúdo é de título, juntando a abertura, fechamento e o conteúdo, teremos um Elemento HTML.&lt;/p&gt;
 &lt;p&gt;Existe também Elementos vazios, que diferente do exemplo acima, não fecham daquela forma, mas assim:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;img&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;alt&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Essa tag, &lt;code&gt;img&lt;/code&gt; utilizada para imagem, possuí atributos adicionais e que terão o seu funcionamento vistos mais a adiante.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;img&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;src&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;alt&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Essa tag, &lt;code&gt;img&lt;/code&gt; utilizada para imagem, possuí atributos adicionais e que terão o seu funcionamento vistos mais a adiante.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;atributos&#34;&gt;Atributos&lt;/h1&gt;
 &lt;p&gt;Os atributos booleanos, aqueles que não precisam de conteúdo, pois por serem booleanos possuem apenas dois tipos de valores, verdadeiro ou falso, não havendo texto, apenas essas duas opções.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;input&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;disabled&lt;/span&gt;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Outro fator que devemos levar em consideração são as aspas, recomendado apenas o uso das aspas duplas, para não desencadear problemas no código.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;input&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;type&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;disabled&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Outro fator que devemos levar em consideração são as aspas, recomendado apenas o uso das aspas duplas, para não desencadear problemas no código.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -849,88 +848,88 @@ O conteúdo escrito dentro do comentário,
 &lt;p&gt;Atributos globais (veremos apenas os mais utilizados), são atributos aplicáveis em todas as Tags, sendo as principais:&lt;/p&gt;
 &lt;h6 id=&#34;class&#34;&gt;&lt;em&gt;class&lt;/em&gt;&lt;/h6&gt;
 &lt;p&gt;além de classificar as Tags, é usada para aplicar estilo css e também para acessar com o Java Script.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;conteúdo&amp;#34;&lt;/span&gt;&amp;gt;
-&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;conteúdo&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h6 id=&#34;contenteditable&#34;&gt;&lt;em&gt;contenteditable&lt;/em&gt;&lt;/h6&gt;
 &lt;p&gt;usado para editar o conteúdo da página, porém não é mantido após salvar.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;contentedtable&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&amp;gt;
-&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;contentedtable&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h6 id=&#34;data-&#34;&gt;&lt;em&gt;data-&lt;/em&gt;&lt;/h6&gt;
 &lt;p&gt;usado para expandir os tipos de atributos que podemos usar para fazer mais tarde lógica no Java Script , utilizado em css também.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;data-qualquercoisaaqui&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&amp;gt;
- &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--    escrito com &amp;#34;-&amp;#34; ou tudo junto. --&amp;gt;&lt;/span&gt;
-&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;data-qualquercoisaaqui&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--    escrito com &amp;#34;-&amp;#34; ou tudo junto. --&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h6 id=&#34;hidden&#34;&gt;&lt;em&gt;hidden&lt;/em&gt;&lt;/h6&gt;
 &lt;p&gt;usado para esconder uma Tag.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;carrinho&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;hidden&lt;/span&gt;&amp;gt;
-conteúdo
-&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;carrinho&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;hidden&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;conteúdo
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h6 id=&#34;id&#34;&gt;&lt;em&gt;id&lt;/em&gt;&lt;/h6&gt;
 &lt;p&gt;usado apenas 1 por Tag para identificação, podendo também mais tarde utilizar no Java Script e CSS.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;texto&amp;#34;&lt;/span&gt;&amp;gt;
-conteúdo
-&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
-
-&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;texto2&amp;#34;&lt;/span&gt;&amp;gt;
-conteúdo
-&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;texto&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;conteúdo
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;texto2&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;conteúdo
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h6 id=&#34;style&#34;&gt;&lt;em&gt;style&lt;/em&gt;&lt;/h6&gt;
 &lt;p&gt;aplica a estilização na Tag, normalmente não se usa &amp;ldquo;style&amp;rdquo; dentro da Tag, mas sim em arquivos externos.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color: red&amp;#34;&lt;/span&gt;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;color: red&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h6 id=&#34;tabindex&#34;&gt;&lt;em&gt;tabindex&lt;/em&gt;&lt;/h6&gt;
 &lt;p&gt;usado para ordenar o Tab na página.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;tabindex&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;3&amp;#34;&lt;/span&gt;&amp;gt;
-&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
-
-&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;tabindex&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&amp;gt;
-&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
-
-&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;tabindex&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2&amp;#34;&lt;/span&gt;&amp;gt;
-&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;tabindex&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;3&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;tabindex&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;tabindex&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h6 id=&#34;title&#34;&gt;&lt;em&gt;title&lt;/em&gt;&lt;/h6&gt;
 &lt;p&gt;serve para definir um título para a Tag, que aparece quando colocamos o mouse descansando em cima do conteúdo da página.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;aqui vai o título&amp;#34;&lt;/span&gt;&amp;gt;
-    conteudo
-    &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para estudo de mais Atributos Globais, visite o site &lt;a href=&#34;https://developer.mozilla.org/pt-BR/&#34;&gt;DEVELOPER.MOZILA.ORG&lt;/a&gt; que é uma ótima fonte de conhecimento devido à grandiosidade e facilidade de acesso ao material para estudo.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;aqui vai o título&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    conteudo
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;div&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para estudo de mais Atributos Globais, visite o site &lt;a href=&#34;https://developer.mozilla.org/pt-BR/&#34;&gt;DEVELOPER.MOZILA.ORG&lt;/a&gt; que é uma ótima fonte de conhecimento devido à grandiosidade e facilidade de acesso ao material para estudo.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;aninhamento---hierarquia&#34;&gt;Aninhamento - Hierarquia&lt;/h1&gt;
 &lt;p&gt;Aninhamento em HTML significa colocar uma tag dentro da outra, porém não é se trata de uma tag qualquer, existe uma hierarquia por trás delas que deverão ser seguidas, por exemplo:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt; 
-    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;em&lt;/span&gt;&amp;gt;texto&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;em&lt;/span&gt;&amp;gt;
-    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt; texto2&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt; 
-  &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Podemos ver no exemplo acima que a tag &lt;code&gt;&amp;lt;em&amp;gt;&amp;lt;/em&amp;gt;&lt;/code&gt;(usada para dar ênfase em um texto) é pertencente a Tag &lt;code&gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&lt;/code&gt;(usada para criar um parágrafo). Nota-se também que há um fluxo, onde as tags são lidas por ordem de cima para baixo.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;em&lt;/span&gt;&amp;gt;texto&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;em&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt; texto2&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Podemos ver no exemplo acima que a tag &lt;code&gt;&amp;lt;em&amp;gt;&amp;lt;/em&amp;gt;&lt;/code&gt;(usada para dar ênfase em um texto) é pertencente a Tag &lt;code&gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&lt;/code&gt;(usada para criar um parágrafo). Nota-se também que há um fluxo, onde as tags são lidas por ordem de cima para baixo.&lt;/p&gt;
 &lt;p&gt;Por fim, no posicionamento dos elementos, podemos ver que a tag &lt;code&gt;&amp;lt;em&amp;gt;&amp;lt;/em&amp;gt;&lt;/code&gt; não está em uma outra linha como na tag &lt;code&gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&lt;/code&gt;, existem tags que quebram a linha, então mesmo que colocarmos a tag &lt;code&gt;&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&lt;/code&gt; uma do lado da outra, visualmente o resultado será a quebra de linha.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#sum%C3%A1rio&#34;&gt;Sumário&lt;/a&gt;&lt;/li&gt;
@@ -971,24 +970,24 @@ conteúdo
 &lt;/ul&gt;
 &lt;h1 id=&#34;anatomia-de-um-documento&#34;&gt;Anatomia de um Documento&lt;/h1&gt;
 &lt;p&gt;Se abrirmos o documento .html pelo navegador estaremos vendo a página como ela deve ser mostrada ao utilizador, mas se clicarmos em ver o código fonte dela, estaremos vendo o HTML puro. Para testarmos isso na prática, veremos a anatomia de um documento HTML, vide o exemplo abaixo.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt;&amp;gt;
-    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;head&lt;/span&gt;&amp;gt;
-        &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;meta&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;charset&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;utf-8&amp;#34;&lt;/span&gt;&amp;gt;
-        &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;&amp;gt;Anatomia do Documento&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;&amp;gt;
-    &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;head&lt;/span&gt;&amp;gt;
-
-    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
-        &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;h1&lt;/span&gt;&amp;gt;Título&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;h1&lt;/span&gt;&amp;gt;
-        &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt;
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt;
-        &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt;
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt;
-    &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
-&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;O padrão seria esta forma.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;head&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;meta&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;charset&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;utf-8&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;&amp;gt;Anatomia do Documento&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;head&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;h1&lt;/span&gt;&amp;gt;Título&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;h1&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;p&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;O padrão seria esta forma.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/code&gt; — diz ao navegador que estamos trabalhando com HTML 5.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;&amp;lt;html&amp;gt;&amp;lt;/html&amp;gt;&lt;/code&gt; — o próprio HTML, elemento raiz, o início da cadeia.&lt;/li&gt;
@@ -1004,10 +1003,10 @@ conteúdo
     
     <item>
       <title>HTTP?</title>
-      <link>https://cybernimbus.com.br/posts/http/</link>
+      <link>https://obscureart.com.br/posts/http/</link>
       <pubDate>Wed, 29 Sep 2021 14:45:04 -0300</pubDate>
       
-      <guid>https://cybernimbus.com.br/posts/http/</guid>
+      <guid>https://obscureart.com.br/posts/http/</guid>
       <description>Sumário  HTTP  Visualizando essa Comunicação  Browser DevTools cURL     O que é HTTP?  Cliente Servidor Proxy   Recursos HTTP  URI URL URN Revisão do Resource   Mensagens HTTP Métodos HTTP  OPTIONS GET HEAD POST PUT PATCH DELETE   Headers  app.DevDocs   Status CODE Créditos   HTTP Qual o significado da sigla HTTP? Hypertext Transfer Protocol, em português, Protocolo de Transferência de Hipertexto que é o conjunto de regras para a comunicação por meio do Hipertexto, um tipo de texto que pode carregar diferentes dados.</description>
       <content>&lt;h1 id=&#34;sumário&#34;&gt;Sumário&lt;/h1&gt;
 &lt;ul&gt;
@@ -1316,10 +1315,10 @@ Com a aba aberta, podemos entrar em um site, por exemplo o Google, e iremos ver 
     
     <item>
       <title>WEB e DEV?</title>
-      <link>https://cybernimbus.com.br/posts/web-e-dev/</link>
+      <link>https://obscureart.com.br/posts/web-e-dev/</link>
       <pubDate>Thu, 23 Sep 2021 15:46:45 -0300</pubDate>
       
-      <guid>https://cybernimbus.com.br/posts/web-e-dev/</guid>
+      <guid>https://obscureart.com.br/posts/web-e-dev/</guid>
       <description>O que é WEB? Na internet significa uma maneira de estruturar trocas de comunicações entre computadores, por exemplo, você possui o seu computador e do outro lado do mundo há outro, que tem um site que você queira acessar.
 Importante sabermos a “mágica” para que essa troca de informações ocorra e para isso precisamos compreender de forma mais detalhada como funciona essa tecnologia que será fundamental para a construção de nossas futuras aplicações.</description>
       <content>&lt;h1 id=&#34;o-que-é-web&#34;&gt;O que é WEB?&lt;/h1&gt;
@@ -1349,10 +1348,10 @@ Importante sabermos a “mágica” para que essa troca de informações ocorra 
     
     <item>
       <title>Hello Markdown</title>
-      <link>https://cybernimbus.com.br/posts/hello-markdown/</link>
+      <link>https://obscureart.com.br/posts/hello-markdown/</link>
       <pubDate>Mon, 13 Sep 2021 00:34:56 -0300</pubDate>
       
-      <guid>https://cybernimbus.com.br/posts/hello-markdown/</guid>
+      <guid>https://obscureart.com.br/posts/hello-markdown/</guid>
       <description>post.INDEX  Blockquotes Emphasis Lists Links Tables Horizontal Rule Credits  Blockquotes html Quote blocks with markdown    &amp;gt; Blockquotes are very handy in email to emulate reply text. &amp;gt; This line is part of the same quote. Quote break. &amp;gt; This is a very long line that will still be quoted properly when it wraps. Oh boy let&amp;#39;s keep writing to make sure this is long enough to actually wrap for everyone.</description>
       <content>&lt;h1 id=&#34;postindex&#34;&gt;post.INDEX&lt;/h1&gt;
 &lt;ul&gt;
@@ -1709,10 +1708,10 @@ Underscores
     
     <item>
       <title>Ambient Sound - Shiodome Rail Tracks</title>
-      <link>https://cybernimbus.com.br/posts/ambient-sound-shidome-rail-tracks/</link>
+      <link>https://obscureart.com.br/posts/ambient-sound-shidome-rail-tracks/</link>
       <pubDate>Sun, 12 Sep 2021 22:59:27 -0300</pubDate>
       
-      <guid>https://cybernimbus.com.br/posts/ambient-sound-shidome-rail-tracks/</guid>
+      <guid>https://obscureart.com.br/posts/ambient-sound-shidome-rail-tracks/</guid>
       <description>Para algumas pessoas, causa grande desconforto o simples fato de estarem em um ambiente isolado de toda sonoridade vinda das atividades mundanas. Tal situação acaba prejudicando no desempenho de suas tarefas como também na concentração necessária para sua completação.
 Para o alívio deste grupo de indivíduos, que se sentem mais acomodados quando estão envoltos desses sons ambientes, a tecnologia apresenta uma solução bastante conveniente.
 Dito isso, começo essa categoria de Ambient Sounds para compartilhar algumas das grandes opções disponíveis na web que tornam possível a simulação dessa ambientação sonora, esteja onde você estiver.</description>
@@ -1735,10 +1734,10 @@ Dito isso, começo essa categoria de Ambient Sounds para compartilhar algumas da
     
     <item>
       <title>About</title>
-      <link>https://cybernimbus.com.br/about/</link>
+      <link>https://obscureart.com.br/about/</link>
       <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://cybernimbus.com.br/about/</guid>
+      <guid>https://obscureart.com.br/about/</guid>
       <description>Autor Os poetas, quando escrevem romances, costumam proceder como se fossem Deus e pudessem abranger com o olhar toda a história de uma vida humana, compreendendo-a e expondo-a como se o próprio Deus a relatasse, sem nenhum véu, revelando a cada instante sua essência mais íntima.
 Não posso agir assim, e os próprios poetas não o conseguem. Minha história é, no entanto, para mim, mais importante do que a de qualquer poeta é para ele, pois é a minha própria história, e é a história de um homem, único e vivo.</description>
       <content>&lt;h1 id=&#34;autor&#34;&gt;Autor&lt;/h1&gt;

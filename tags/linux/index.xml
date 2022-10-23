@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>linux on cyber_nimbus</title>
-    <link>https://cybernimbus.com.br/tags/linux/</link>
+    <link>https://obscureart.com.br/tags/linux/</link>
     <description>Recent content in linux on cyber_nimbus</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>TCN © 2021 :: Licensed under &lt;a href=http://creativecommons.org/licenses/by-sa/4.0/&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 27 Oct 2021 15:36:29 -0300</lastBuildDate><atom:link href="https://cybernimbus.com.br/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>TCN © 2022 :: Licensed under &lt;a href=http://creativecommons.org/licenses/by-sa/4.0/&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 27 Oct 2021 15:36:29 -0300</lastBuildDate><atom:link href="https://obscureart.com.br/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ghostscript - Reduzindo o tamanho de arquivos PDF</title>
-      <link>https://cybernimbus.com.br/posts/ghostscript-pdf-compress/</link>
+      <link>https://obscureart.com.br/posts/ghostscript-pdf-compress/</link>
       <pubDate>Wed, 27 Oct 2021 15:36:29 -0300</pubDate>
       
-      <guid>https://cybernimbus.com.br/posts/ghostscript-pdf-compress/</guid>
+      <guid>https://obscureart.com.br/posts/ghostscript-pdf-compress/</guid>
       <description>Utilizando ghostscript com comandos no terminal para reduzir o tamanho de um arquivo PDF de maneira simples, rápida e prática.
 Se o comando não estiver disponível na sua máquina, então será necessário a instalação do pacote ghostscript.
 No Ubuntu, por exemplo, é muito simples, basta utilizar o apt:
@@ -21,15 +21,14 @@ sudo apt install ghostscript Com o pacote devidamente adicionado ao seu sistema,
       <content>&lt;p&gt;Utilizando &lt;em&gt;&lt;strong&gt;ghostscript&lt;/strong&gt;&lt;/em&gt; com comandos no terminal para reduzir o tamanho de um arquivo PDF de maneira simples, rápida e prática.&lt;/p&gt;
 &lt;p&gt;Se o comando não estiver disponível na sua máquina, então será necessário a instalação do pacote ghostscript.&lt;/p&gt;
 &lt;p&gt;No Ubuntu, por exemplo, é muito simples, basta utilizar o &lt;code&gt;apt&lt;/code&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo apt install ghostscript
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt install ghostscript
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Com o pacote devidamente adicionado ao seu sistema, podemos utilizar esse comando &amp;ldquo;&lt;em&gt;&lt;strong&gt;mágico&lt;/strong&gt;&lt;/em&gt;&amp;rdquo; para reduzir o tamanho do arquivo PDF, mantendo uma ótima qualidade para leitura e impressão.&lt;/p&gt;
 &lt;p&gt;Antes de executar o comando, certifique-se de ter alterado a &lt;code&gt;saida.pdf&lt;/code&gt; que será o nome do arquivo comprimido. O novo arquivo comprimido será criado no diretório &lt;code&gt;~&lt;/code&gt; caso nenhum outro seja especificado pelo usuário.&lt;/p&gt;
 &lt;p&gt;Em &lt;code&gt;entrada.pdf&lt;/code&gt; &lt;strong&gt;deverá&lt;/strong&gt; ser especificado o nome do arquivo a ser comprimido e também o diretório onde ele se encontra, exemplo: &lt;code&gt; ~/Downloads/teste.pdf&lt;/code&gt;. Caso o arquivo esteja no seu diretório atual, não sera necessário apontar o caminho.&lt;/p&gt;
 &lt;p&gt;Feito isso, vamos ao comando:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
-gs -sDEVICE&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;pdfwrite -dCompatibilityLevel&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;1.4 -dPDFSETTINGS&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/printer -dNOPAUSE -dQUIET -dBATCH -sOutputFile&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;saida.pdf entrada.pdf
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Podemos ajustar o  &lt;code&gt;-dPDFSETTINGS&lt;/code&gt; de acordo com a nossa necessidade, a tabela abaixo contem as opções que podem ser utilizadas:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gs -sDEVICE&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;pdfwrite -dCompatibilityLevel&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;1.4 -dPDFSETTINGS&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/printer -dNOPAUSE -dQUIET -dBATCH -sOutputFile&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;saida.pdf entrada.pdf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Podemos ajustar o  &lt;code&gt;-dPDFSETTINGS&lt;/code&gt; de acordo com a nossa necessidade, a tabela abaixo contem as opções que podem ser utilizadas:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -67,10 +66,10 @@ gs -sDEVICE&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;pdfwrite -dCo
     
     <item>
       <title>Guia Básico de Linux - Discos e Partições</title>
-      <link>https://cybernimbus.com.br/posts/linux-discos-particoes/</link>
+      <link>https://obscureart.com.br/posts/linux-discos-particoes/</link>
       <pubDate>Sun, 10 Oct 2021 17:30:57 -0300</pubDate>
       
-      <guid>https://cybernimbus.com.br/posts/linux-discos-particoes/</guid>
+      <guid>https://obscureart.com.br/posts/linux-discos-particoes/</guid>
       <description>Sumário  Partições Pontos de Montagem Identificação de discos e partições Montando Partições  fstab   Desmontando Partições Créditos  Partições As partições, são divisões existentes no disco rígido que marcam onde começa onde termina um sistema de arquivos. As partições nos permitem utilizar mais de um sistema operacional no mesmo computador (como o GNU/Linux e Windows), ou dividir o disco rígido em uma ou mais partes para ser usado por um único sistema operacional ou até mesmo por diferentes arquiteturas (32 e 64 bits).</description>
       <content>&lt;h1 id=&#34;sumário&#34;&gt;Sumário&lt;/h1&gt;
 &lt;ul&gt;
@@ -137,16 +136,16 @@ gs -sDEVICE&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;pdfwrite -dCo
 &lt;h1 id=&#34;identificação-de-discos-e-partições-em-sistemas-linux&#34;&gt;Identificação de discos e partições em sistemas Linux&lt;/h1&gt;
 &lt;p&gt;No GNU/Linux, os dispositivos existentes em seu computador (como discos rígidos, pen-drives, flash, storages remotas, disquetes, tela, portas de impressora, modem, etc) são identificados por um arquivo referente a este dispositivo no diretório &lt;code&gt;/dev&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;A identificação de discos rígidos no GNU/Linux é feita da seguinte forma:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;/dev/sda1
-|    | ||
-|    | ||_Número que identifica o número da partição no disco rígido.
-|    | |
-|    | |_Letra que identifica o disco rígido (a=primeiro, b=segundo, etc...).
-|    |
-|    |_Sigla que identifica o tipo do disco rígido (sd=SATA/SCSI, sd=IDE, xt=MFM).
-|
-|_Diretório onde são armazenados os dispositivos existentes no sistema.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Abaixo algumas identificações de discos e partições em sistemas Linux:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;/dev/sda1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|    | ||
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|    | ||_Número que identifica o número da partição no disco rígido.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|    | |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|    | |_Letra que identifica o disco rígido (a=primeiro, b=segundo, etc...).
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|    |
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|    |_Sigla que identifica o tipo do disco rígido (sd=SATA/SCSI, sd=IDE, xt=MFM).
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|_Diretório onde são armazenados os dispositivos existentes no sistema.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Abaixo algumas identificações de discos e partições em sistemas Linux:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;ev/fd0&lt;/code&gt; - Primeira unidade de disquetes.&lt;/p&gt;
@@ -401,10 +400,10 @@ gs -sDEVICE&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;pdfwrite -dCo
     
     <item>
       <title>Guia Básico de Linux - Coringas</title>
-      <link>https://cybernimbus.com.br/posts/linux-coringas/</link>
+      <link>https://obscureart.com.br/posts/linux-coringas/</link>
       <pubDate>Sun, 10 Oct 2021 16:10:40 -0300</pubDate>
       
-      <guid>https://cybernimbus.com.br/posts/linux-coringas/</guid>
+      <guid>https://obscureart.com.br/posts/linux-coringas/</guid>
       <description>Sumário  Coringas  Utilizando   Créditos  Coringas O coringa (ou referência global) é um recurso utilizado para especificar um ou mais arquivos e/ou diretórios do sistema de uma só vez. Este é um recurso permite que você faça a filtragem do que será listado, copiado, apagado, etc. São usados 4 tipos de coringas no GNU/Linux:
  * - Faz referência a um nome completo/restante de um arquivo/diretório. ?</description>
       <content>&lt;h1 id=&#34;sumário&#34;&gt;Sumário&lt;/h1&gt;
@@ -488,10 +487,10 @@ Caso deseje listar &lt;strong&gt;todos&lt;/strong&gt; os arquivos do diretório 
     
     <item>
       <title>Guia Básico de Linux - Diretórios</title>
-      <link>https://cybernimbus.com.br/posts/linux-diretorios/</link>
+      <link>https://obscureart.com.br/posts/linux-diretorios/</link>
       <pubDate>Sat, 02 Oct 2021 15:28:47 -0300</pubDate>
       
-      <guid>https://cybernimbus.com.br/posts/linux-diretorios/</guid>
+      <guid>https://obscureart.com.br/posts/linux-diretorios/</guid>
       <description>Sumário  Diretório  mkdir   Diretório Raíz Diretório atual Diretório Home Diretório Superior Diretório Anterior Caminhos na estrutura de diretórios Estrutura básica de diretórios no Linux Créditos  Diretório Diretório é o local utilizado para armazenar conjuntos arquivos para melhor organização e localização. Em outras palavras, o diretório pode ser entendido como uma pasta onde você armazena seus arquivos e documentos. O diretório, como o arquivo, é &amp;ldquo;Case Sensitive&amp;rdquo; ou seja, o diretório /teste é completamente diferente do diretório /Teste.</description>
       <content>&lt;h1 id=&#34;sumário&#34;&gt;Sumário&lt;/h1&gt;
 &lt;ul&gt;

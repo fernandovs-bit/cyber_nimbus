@@ -9,23 +9,23 @@
 <meta name="description" content="Utilizando ***ghostscript*** com comandos no terminal para reduzir o tamanho de um arquivo PDF de maneira simples, rápida e prática." />
 <meta name="keywords" content=", " />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://cybernimbus.com.br/posts/ghostscript-pdf-compress/" />
+<link rel="canonical" href="https://obscureart.com.br/posts/ghostscript-pdf-compress/" />
 
 
 
 
-<link rel="stylesheet" href="https://cybernimbus.com.br/assets/style.css">
+<link rel="stylesheet" href="https://obscureart.com.br/assets/style.css">
 
-  <link rel="stylesheet" href="https://cybernimbus.com.br/assets/blue.css">
-
-
-
-<link rel="stylesheet" href="https://cybernimbus.com.br/style.css">
+  <link rel="stylesheet" href="https://obscureart.com.br/assets/blue.css">
 
 
-<link rel="apple-touch-icon" href="https://cybernimbus.com.br/img/apple-touch-icon-192x192.png">
 
-  <link rel="shortcut icon" href="https://cybernimbus.com.br/img/favicon/favicon-r.ico">
+<link rel="stylesheet" href="https://obscureart.com.br/style.css">
+
+
+<link rel="apple-touch-icon" href="https://obscureart.com.br/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="https://obscureart.com.br/img/favicon/favicon-r.ico">
 
 
 
@@ -42,10 +42,10 @@
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Ghostscript - Reduzindo o tamanho de arquivos PDF">
 <meta property="og:description" content="Utilizando ***ghostscript*** com comandos no terminal para reduzir o tamanho de um arquivo PDF de maneira simples, rápida e prática." />
-<meta property="og:url" content="https://cybernimbus.com.br/posts/ghostscript-pdf-compress/" />
+<meta property="og:url" content="https://obscureart.com.br/posts/ghostscript-pdf-compress/" />
 <meta property="og:site_name" content="cyber_nimbus" />
 
-  <meta property="og:image" content="https://cybernimbus.com.br/img/cover/board.webp">
+  <meta property="og:image" content="https://obscureart.com.br/img/cover/board.webp">
 
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
@@ -146,7 +146,7 @@
     
 <div class="post">
   <h1 class="post-title">
-    <a href="https://cybernimbus.com.br/posts/ghostscript-pdf-compress/">Ghostscript - Reduzindo o tamanho de arquivos PDF</a></h1>
+    <a href="https://obscureart.com.br/posts/ghostscript-pdf-compress/">Ghostscript - Reduzindo o tamanho de arquivos PDF</a></h1>
     <div class="post-meta">
       
         <span class="post-date">
@@ -158,9 +158,9 @@
       
         <span class="post-meta">
         
-          #<a href="https://cybernimbus.com.br/tags/linux/">linux</a>&nbsp;
+          #<a href="https://obscureart.com.br/tags/linux/">linux</a>&nbsp;
         
-          #<a href="https://cybernimbus.com.br/tags/linux-dicas/">linux-dicas</a>&nbsp;
+          #<a href="https://obscureart.com.br/tags/linux-dicas/">linux-dicas</a>&nbsp;
         
         </span>
     </div>
@@ -171,7 +171,7 @@
   
 
   
-    <img src="https://cybernimbus.com.br/img/cover/board.webp" class="in-post-cover" alt="Ghostscript - Reduzindo o tamanho de arquivos PDF" />
+    <img src="https://obscureart.com.br/img/cover/board.webp" class="in-post-cover" alt="Ghostscript - Reduzindo o tamanho de arquivos PDF" />
   
   
 
@@ -179,15 +179,14 @@
         <p>Utilizando <em><strong>ghostscript</strong></em> com comandos no terminal para reduzir o tamanho de um arquivo PDF de maneira simples, rápida e prática.</p>
 <p>Se o comando não estiver disponível na sua máquina, então será necessário a instalação do pacote ghostscript.</p>
 <p>No Ubuntu, por exemplo, é muito simples, basta utilizar o <code>apt</code>:</p>
-<pre><code>sudo apt install ghostscript
+<pre tabindex="0"><code>sudo apt install ghostscript
 </code></pre><p>Com o pacote devidamente adicionado ao seu sistema, podemos utilizar esse comando &ldquo;<em><strong>mágico</strong></em>&rdquo; para reduzir o tamanho do arquivo PDF, mantendo uma ótima qualidade para leitura e impressão.</p>
 <p>Antes de executar o comando, certifique-se de ter alterado a <code>saida.pdf</code> que será o nome do arquivo comprimido. O novo arquivo comprimido será criado no diretório <code>~</code> caso nenhum outro seja especificado pelo usuário.</p>
 <p>Em <code>entrada.pdf</code> <strong>deverá</strong> ser especificado o nome do arquivo a ser comprimido e também o diretório onde ele se encontra, exemplo: <code> ~/Downloads/teste.pdf</code>. Caso o arquivo esteja no seu diretório atual, não sera necessário apontar o caminho.</p>
 <p>Feito isso, vamos ao comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
-gs -sDEVICE<span style="color:#f92672">=</span>pdfwrite -dCompatibilityLevel<span style="color:#f92672">=</span>1.4 -dPDFSETTINGS<span style="color:#f92672">=</span>/printer -dNOPAUSE -dQUIET -dBATCH -sOutputFile<span style="color:#f92672">=</span>saida.pdf entrada.pdf
-
-</code></pre></div><p>Podemos ajustar o  <code>-dPDFSETTINGS</code> de acordo com a nossa necessidade, a tabela abaixo contem as opções que podem ser utilizadas:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>gs -sDEVICE<span style="color:#f92672">=</span>pdfwrite -dCompatibilityLevel<span style="color:#f92672">=</span>1.4 -dPDFSETTINGS<span style="color:#f92672">=</span>/printer -dNOPAUSE -dQUIET -dBATCH -sOutputFile<span style="color:#f92672">=</span>saida.pdf entrada.pdf
+</span></span></code></pre></div><p>Podemos ajustar o  <code>-dPDFSETTINGS</code> de acordo com a nossa necessidade, a tabela abaixo contem as opções que podem ser utilizadas:</p>
 <table>
 <thead>
 <tr>
@@ -233,7 +232,7 @@ gs -sDEVICE<span style="color:#f92672">=</span>pdfwrite -dCompatibilityLevel<spa
         
         
         <span class="button next">
-            <a href="https://cybernimbus.com.br/posts/linux-discos-particoes/">
+            <a href="https://obscureart.com.br/posts/linux-discos-particoes/">
                 <span class="button__text">Guia Básico de Linux - Discos e Partições</span>
                 <span class="button__icon">→</span>
             </a>
@@ -256,15 +255,15 @@ gs -sDEVICE<span style="color:#f92672">=</span>pdfwrite -dCompatibilityLevel<spa
   <div class="footer__inner">
     
       <div class="copyright copyright--user">
-        <span>TCN © 2021 :: Licensed under <a href=http://creativecommons.org/licenses/by-sa/4.0/>CC BY-SA 4.0</a></span>
+        <span>TCN © 2022 :: Licensed under <a href=http://creativecommons.org/licenses/by-sa/4.0/>CC BY-SA 4.0</a></span>
     
         <span></span>
       </div>
   </div>
 </footer>
 
-<script src="https://cybernimbus.com.br/assets/main.js"></script>
-<script src="https://cybernimbus.com.br/assets/prism.js"></script>
+<script src="https://obscureart.com.br/assets/main.js"></script>
+<script src="https://obscureart.com.br/assets/prism.js"></script>
 
 
 

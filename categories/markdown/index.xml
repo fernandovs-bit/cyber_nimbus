@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>markdown on cyber_nimbus</title>
-    <link>https://cybernimbus.com.br/categories/markdown/</link>
+    <link>https://obscureart.com.br/categories/markdown/</link>
     <description>Recent content in markdown on cyber_nimbus</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>TCN © 2021 :: Licensed under &lt;a href=http://creativecommons.org/licenses/by-sa/4.0/&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 13 Sep 2021 00:34:56 -0300</lastBuildDate><atom:link href="https://cybernimbus.com.br/categories/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>TCN © 2022 :: Licensed under &lt;a href=http://creativecommons.org/licenses/by-sa/4.0/&gt;CC BY-SA 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 13 Sep 2021 00:34:56 -0300</lastBuildDate><atom:link href="https://obscureart.com.br/categories/markdown/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello Markdown</title>
-      <link>https://cybernimbus.com.br/posts/hello-markdown/</link>
+      <link>https://obscureart.com.br/posts/hello-markdown/</link>
       <pubDate>Mon, 13 Sep 2021 00:34:56 -0300</pubDate>
       
-      <guid>https://cybernimbus.com.br/posts/hello-markdown/</guid>
+      <guid>https://obscureart.com.br/posts/hello-markdown/</guid>
       <description>post.INDEX  Blockquotes Emphasis Lists Links Tables Horizontal Rule Credits  Blockquotes html Quote blocks with markdown    &amp;gt; Blockquotes are very handy in email to emulate reply text. &amp;gt; This line is part of the same quote. Quote break. &amp;gt; This is a very long line that will still be quoted properly when it wraps. Oh boy let&amp;#39;s keep writing to make sure this is long enough to actually wrap for everyone.</description>
       <content>&lt;h1 id=&#34;postindex&#34;&gt;post.INDEX&lt;/h1&gt;
 &lt;ul&gt;
