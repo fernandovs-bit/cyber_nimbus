@@ -14,7 +14,7 @@
       <pubDate>Sun, 10 Oct 2021 17:30:57 -0300</pubDate>
       
       <guid>https://obscureart.com.br/posts/linux-discos-particoes/</guid>
-      <description>Sumário  Partições Pontos de Montagem Identificação de discos e partições Montando Partições  fstab   Desmontando Partições Créditos  Partições As partições, são divisões existentes no disco rígido que marcam onde começa onde termina um sistema de arquivos. As partições nos permitem utilizar mais de um sistema operacional no mesmo computador (como o GNU/Linux e Windows), ou dividir o disco rígido em uma ou mais partes para ser usado por um único sistema operacional ou até mesmo por diferentes arquiteturas (32 e 64 bits).</description>
+      <description>Sumário Partições Pontos de Montagem Identificação de discos e partições Montando Partições fstab Desmontando Partições Créditos Partições As partições, são divisões existentes no disco rígido que marcam onde começa onde termina um sistema de arquivos. As partições nos permitem utilizar mais de um sistema operacional no mesmo computador (como o GNU/Linux e Windows), ou dividir o disco rígido em uma ou mais partes para ser usado por um único sistema operacional ou até mesmo por diferentes arquiteturas (32 e 64 bits).</description>
       <content>&lt;h1 id=&#34;sumário&#34;&gt;Sumário&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#parti%C3%A7%C3%B5es&#34;&gt;Partições&lt;/a&gt;&lt;/li&gt;
@@ -348,8 +348,8 @@
       <pubDate>Sun, 10 Oct 2021 16:10:40 -0300</pubDate>
       
       <guid>https://obscureart.com.br/posts/linux-coringas/</guid>
-      <description>Sumário  Coringas  Utilizando   Créditos  Coringas O coringa (ou referência global) é um recurso utilizado para especificar um ou mais arquivos e/ou diretórios do sistema de uma só vez. Este é um recurso permite que você faça a filtragem do que será listado, copiado, apagado, etc. São usados 4 tipos de coringas no GNU/Linux:
- * - Faz referência a um nome completo/restante de um arquivo/diretório. ?</description>
+      <description>Sumário Coringas Utilizando Créditos Coringas O coringa (ou referência global) é um recurso utilizado para especificar um ou mais arquivos e/ou diretórios do sistema de uma só vez. Este é um recurso permite que você faça a filtragem do que será listado, copiado, apagado, etc. São usados 4 tipos de coringas no GNU/Linux:
+* - Faz referência a um nome completo/restante de um arquivo/diretório. ? - Faz referência a uma letra naquela posição.</description>
       <content>&lt;h1 id=&#34;sumário&#34;&gt;Sumário&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#coringas&#34;&gt;Coringas&lt;/a&gt;
@@ -435,7 +435,7 @@ Caso deseje listar &lt;strong&gt;todos&lt;/strong&gt; os arquivos do diretório 
       <pubDate>Sat, 02 Oct 2021 15:28:47 -0300</pubDate>
       
       <guid>https://obscureart.com.br/posts/linux-diretorios/</guid>
-      <description>Sumário  Diretório  mkdir   Diretório Raíz Diretório atual Diretório Home Diretório Superior Diretório Anterior Caminhos na estrutura de diretórios Estrutura básica de diretórios no Linux Créditos  Diretório Diretório é o local utilizado para armazenar conjuntos arquivos para melhor organização e localização. Em outras palavras, o diretório pode ser entendido como uma pasta onde você armazena seus arquivos e documentos. O diretório, como o arquivo, é &amp;ldquo;Case Sensitive&amp;rdquo; ou seja, o diretório /teste é completamente diferente do diretório /Teste.</description>
+      <description>Sumário Diretório mkdir Diretório Raíz Diretório atual Diretório Home Diretório Superior Diretório Anterior Caminhos na estrutura de diretórios Estrutura básica de diretórios no Linux Créditos Diretório Diretório é o local utilizado para armazenar conjuntos arquivos para melhor organização e localização. Em outras palavras, o diretório pode ser entendido como uma pasta onde você armazena seus arquivos e documentos. O diretório, como o arquivo, é &amp;ldquo;Case Sensitive&amp;rdquo; ou seja, o diretório /teste é completamente diferente do diretório /Teste.</description>
       <content>&lt;h1 id=&#34;sumário&#34;&gt;Sumário&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#diret%C3%B3rio&#34;&gt;Diretório&lt;/a&gt;

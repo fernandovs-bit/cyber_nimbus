@@ -70,7 +70,7 @@ sudo apt install ghostscript Com o pacote devidamente adicionado ao seu sistema,
       <pubDate>Sun, 10 Oct 2021 17:30:57 -0300</pubDate>
       
       <guid>https://obscureart.com.br/posts/linux-discos-particoes/</guid>
-      <description>Sumário  Partições Pontos de Montagem Identificação de discos e partições Montando Partições  fstab   Desmontando Partições Créditos  Partições As partições, são divisões existentes no disco rígido que marcam onde começa onde termina um sistema de arquivos. As partições nos permitem utilizar mais de um sistema operacional no mesmo computador (como o GNU/Linux e Windows), ou dividir o disco rígido em uma ou mais partes para ser usado por um único sistema operacional ou até mesmo por diferentes arquiteturas (32 e 64 bits).</description>
+      <description>Sumário Partições Pontos de Montagem Identificação de discos e partições Montando Partições fstab Desmontando Partições Créditos Partições As partições, são divisões existentes no disco rígido que marcam onde começa onde termina um sistema de arquivos. As partições nos permitem utilizar mais de um sistema operacional no mesmo computador (como o GNU/Linux e Windows), ou dividir o disco rígido em uma ou mais partes para ser usado por um único sistema operacional ou até mesmo por diferentes arquiteturas (32 e 64 bits).</description>
       <content>&lt;h1 id=&#34;sumário&#34;&gt;Sumário&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#parti%C3%A7%C3%B5es&#34;&gt;Partições&lt;/a&gt;&lt;/li&gt;
@@ -404,8 +404,8 @@ sudo apt install ghostscript Com o pacote devidamente adicionado ao seu sistema,
       <pubDate>Sun, 10 Oct 2021 16:10:40 -0300</pubDate>
       
       <guid>https://obscureart.com.br/posts/linux-coringas/</guid>
-      <description>Sumário  Coringas  Utilizando   Créditos  Coringas O coringa (ou referência global) é um recurso utilizado para especificar um ou mais arquivos e/ou diretórios do sistema de uma só vez. Este é um recurso permite que você faça a filtragem do que será listado, copiado, apagado, etc. São usados 4 tipos de coringas no GNU/Linux:
- * - Faz referência a um nome completo/restante de um arquivo/diretório. ?</description>
+      <description>Sumário Coringas Utilizando Créditos Coringas O coringa (ou referência global) é um recurso utilizado para especificar um ou mais arquivos e/ou diretórios do sistema de uma só vez. Este é um recurso permite que você faça a filtragem do que será listado, copiado, apagado, etc. São usados 4 tipos de coringas no GNU/Linux:
+* - Faz referência a um nome completo/restante de um arquivo/diretório. ? - Faz referência a uma letra naquela posição.</description>
       <content>&lt;h1 id=&#34;sumário&#34;&gt;Sumário&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#coringas&#34;&gt;Coringas&lt;/a&gt;
@@ -491,7 +491,7 @@ Caso deseje listar &lt;strong&gt;todos&lt;/strong&gt; os arquivos do diretório 
       <pubDate>Sat, 02 Oct 2021 15:28:47 -0300</pubDate>
       
       <guid>https://obscureart.com.br/posts/linux-diretorios/</guid>
-      <description>Sumário  Diretório  mkdir   Diretório Raíz Diretório atual Diretório Home Diretório Superior Diretório Anterior Caminhos na estrutura de diretórios Estrutura básica de diretórios no Linux Créditos  Diretório Diretório é o local utilizado para armazenar conjuntos arquivos para melhor organização e localização. Em outras palavras, o diretório pode ser entendido como uma pasta onde você armazena seus arquivos e documentos. O diretório, como o arquivo, é &amp;ldquo;Case Sensitive&amp;rdquo; ou seja, o diretório /teste é completamente diferente do diretório /Teste.</description>
+      <description>Sumário Diretório mkdir Diretório Raíz Diretório atual Diretório Home Diretório Superior Diretório Anterior Caminhos na estrutura de diretórios Estrutura básica de diretórios no Linux Créditos Diretório Diretório é o local utilizado para armazenar conjuntos arquivos para melhor organização e localização. Em outras palavras, o diretório pode ser entendido como uma pasta onde você armazena seus arquivos e documentos. O diretório, como o arquivo, é &amp;ldquo;Case Sensitive&amp;rdquo; ou seja, o diretório /teste é completamente diferente do diretório /Teste.</description>
       <content>&lt;h1 id=&#34;sumário&#34;&gt;Sumário&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#diret%C3%B3rio&#34;&gt;Diretório&lt;/a&gt;
@@ -761,7 +761,7 @@ O diretório home também é identificado por um &lt;code&gt;~&lt;/code&gt;(til)
       <pubDate>Wed, 29 Sep 2021 15:50:58 -0300</pubDate>
       
       <guid>https://obscureart.com.br/posts/html/</guid>
-      <description>Sumário  Início VSCode e VSCodium Comentários Anatomia das Tags Atributos Atributos Globais  class contenteditable data-* hidden id style tabindex title   Aninhamento - Hierarquia Anatomia - Documento Créditos  Início O tema desta nova postagem que trata de conceitos inicias e basilares do desenvolvimento web, é sobre o HTML e seus conceitos essenciais, tags, atributos, aninhamentos, hierarquias de tags, elementos de diretórios e muito mais.
+      <description>Sumário Início VSCode e VSCodium Comentários Anatomia das Tags Atributos Atributos Globais class contenteditable data-* hidden id style tabindex title Aninhamento - Hierarquia Anatomia - Documento Créditos Início O tema desta nova postagem que trata de conceitos inicias e basilares do desenvolvimento web, é sobre o HTML e seus conceitos essenciais, tags, atributos, aninhamentos, hierarquias de tags, elementos de diretórios e muito mais.
 VS Code? O Visual Studio Code (VS Code) é um editor de código aberto desenvolvido pela Microsoft.</description>
       <content>&lt;h1 id=&#34;sumário&#34;&gt;Sumário&lt;/h1&gt;
 &lt;ul&gt;
@@ -1007,7 +1007,7 @@ O conteúdo escrito dentro do comentário,
       <pubDate>Wed, 29 Sep 2021 14:45:04 -0300</pubDate>
       
       <guid>https://obscureart.com.br/posts/http/</guid>
-      <description>Sumário  HTTP  Visualizando essa Comunicação  Browser DevTools cURL     O que é HTTP?  Cliente Servidor Proxy   Recursos HTTP  URI URL URN Revisão do Resource   Mensagens HTTP Métodos HTTP  OPTIONS GET HEAD POST PUT PATCH DELETE   Headers  app.DevDocs   Status CODE Créditos   HTTP Qual o significado da sigla HTTP? Hypertext Transfer Protocol, em português, Protocolo de Transferência de Hipertexto que é o conjunto de regras para a comunicação por meio do Hipertexto, um tipo de texto que pode carregar diferentes dados.</description>
+      <description>Sumário HTTP Visualizando essa Comunicação Browser DevTools cURL O que é HTTP? Cliente Servidor Proxy Recursos HTTP URI URL URN Revisão do Resource Mensagens HTTP Métodos HTTP OPTIONS GET HEAD POST PUT PATCH DELETE Headers app.DevDocs Status CODE Créditos HTTP Qual o significado da sigla HTTP? Hypertext Transfer Protocol, em português, Protocolo de Transferência de Hipertexto que é o conjunto de regras para a comunicação por meio do Hipertexto, um tipo de texto que pode carregar diferentes dados.</description>
       <content>&lt;h1 id=&#34;sumário&#34;&gt;Sumário&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#https&#34;&gt;HTTP&lt;/a&gt;
@@ -1352,7 +1352,7 @@ Importante sabermos a “mágica” para que essa troca de informações ocorra 
       <pubDate>Mon, 13 Sep 2021 00:34:56 -0300</pubDate>
       
       <guid>https://obscureart.com.br/posts/hello-markdown/</guid>
-      <description>post.INDEX  Blockquotes Emphasis Lists Links Tables Horizontal Rule Credits  Blockquotes html Quote blocks with markdown    &amp;gt; Blockquotes are very handy in email to emulate reply text. &amp;gt; This line is part of the same quote. Quote break. &amp;gt; This is a very long line that will still be quoted properly when it wraps. Oh boy let&amp;#39;s keep writing to make sure this is long enough to actually wrap for everyone.</description>
+      <description>post.INDEX Blockquotes Emphasis Lists Links Tables Horizontal Rule Credits Blockquotes html Quote blocks with markdown &amp;gt; Blockquotes are very handy in email to emulate reply text. &amp;gt; This line is part of the same quote. Quote break. &amp;gt; This is a very long line that will still be quoted properly when it wraps. Oh boy let&amp;#39;s keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.</description>
       <content>&lt;h1 id=&#34;postindex&#34;&gt;post.INDEX&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#blockquotes&#34;&gt;Blockquotes&lt;/a&gt;&lt;/li&gt;
@@ -1695,14 +1695,14 @@ Underscores
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#postindex&#34;&gt;post.INDEX&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
 &lt;p&gt;thats the footnote&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/section&gt;
+&lt;/div&gt;
 </content>
     </item>
     
@@ -1722,7 +1722,7 @@ Dito isso, começo essa categoria de Ambient Sounds para compartilhar algumas da
 &lt;hr&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/QOjmvL3e7Lc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;Tokyo Live - Can1 - Shiodome&#34;&gt;&lt;/iframe&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/HdWaLmen66Y&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;Tokyo Live - Can1 - Shiodome&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 
 &lt;h1 id=&#34;credits&#34;&gt;Credits&lt;/h1&gt;
